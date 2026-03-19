@@ -1,1 +1,27 @@
+# Reference materials
 references
+
+# Build directory (contains all simulator outputs)
+build/
+
+# iverilog artifacts (if accidentally created in root)
+*.vvp
+*.vcd
+
+# Xilinx xsim artifacts (if accidentally created in root)
+xsim.dir/
+*.wdb
+*.jou
+*.log
+*.pb
+.Xil/
+xsim_*.backup.*
+dfx_runtime.txt
+
+# Vivado artifacts
+*.tmp
+*.backup
+webtalk*.jou
+webtalk*.log
+vivado*.jou
+vivado*.log
