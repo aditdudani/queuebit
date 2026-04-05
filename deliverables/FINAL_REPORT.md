@@ -153,12 +153,12 @@ The QueueBit dispatcher comprises three modules:
 
 **Module 3: Dispatch FSM** (4-state: IDLE → HAZARD_CHK → ISSUE → STALL)
 - State machine coordinating FIFO reads, matrix checks, and worker assignment
-- **Critical Fix** (Phase 3): 2-cycle release delay counter ensures matrix sequential logic propagates before FSM re-checks collision
+- **Critical Design Element**: 2-cycle release delay counter ensures matrix sequential logic propagates before FSM re-checks collision
 - Per-worker tracking (stored coordinates for cleanup)
 
 ### 3.2 Design Verification
 
-**Phase 2–3 Testing**:
+**Design Verification**:
 - Unit tests: 48 tests (26 FIFO + 22 Matrix) on iverilog and xsim → 100% pass
 - Integration test: 221 syndromes processed end-to-end → **0 collisions detected**
 - Collision verification: Python script parses dispatch_log.txt → confirms mutual exclusion
@@ -166,7 +166,6 @@ The QueueBit dispatcher comprises three modules:
 **Additional Verification Artifacts**:
 - FSM state transitions logged at each clock edge (behavioral simulation)
 - Worker release events logged (matrix lock/unlock tracking)
-- Detailed test summary: `docs/PHASE3_TEST_SUMMARY.md` (debugging history, FSM deadlock fix)
 
 ### 3.3 Synthesis & Simulation Methodology
 
@@ -375,7 +374,7 @@ Our design and characterization assume error rate p = 0.001, the QUEKUF design p
 **Implications**:
 - Our stall-rate results (52%–88%) are valid only at p = 0.001
 - Above threshold, error cluster size grows exponentially; spatial collision distance may increase beyond 3×3 locks
-- **Future work** (Phase 5): Sweep error rates and re-characterize stall rates
+- **Future work**: Sweep error rates and re-characterize stall rates
 
 This limitation is explicitly acknowledged in the project scope; it does not invalidate results for current application.
 
@@ -455,7 +454,7 @@ QueueBit demonstrates key principles for real-time quantum error correction hard
 4. **4-worker pool**: Fixed parallelism; scaling to larger worker counts not explored
 5. **No formal properties**: Mutual exclusion proven by construction + testing, not formal methods (e.g., SVA assertions)
 
-**Future Work (Phase 5+)**:
+**Future Work**:
 1. **Formal Verification**: Add SystemVerilog Assertions (SVA) for mutual exclusion property; use formal tools (OneSpin, Cadence) for proof
 2. **Adaptive Lock Sizing**: Vary 3×3 neighborhood based on error cluster distribution; re-characterize stall rates
 3. **Multi-Round Tracking**: Extend matrix with round ID; support cross-round cluster continuity

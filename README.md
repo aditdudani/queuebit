@@ -18,7 +18,7 @@ The dispatcher operates as the control plane between syndrome extraction and dec
 | **Performance** | 52–89% stall rate | K-sweep across 4 worker latency values (5–20 cycles) |
 | **Verification** | 48/48 unit tests | 100% pass (iverilog + xsim) |
 
-**Full results, methodology, and analysis**: See [`deliverables/FINAL_REPORT.md`](deliverables/FINAL_REPORT.md) (6500+ words, 17 citations, publication-ready)
+**Full results, methodology, and analysis**: See [`deliverables/FINAL_REPORT.md`](deliverables/FINAL_REPORT.md) (6500+ words, 17 citations)
 
 ## Quick Start
 
@@ -61,14 +61,14 @@ queuebit/
 │   ├── verify_collisions.py    # Collision verifier
 │   └── stim_errors.txt         # 221 syndrome pairs
 │
-├── batch_run/              # Phase 4: Batch simulation & metrics
+├── batch_run/              # Batch simulation & metrics
 │   ├── batch_simulate.tcl  # Vivado batch automation
 │   ├── extract_metrics.py  # Metrics parsing script
 │   ├── plot_results.py     # Matplotlib visualization
 │   └── queuebit_vivado/    # Vivado project (synthesis state)
 │
-├── deliverables/           # Phase 4 Results ⭐
-│   ├── FINAL_REPORT.md     # Academic report (START HERE)
+├── deliverables/           # Results
+│   ├── FINAL_REPORT.md     # Academic report
 │   ├── stall_vs_load_sweep.png # Figure 1 (K-sweep curves)
 │   ├── worker_utilization.png  # Figure 2 (pool utilization)
 │   ├── synthesis_fmax.png      # Figure 3 (synthesis metrics)
@@ -82,9 +82,13 @@ queuebit/
 
 ## Architecture Overview
 
-```
-Syndrome Stream → [FIFO] → [Dispatch FSM] → [Tracking Matrix] → [4-Worker Pool]
-                            (collision checking + queueing)
+```mermaid
+graph LR
+    IN([Syndrome Stream]) --> FIFO["Syndrome FIFO<br/>(32 entries)"]
+    FIFO --> FSM["Dispatch FSM<br/>(4-state)"]
+    FSM --> MTX["Tracking Matrix<br/>(23×21 grid)"]
+    MTX --> POOL["Worker Pool<br/>(4 workers)"]
+    POOL --> OUT([Decoded Results])
 ```
 
 **Design principles**:
@@ -112,7 +116,7 @@ Syndrome Stream → [FIFO] → [Dispatch FSM] → [Tracking Matrix] → [4-Worke
 
 | Document | Purpose |
 |----------|---------|
-| **[`deliverables/FINAL_REPORT.md`](deliverables/FINAL_REPORT.md)** | **START HERE** — Full academic report with methodology, results, and analysis |
+| **[`deliverables/FINAL_REPORT.md`](deliverables/FINAL_REPORT.md)** | Full academic report with methodology, results, and analysis |
 | **[`deliverables/README.md`](deliverables/README.md)** | Artifact index & interpretation guide |
 
 ## Reproducibility
@@ -156,8 +160,11 @@ All development, verification, synthesis, and documentation are finalized. The p
 ## License & Attribution
 
 **Author**: Adit Dudani (2022B5A30533P)
+
 **Advisors**: Prof. Jayendra N. Bandyopadhyay (Physics), Prof. Govind Prasad (EEE)
+
 **Institution**: BITS Pilani, PHY F366 Study-Oriented Project
+
 **Date**: April 6, 2026
 
 All RTL and testbenches are original work. All external references are properly cited in the final report.
