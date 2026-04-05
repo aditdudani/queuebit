@@ -65,12 +65,12 @@ module tb_dispatcher_integration #(
         string stim_path;
 
         // Try primary path
-        stim_path = "verification/stim_errors.txt";
+        stim_path = "D:\\College\\4-2\\SoP2\\Code\\queuebit\\verification\\stim_errors.txt";
         file_fd = $fopen(stim_path, "r");
 
         // Try alternate path (for build subdirectory runs)
         if (file_fd == 0) begin
-            stim_path = "../../verification/stim_errors.txt";
+            stim_path = "D:/College/4-2/SoP2/Code/queuebit/verification/stim_errors.txt";
             file_fd = $fopen(stim_path, "r");
         end
 
