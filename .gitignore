@@ -8,6 +8,11 @@ build/
 *.vvp
 *.vcd
 
+# Test & simulation artifacts
+dispatch_log.txt
+integration_test.log
+reduced_stim.txt
+
 # Xilinx xsim artifacts (if accidentally created in root)
 xsim.dir/
 *.wdb

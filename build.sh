@@ -18,8 +18,11 @@ XSIM="C:/Xilinx/2025.1/Vivado/bin/xsim.bat"
 PKG_SRC="$RTL_DIR/dispatcher_pkg.sv"
 FIFO_SRC="$RTL_DIR/syndrome_fifo.sv"
 MATRIX_SRC="$RTL_DIR/tracking_matrix.sv"
+FSM_SRC="$RTL_DIR/dispatcher_fsm.sv"
+TOP_SRC="$RTL_DIR/dispatcher_top.sv"
 FIFO_TB="$TB_DIR/tb_syndrome_fifo.sv"
 MATRIX_TB="$TB_DIR/tb_tracking_matrix.sv"
+INTEGRATION_TB="$TB_DIR/tb_dispatcher_integration.sv"
 
 # Colors for output
 RED='\033[0;31m'
@@ -94,6 +97,31 @@ run_xsim_matrix() {
     cd ../..
 }
 
+run_iverilog_integration() {
+    print_info "Compiling dispatcher integration test with iverilog..."
+    mkdir -p "$IVERILOG_DIR"
+    iverilog -g2012 -o "$IVERILOG_DIR/tb_integration.vvp" \
+        "$PKG_SRC" "$FIFO_SRC" "$MATRIX_SRC" "$FSM_SRC" "$TOP_SRC" "$INTEGRATION_TB"
+
+    print_info "Running integration testbench..."
+    cd "$IVERILOG_DIR" && vvp tb_integration.vvp
+    cd ../..
+}
+
+run_xsim_integration() {
+    print_info "Compiling dispatcher integration test with xsim..."
+    mkdir -p "$XSIM_DIR"
+    cd "$XSIM_DIR"
+    "$XVLOG" -sv "../../$PKG_SRC" "../../$FIFO_SRC" "../../$MATRIX_SRC" \
+        "../../$FSM_SRC" "../../$TOP_SRC" "../../$INTEGRATION_TB" > xvlog_integration.log 2>&1
+    "$XELAB" -debug typical tb_dispatcher_integration -s integration_sim > xelab_integration.log 2>&1
+
+    print_info "Running integration testbench..."
+    "$XSIM" integration_sim -runall > xsim_integration.log 2>&1
+    grep "INTEGRATION TEST RESULTS" -A 10 xsim_integration.log || grep "Simulation" xsim_integration.log
+    cd ../..
+}
+
 # Clean build directory
 clean() {
     print_info "Cleaning build artifacts..."
@@ -109,15 +137,21 @@ show_help() {
     echo "Usage: ./build.sh [command]"
     echo ""
     echo "Commands:"
-    echo "  test              - Run all tests with iverilog (default)"
-    echo "  test-xsim         - Run all tests with xsim"
-    echo "  test-all          - Run all tests with both simulators"
+    echo "  test              - Run unit tests with iverilog (default)"
+    echo "  test-xsim         - Run unit tests with xsim"
+    echo "  test-all          - Run all unit tests with both simulators"
+    echo "  test-integration  - Run integration test with iverilog"
+    echo "  test-integration-xsim - Run integration test with xsim"
     echo ""
-    echo "Individual tests:"
+    echo "Individual unit tests:"
     echo "  iverilog-fifo     - Test FIFO with iverilog"
     echo "  iverilog-matrix   - Test tracking matrix with iverilog"
     echo "  xsim-fifo         - Test FIFO with xsim"
     echo "  xsim-matrix       - Test tracking matrix with xsim"
+    echo ""
+    echo "Individual integration tests:"
+    echo "  iverilog-integration - Integration test with iverilog"
+    echo "  xsim-integration     - Integration test with xsim"
     echo ""
     echo "Utility:"
     echo "  clean             - Remove all build artifacts"
@@ -127,19 +161,19 @@ show_help() {
 # Main script
 case "${1:-test}" in
     test)
-        print_header "Running iverilog tests"
+        print_header "Running iverilog unit tests"
         run_iverilog_fifo
         echo ""
         run_iverilog_matrix
         ;;
     test-xsim)
-        print_header "Running xsim tests"
+        print_header "Running xsim unit tests"
         run_xsim_fifo
         echo ""
         run_xsim_matrix
         ;;
     test-all)
-        print_header "Running all tests (iverilog + xsim)"
+        print_header "Running all unit tests (iverilog + xsim)"
         run_iverilog_fifo
         echo ""
         run_iverilog_matrix
@@ -147,6 +181,14 @@ case "${1:-test}" in
         run_xsim_fifo
         echo ""
         run_xsim_matrix
+        ;;
+    test-integration)
+        print_header "Running integration test (iverilog)"
+        run_iverilog_integration
+        ;;
+    test-integration-xsim)
+        print_header "Running integration test (xsim)"
+        run_xsim_integration
         ;;
     iverilog-fifo)
         run_iverilog_fifo
@@ -154,11 +196,17 @@ case "${1:-test}" in
     iverilog-matrix)
         run_iverilog_matrix
         ;;
+    iverilog-integration)
+        run_iverilog_integration
+        ;;
     xsim-fifo)
         run_xsim_fifo
         ;;
     xsim-matrix)
         run_xsim_matrix
+        ;;
+    xsim-integration)
+        run_xsim_integration
         ;;
     clean)
         clean

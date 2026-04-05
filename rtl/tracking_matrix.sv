@@ -132,6 +132,27 @@ module tracking_matrix #(
     // synthesis translate_off
     always @(posedge clk) begin
         if (rst_n) begin
+            // Log lock operations
+            if (lock_en) begin
+                $display("[MATRIX] Lock at (%0d, %0d) - cells set: (%0d-%0d, %0d-%0d)",
+                         lock_x, lock_y,
+                         (lock_x > 0 ? lock_x-1 : 0), (lock_x < GRID_WIDTH-1 ? lock_x+1 : GRID_WIDTH-1),
+                         (lock_y > 0 ? lock_y-1 : 0), (lock_y < GRID_HEIGHT-1 ? lock_y+1 : GRID_HEIGHT-1));
+            end
+
+            // Log release operations
+            if (release_en) begin
+                $display("[MATRIX] Release at (%0d, %0d) - cells cleared: (%0d-%0d, %0d-%0d)",
+                         release_x, release_y,
+                         (release_x > 0 ? release_x-1 : 0), (release_x < GRID_WIDTH-1 ? release_x+1 : GRID_WIDTH-1),
+                         (release_y > 0 ? release_y-1 : 0), (release_y < GRID_HEIGHT-1 ? release_y+1 : GRID_HEIGHT-1));
+            end
+
+            // Check for both lock and release same cycle (lock wins)
+            if (lock_en && release_en) begin
+                $warning("[MATRIX] Both LOCK and RELEASE asserted same cycle - lock takes priority!");
+            end
+
             if (lock_en && (lock_x >= GRID_WIDTH || lock_y >= GRID_HEIGHT))
                 $error("MATRIX: Lock coordinate out of range: (%0d, %0d)", lock_x, lock_y);
             if (release_en && (release_x >= GRID_WIDTH || release_y >= GRID_HEIGHT))
