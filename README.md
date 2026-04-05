@@ -1,24 +1,25 @@
 # QueueBit: Dynamic Syndrome Dispatcher for Quantum Error Correction
 
-Hardware-accelerated syndrome routing pipeline for surface code quantum error correction (d=11 code distance on 21×23 lattice).
+Hardware-accelerated syndrome routing pipeline for surface code quantum error correction (d=11 code distance on 21x23 lattice).
 
-**Status**: ✅ Phase 3 Complete (Integration Testing) | ⏳ Phase 4 In Progress (Synthesis & Performance)
+**Status**: Phase 3 Complete (Integration Testing - PASSING) | Phase 4 In Progress (Synthesis & Performance Analysis)
 
 ## Quick Links
 
-- **📊 Full Project Status**: See [`docs/PROJECT_STATUS.md`](docs/PROJECT_STATUS.md) for comprehensive architecture, detailed task list, and Phase 4 deliverables
-- **🧪 Phase 3 Test Results**: See [`docs/PHASE3_TEST_SUMMARY.md`](docs/PHASE3_TEST_SUMMARY.md) for debugging history and all test results
-- **📋 Project Memory**: See [`docs/MEMORY.md`](docs/MEMORY.md) for key design decisions and project notes
+- **Full Project Status**: See `docs/PROJECT_STATUS.md` for comprehensive architecture, detailed task list, and Phase 4 deliverables
+- **Project Memory**: See `docs/MEMORY.md` for key design decisions and project notes
+- **Phase 4 Documentation**: See `docs/vivado_guide/` for Vivado setup, TCL scripting, and metrics extraction guides
 
-## What's Working ✅
+## What's Working
 
 | Component | Tests | Status |
 |-----------|-------|--------|
-| Syndrome FIFO (`rtl/syndrome_fifo.sv`) | 26/26 passing | ✅ Phase 2 Complete |
-| Tracking Matrix (`rtl/tracking_matrix.sv`) | 22/22 passing | ✅ Phase 2 Complete |
-| Dispatcher FSM (`rtl/dispatcher_fsm.sv`) | Integration test | ✅ Phase 3 Complete |
-| Top-level Dispatcher (`rtl/dispatcher_top.sv`) | 221 syndromes | ✅ Phase 3 Complete |
-| **Collision Verification** | 0 violations | ✅ Phase 3 Complete |
+| Syndrome FIFO (`rtl/syndrome_fifo.sv`) | 26/26 passing | Phase 2 Complete |
+| Tracking Matrix (`rtl/tracking_matrix.sv`) | 22/22 passing | Phase 2 Complete |
+| Dispatcher FSM (`rtl/dispatcher_fsm.sv`) | Integration test | Phase 3 Complete |
+| Top-level Dispatcher (`rtl/dispatcher_top.sv`) | 221 syndromes | Phase 3 Complete |
+| Collision Verification | 0 violations | Phase 3 Complete |
+| Testbench Parameterization (WORKER_LATENCY) | K-sweep ready | Phase 4 Preparation Complete |
 
 ## Project Structure
 
@@ -91,24 +92,24 @@ make help         # Show all targets
 
 ## Test Results Summary
 
-✅ **Phase 3 (2026-04-06) - All Tests PASSING**
+Phase 3 (2026-04-06) - All Tests PASSING
 
 ```
 Unit Tests:          48/48 PASS (26 FIFO + 22 Matrix)
   ├─ iverilog:       48/48 PASS
   └─ xsim:           48/48 PASS
 
-Integration Test:    221 syndromes → 0 collisions PASS
+Integration Test:    221 syndromes processed
   ├─ Syndromes loaded:      221
   ├─ Syndromes issued:      190
-  ├─ Spatial collisions:    0 ✅
-  └─ All workers complete:  Yes ✅
+  ├─ Spatial collisions:    0 (PASS)
+  └─ All workers complete:  Yes (PASS)
 
 FSM Fix Applied:     2-cycle release delay counter
   └─ Prevents timing race between FSM and matrix
 ```
 
-For detailed test breakdown and debugging history, see [`docs/PHASE3_TEST_SUMMARY.md`](docs/PHASE3_TEST_SUMMARY.md).
+For detailed test breakdown and debugging history, see `docs/PHASE3_TEST_SUMMARY.md`.
 
 ## System Requirements
 
@@ -141,13 +142,33 @@ Quantum Circuit (Syndrome Extraction)
 [Decoder Output] ← Cluster estimates
 ```
 
-## Next Steps (Phase 4)
+## Next Steps (Phase 4: Synthesis & Performance Analysis)
 
-1. **Synthesize to FPGA** (Xilinx Vivado) → Measure Fmax
-2. **Collect Performance Data** → Stall vs. load curves (PRIMARY deliverable)
-3. **Generate Final Report** → Results and conclusions
+Phase 4 focuses on FPGA synthesis, performance characterization, and final reporting. Estimated duration: 4.5 hours.
 
-See [`docs/PROJECT_STATUS.md` § 6](docs/PROJECT_STATUS.md#6-next-steps-priority-order---phase-4-in-progress) for detailed Phase 4 plan.
+1. **Vivado GUI Setup** (45 min)
+   - Create Vivado project targeting xc7z020clg400-1 (PYNQ) or xc7z020clg484-1 (ZedBoard)
+   - Add RTL files and set synthesis constraints (100 MHz clock target)
+   - Run synthesis and record Fmax, LUT utilization, FF utilization
+   - Verify testbench elaborates with xsim
+
+2. **Testbench Parameterization** (10 min)
+   - WORKER_LATENCY parameter now added to tb_dispatcher_integration.sv
+   - Allows K-sweep over {5, 10, 15, 20} cycles without recompilation
+   - Enabled via Vivado's elaborate -generics flag
+
+3. **Batch Simulation** (1.5 hours + 20 min idle)
+   - Export project to TCL (Phase4/run_sims.tcl)
+   - Create batch wrapper script with nested loops (Phase4/batch_simulate.tcl)
+   - Run 60 total simulations: 4 K values x 5 injection rates x 3 runs per config
+   - Collect logs, extract metrics (stall rate, worker utilization)
+
+4. **Performance Analysis** (45 min)
+   - Parse simulation logs to compute stall rates and worker utilization
+   - Generate 3 graphs: stall vs. load (K-sweep), worker utilization, Fmax
+   - Create final academic report with results, analysis, and conclusions
+
+For detailed Phase 4 plan, see `docs/PROJECT_STATUS.md` Section 6 or `docs/vivado_guide/README_DOCUMENTATION_INDEX.md`.
 
 ## Documentation
 
@@ -181,5 +202,5 @@ See [`docs/PROJECT_STATUS.md` § 6](docs/PROJECT_STATUS.md#6-next-steps-priority
 
 ---
 
-**Last Updated**: 2026-04-06
-**Status**: Phase 3 Complete (Integration PASSING) | Phase 4 In Progress (Synthesis Pending)
+**Last Updated**: 2026-04-06 (Phase 4 Preparation Complete - Testbench Parameterization)
+**Status**: Phase 3 Complete (All Integration Tests PASSING) | Phase 4 In Progress (Vivado Setup Pending)

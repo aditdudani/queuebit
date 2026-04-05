@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 
-module tb_dispatcher_integration;
+module tb_dispatcher_integration #(
+    parameter integer WORKER_LATENCY = 5  // Override via Vivado elaborate -generics flag
+) ();
 
     import dispatcher_pkg::*;
 
@@ -28,8 +30,8 @@ module tb_dispatcher_integration;
     string dispatch_log_filename = "dispatch_log.txt";
     integer dispatch_log_fd = 0;
 
-    // Worker latency simulation (K=5 cycles)
-    localparam int WORKER_LATENCY = 5;
+    // Worker latency simulation (K cycles, overridable parameter)
+    // WORKER_LATENCY is now a top-level module parameter (see module header)
     integer worker_timer [4];
     logic [3:0] worker_busy;
     integer worker_coord_x [4];
