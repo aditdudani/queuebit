@@ -1,19 +1,18 @@
-# Reference materials
-references
+local_backup
 
-# Build directory (contains all simulator outputs)
 build/
 
-# iverilog artifacts (if accidentally created in root)
+batch_run/queuebit_vivado/
+batch_run/dfx_runtime.txt
+batch_run/.Xil/
+
 *.vvp
 *.vcd
 
-# Test & simulation artifacts
 dispatch_log.txt
 integration_test.log
 reduced_stim.txt
 
-# Xilinx xsim artifacts (if accidentally created in root)
 xsim.dir/
 *.wdb
 *.jou
@@ -23,7 +22,6 @@ xsim.dir/
 xsim_*.backup.*
 dfx_runtime.txt
 
-# Vivado artifacts
 *.tmp
 *.backup
 webtalk*.jou
