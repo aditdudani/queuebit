@@ -13,6 +13,8 @@ XSIM_DIR="$BUILD_DIR/xsim"
 XVLOG="C:/Xilinx/2025.1/Vivado/bin/xvlog.bat"
 XELAB="C:/Xilinx/2025.1/Vivado/bin/xelab.bat"
 XSIM="C:/Xilinx/2025.1/Vivado/bin/xsim.bat"
+IVERILOG="C:/iverilog/bin/iverilog.exe"
+VVP="C:/iverilog/bin/vvp.exe"
 
 # Source files
 PKG_SRC="$RTL_DIR/dispatcher_pkg.sv"
@@ -53,20 +55,20 @@ print_info() {
 run_iverilog_fifo() {
     print_info "Compiling FIFO with iverilog..."
     mkdir -p "$IVERILOG_DIR"
-    iverilog -g2012 -o "$IVERILOG_DIR/tb_fifo.vvp" "$PKG_SRC" "$FIFO_SRC" "$FIFO_TB"
+    "$IVERILOG" -g2012 -o "$IVERILOG_DIR/tb_fifo.vvp" "$PKG_SRC" "$FIFO_SRC" "$FIFO_TB"
 
     print_info "Running FIFO testbench..."
-    cd "$IVERILOG_DIR" && vvp tb_fifo.vvp
+    cd "$IVERILOG_DIR" && "$VVP" tb_fifo.vvp
     cd ../..
 }
 
 run_iverilog_matrix() {
     print_info "Compiling Tracking Matrix with iverilog..."
     mkdir -p "$IVERILOG_DIR"
-    iverilog -g2012 -o "$IVERILOG_DIR/tb_matrix.vvp" "$PKG_SRC" "$MATRIX_SRC" "$MATRIX_TB"
+    "$IVERILOG" -g2012 -o "$IVERILOG_DIR/tb_matrix.vvp" "$PKG_SRC" "$MATRIX_SRC" "$MATRIX_TB"
 
     print_info "Running Tracking Matrix testbench..."
-    cd "$IVERILOG_DIR" && vvp tb_matrix.vvp
+    cd "$IVERILOG_DIR" && "$VVP" tb_matrix.vvp
     cd ../..
 }
 
@@ -100,11 +102,11 @@ run_xsim_matrix() {
 run_iverilog_integration() {
     print_info "Compiling dispatcher integration test with iverilog..."
     mkdir -p "$IVERILOG_DIR"
-    iverilog -g2012 -o "$IVERILOG_DIR/tb_integration.vvp" \
+    "$IVERILOG" -g2012 -o "$IVERILOG_DIR/tb_integration.vvp" \
         "$PKG_SRC" "$FIFO_SRC" "$MATRIX_SRC" "$FSM_SRC" "$TOP_SRC" "$INTEGRATION_TB"
 
     print_info "Running integration testbench..."
-    cd "$IVERILOG_DIR" && vvp tb_integration.vvp
+    cd "$IVERILOG_DIR" && "$VVP" tb_integration.vvp
     cd ../..
 }
 
@@ -119,6 +121,38 @@ run_xsim_integration() {
     print_info "Running integration testbench..."
     "$XSIM" integration_sim -runall > xsim_integration.log 2>&1
     grep "INTEGRATION TEST RESULTS" -A 10 xsim_integration.log || grep "Simulation" xsim_integration.log
+    cd ../..
+}
+
+run_xsim_integration_naive() {
+    print_info "Compiling dispatcher integration test (NAIVE - collision checking DISABLED) with xsim..."
+    mkdir -p "$XSIM_DIR"
+    cd "$XSIM_DIR"
+    INTEGRATION_TB_NAIVE="../../tb/tb_dispatcher_integration_naive.sv"
+    "$XVLOG" -sv "../../$PKG_SRC" "../../$FIFO_SRC" "../../$MATRIX_SRC" \
+        "../../$FSM_SRC" "../../$TOP_SRC" "$INTEGRATION_TB_NAIVE" > xvlog_integration_naive.log 2>&1
+    "$XELAB" -debug typical tb_dispatcher_integration_naive -s integration_sim_naive > xelab_integration_naive.log 2>&1
+
+    print_info "Running integration testbench (naive)..."
+    "$XSIM" integration_sim_naive -runall > xsim_integration_naive.log 2>&1
+    grep "INTEGRATION TEST RESULTS (NAIVE)" -A 10 xsim_integration_naive.log || grep "Simulation" xsim_integration_naive.log
+    cd ../..
+}
+
+run_xsim_integration_d23() {
+    print_info "Compiling dispatcher integration test (d=23) with xsim..."
+    mkdir -p "$XSIM_DIR"
+    cd "$XSIM_DIR"
+    TOP_SRC_D23="../../rtl/dispatcher_top_d23.sv"
+    FSM_SRC_D23="../../rtl/dispatcher_fsm_d23.sv"
+    INTEGRATION_TB_D23="../../tb/tb_dispatcher_integration_d23.sv"
+    "$XVLOG" -sv "../../$PKG_SRC" "../../$FIFO_SRC" "../../$MATRIX_SRC" \
+        "$FSM_SRC_D23" "$TOP_SRC_D23" "$INTEGRATION_TB_D23" > xvlog_integration_d23.log 2>&1
+    "$XELAB" -debug typical tb_dispatcher_integration_d23 -s integration_sim_d23 > xelab_integration_d23.log 2>&1
+
+    print_info "Running integration testbench (d=23)..."
+    "$XSIM" integration_sim_d23 -runall > xsim_integration_d23.log 2>&1
+    grep "INTEGRATION TEST RESULTS (d=23)" -A 10 xsim_integration_d23.log || grep "Simulation" xsim_integration_d23.log
     cd ../..
 }
 
@@ -140,8 +174,10 @@ show_help() {
     echo "  test              - Run unit tests with iverilog (default)"
     echo "  test-xsim         - Run unit tests with xsim"
     echo "  test-all          - Run all unit tests with both simulators"
-    echo "  test-integration  - Run integration test with iverilog"
-    echo "  test-integration-xsim - Run integration test with xsim"
+    echo "  test-integration  - Run integration test with iverilog (d=11)"
+    echo "  test-integration-xsim - Run integration test with xsim (d=11)"
+    echo "  test-integration-naive - Run integration test (naive, no collision checking)"
+    echo "  test-d23          - Run integration test with d=23 dispatcher (xsim)"
     echo ""
     echo "Individual unit tests:"
     echo "  iverilog-fifo     - Test FIFO with iverilog"
@@ -150,8 +186,9 @@ show_help() {
     echo "  xsim-matrix       - Test tracking matrix with xsim"
     echo ""
     echo "Individual integration tests:"
-    echo "  iverilog-integration - Integration test with iverilog"
-    echo "  xsim-integration     - Integration test with xsim"
+    echo "  iverilog-integration - Integration test with iverilog (d=11)"
+    echo "  xsim-integration     - Integration test with xsim (d=11)"
+    echo "  xsim-d23             - Integration test with xsim (d=23)"
     echo ""
     echo "Utility:"
     echo "  clean             - Remove all build artifacts"
@@ -207,6 +244,20 @@ case "${1:-test}" in
         ;;
     xsim-integration)
         run_xsim_integration
+        ;;
+    test-integration-naive)
+        print_header "Running integration test (naive - collision checking disabled)"
+        run_xsim_integration_naive
+        ;;
+    xsim-integration-naive)
+        run_xsim_integration_naive
+        ;;
+    test-d23)
+        print_header "Running integration test (d=23 dispatcher)"
+        run_xsim_integration_d23
+        ;;
+    xsim-d23)
+        run_xsim_integration_d23
         ;;
     clean)
         clean

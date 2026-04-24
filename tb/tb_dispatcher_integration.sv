@@ -1,7 +1,8 @@
 `timescale 1ns/1ps
 
 module tb_dispatcher_integration #(
-    parameter integer WORKER_LATENCY = 5  // Override via Vivado elaborate -generics flag
+    parameter integer WORKER_LATENCY = 5,
+    parameter integer INJECT_RATE_PPT = 1000  // Thousandths of a syndrome per cycle
 ) ();
 
     import dispatcher_pkg::*;
@@ -108,32 +109,54 @@ module tb_dispatcher_integration #(
     // =========================================================================
 
     integer stim_idx = 0;
+    integer inject_credit_ppt = 0;
+    integer next_inject_credit_ppt;
+    logic inject_enable;
+
+    always_comb begin
+        integer accrued_credit_ppt;
+
+        if (stim_idx < stim_count) begin
+            wr_data = {stim_y[stim_idx][4:0], stim_x[stim_idx][4:0]};
+        end else begin
+            wr_data = 10'b0;
+        end
+
+        accrued_credit_ppt = inject_credit_ppt;
+        if (stim_idx < stim_count) begin
+            accrued_credit_ppt = accrued_credit_ppt + INJECT_RATE_PPT;
+        end
+
+        inject_enable = (stim_idx < stim_count) &&
+                        (accrued_credit_ppt >= 1000) &&
+                        wr_ready;
+        wr_valid = inject_enable;
+
+        next_inject_credit_ppt = accrued_credit_ppt;
+        if (inject_enable) begin
+            next_inject_credit_ppt = next_inject_credit_ppt - 1000;
+        end
+
+        if (next_inject_credit_ppt < 0) begin
+            next_inject_credit_ppt = 0;
+        end
+    end
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            wr_valid <= 1'b0;
-            wr_data  <= 10'b0;
             stim_idx <= 0;
+            syndromes_injected <= 0;
+            inject_credit_ppt <= 0;
         end else begin
-            // Proper handshake: only write when FIFO is ready AND not currently writing
-            if (!wr_valid && stim_idx < stim_count && wr_ready) begin
-                // No transfer pending, FIFO ready, and have data: initiate transfer
-                wr_valid <= 1'b1;
-                wr_data  <= {stim_y[stim_idx][4:0], stim_x[stim_idx][4:0]};
-            end else if (wr_valid && wr_ready) begin
-                // Transfer completed: advance to next
+            inject_credit_ppt <= next_inject_credit_ppt;
+
+            if (inject_enable) begin
+                // One-cycle pulse source: only present a write when the FIFO is
+                // currently ready, so the testbench never holds wr_valid high
+                // against a full FIFO.
                 syndromes_injected <= syndromes_injected + 1;
                 stim_idx <= stim_idx + 1;
-                if (stim_idx + 1 < stim_count) begin
-                    // Immediately start next transfer
-                    wr_valid <= 1'b1;
-                    wr_data  <= {stim_y[stim_idx+1][4:0], stim_x[stim_idx+1][4:0]};
-                end else begin
-                    // No more data
-                    wr_valid <= 1'b0;
-                end
             end
-            // else: wr_valid stays high while waiting for wr_ready (handshake pending)
         end
     end
 
@@ -241,12 +264,19 @@ module tb_dispatcher_integration #(
     );
 
     // =========================================================================
-    // Test Control: Run until all stimulus processed + workers idle
+    // Test Control: Run until all stimulus processed + dispatcher drained
     // =========================================================================
 
     initial begin
-        integer wait_cycles = 0;
-        integer max_wait = 2000;
+        integer wait_cycles;
+        integer quiet_cycles;
+        integer max_wait;
+        integer required_quiet_cycles;
+
+        wait_cycles = 0;
+        quiet_cycles = 0;
+        max_wait = 5000;
+        required_quiet_cycles = 8;
 
         // Wait for reset
         wait(rst_n);
@@ -262,15 +292,26 @@ module tb_dispatcher_integration #(
         wait(stim_idx >= stim_count);
         $display("[Testbench] All %0d syndromes injected at cycle %0d", stim_count, cycle_count);
 
-        // Wait for all workers to complete
+        // Wait for the dispatcher pipeline to go quiet. This catches
+        // syndromes still buffered inside the DUT after stimulus injection ends.
         wait_cycles = 0;
-        while (worker_busy != 4'b0000 && wait_cycles < max_wait) begin
+        quiet_cycles = 0;
+        while (quiet_cycles < required_quiet_cycles && wait_cycles < max_wait) begin
             @(posedge clk);
             wait_cycles = wait_cycles + 1;
+
+            if ((wr_valid == 1'b0) &&
+                (issue_valid == 1'b0) &&
+                (worker_busy == 4'b0000) &&
+                (worker_done == 4'b0000)) begin
+                quiet_cycles = quiet_cycles + 1;
+            end else begin
+                quiet_cycles = 0;
+            end
         end
 
         if (wait_cycles >= max_wait) begin
-            $warning("[Testbench] Timeout waiting for workers to complete");
+            $warning("[Testbench] Timeout waiting for dispatcher pipeline to drain");
         end
 
         // Close dispatch log
@@ -287,7 +328,8 @@ module tb_dispatcher_integration #(
         $display("Total cycles run:     %0d", cycle_count);
         $display("Syndromes injected:   %0d", syndromes_injected);
         $display("Syndromes issued:     %0d", issued_count);
-        $display("Completion status:    %s", (worker_busy == 4'b0000) ? "ALL WORKERS DONE" : "TIMEOUT");
+        $display("Completion status:    %s",
+                 (quiet_cycles >= required_quiet_cycles) ? "ALL WORKERS DONE" : "TIMEOUT");
         $display("================================================");
         $display("Expected: collision verification via verify_collisions.py");
         $display("================================================\n");

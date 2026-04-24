@@ -1,7 +1,13 @@
 `ifndef DISPATCHER_PKG_SV
 `define DISPATCHER_PKG_SV
 
+`timescale 1ns/1ps
+
 package dispatcher_pkg;
+
+    // Feature control: enable/disable collision detection
+    // Set to 0 for naive variant (testing collision avoidance value)
+    parameter bit ENABLE_COLLISION_CHECK = 1'b1;
 
     // Grid parameters derived from d=11 surface code
     parameter int CODE_DISTANCE = 11;

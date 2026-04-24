@@ -1,0 +1,2078 @@
+Configuration: K=15, InjectRate=0.1, Run=1
+--- XSIM STDOUT ---
+Time resolution is 1 ps
+[Stimulus] Loaded 221 syndrome pairs from D:\College\4-2\SoP2\Code\queuebit\verification\stim_errors_d23.txt
+[Stimulus] Injection pacing = 100 ppt (0.100 syndromes/cycle)
+[FSM d23] Cycle 13: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Cycle 14: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (5,13) → collision=0
+[MATRIX] Lock at (5, 13) - cells set: (4-6, 12-14)
+[FSM d23] Cycle 15: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (5,13) → dispatch to worker
+[Dispatcher d23] Cycle 155: Issued syndr (5, 13) to worker[0]
+[FSM d23] Cycle 23: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 24: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,13) → collision=0
+[MATRIX] Lock at (9, 13) - cells set: (8-10, 12-14)
+[FSM d23] Cycle 25: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,13) → dispatch to worker
+[Dispatcher d23] Cycle 255: Issued syndr (9, 13) to worker[1]
+[Dispatcher d23] Cycle 305: Worker[0] DONE (active=1, stored_coord=(5,13))
+[MATRIX] Release at (5, 13) - cells cleared: (4-6, 12-14)
+[FSM d23] Cycle 33: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 34: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,17) → collision=0
+[MATRIX] Lock at (5, 17) - cells set: (4-6, 16-18)
+[FSM d23] Cycle 35: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,17) → dispatch to worker
+[Dispatcher d23] Cycle 355: Issued syndr (5, 17) to worker[0]
+[Dispatcher d23] Cycle 405: Worker[1] DONE (active=1, stored_coord=(9,13))
+[MATRIX] Release at (9, 13) - cells cleared: (8-10, 12-14)
+[FSM d23] Cycle 43: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 44: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,17) → collision=0
+[MATRIX] Lock at (9, 17) - cells set: (8-10, 16-18)
+[FSM d23] Cycle 45: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,17) → dispatch to worker
+[Dispatcher d23] Cycle 455: Issued syndr (9, 17) to worker[1]
+[Dispatcher d23] Cycle 505: Worker[0] DONE (active=1, stored_coord=(5,17))
+[MATRIX] Release at (5, 17) - cells cleared: (4-6, 16-18)
+[FSM d23] Cycle 53: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 54: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,21) → collision=0
+[MATRIX] Lock at (9, 21) - cells set: (8-10, 20-22)
+[FSM d23] Cycle 55: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,21) → dispatch to worker
+[Dispatcher d23] Cycle 555: Issued syndr (9, 21) to worker[0]
+[Dispatcher d23] Cycle 605: Worker[1] DONE (active=1, stored_coord=(9,17))
+[MATRIX] Release at (9, 17) - cells cleared: (8-10, 16-18)
+[FSM d23] Cycle 63: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 64: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,21) → collision=0
+[MATRIX] Lock at (14, 21) - cells set: (13-15, 20-22)
+[FSM d23] Cycle 65: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,21) → dispatch to worker
+[Dispatcher d23] Cycle 655: Issued syndr (14, 21) to worker[1]
+[Dispatcher d23] Cycle 705: Worker[0] DONE (active=1, stored_coord=(9,21))
+[MATRIX] Release at (9, 21) - cells cleared: (8-10, 20-22)
+[FSM d23] Cycle 73: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 74: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,25) → collision=0
+[MATRIX] Lock at (5, 25) - cells set: (4-6, 24-26)
+[FSM d23] Cycle 75: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,25) → dispatch to worker
+[Dispatcher d23] Cycle 755: Issued syndr (5, 25) to worker[0]
+[Dispatcher d23] Cycle 805: Worker[1] DONE (active=1, stored_coord=(14,21))
+[MATRIX] Release at (14, 21) - cells cleared: (13-15, 20-22)
+[FSM d23] Cycle 83: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 84: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,25) → collision=0
+[MATRIX] Lock at (9, 25) - cells set: (8-10, 24-26)
+[FSM d23] Cycle 85: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,25) → dispatch to worker
+[Dispatcher d23] Cycle 855: Issued syndr (9, 25) to worker[1]
+[Dispatcher d23] Cycle 905: Worker[0] DONE (active=1, stored_coord=(5,25))
+[MATRIX] Release at (5, 25) - cells cleared: (4-6, 24-26)
+[FSM d23] Cycle 93: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 94: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,21) → collision=0
+[MATRIX] Lock at (32, 21) - cells set: (31-33, 20-22)
+[FSM d23] Cycle 95: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,21) → dispatch to worker
+[Dispatcher d23] Cycle 955: Issued syndr (32, 21) to worker[0]
+[Dispatcher d23] Cycle 1005: Worker[1] DONE (active=1, stored_coord=(9,25))
+[MATRIX] Release at (9, 25) - cells cleared: (8-10, 24-26)
+[FSM d23] Cycle 103: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 104: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (37,21) → collision=0
+[MATRIX] Lock at (37, 21) - cells set: (36-38, 20-22)
+[FSM d23] Cycle 105: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (37,21) → dispatch to worker
+[Dispatcher d23] Cycle 1055: Issued syndr (37, 21) to worker[1]
+[Dispatcher d23] Cycle 1105: Worker[0] DONE (active=1, stored_coord=(32,21))
+[MATRIX] Release at (32, 21) - cells cleared: (31-33, 20-22)
+[FSM d23] Cycle 113: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 114: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,25) → collision=0
+[MATRIX] Lock at (14, 25) - cells set: (13-15, 24-26)
+[FSM d23] Cycle 115: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,25) → dispatch to worker
+[Dispatcher d23] Cycle 1155: Issued syndr (14, 25) to worker[0]
+[Dispatcher d23] Cycle 1205: Worker[1] DONE (active=1, stored_coord=(37,21))
+[MATRIX] Release at (37, 21) - cells cleared: (36-38, 20-22)
+[FSM d23] Cycle 123: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 124: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,25) → collision=0
+[MATRIX] Lock at (32, 25) - cells set: (31-33, 24-26)
+[FSM d23] Cycle 125: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,25) → dispatch to worker
+[Dispatcher d23] Cycle 1255: Issued syndr (32, 25) to worker[1]
+[Dispatcher d23] Cycle 1305: Worker[0] DONE (active=1, stored_coord=(14,25))
+[MATRIX] Release at (14, 25) - cells cleared: (13-15, 24-26)
+[FSM d23] Cycle 133: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 134: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,29) → collision=0
+[MATRIX] Lock at (9, 29) - cells set: (8-10, 28-30)
+[FSM d23] Cycle 135: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,29) → dispatch to worker
+[Dispatcher d23] Cycle 1355: Issued syndr (9, 29) to worker[0]
+[Dispatcher d23] Cycle 1405: Worker[1] DONE (active=1, stored_coord=(32,25))
+[MATRIX] Release at (32, 25) - cells cleared: (31-33, 24-26)
+[FSM d23] Cycle 143: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 144: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (37,13) → collision=0
+[MATRIX] Lock at (37, 13) - cells set: (36-38, 12-14)
+[FSM d23] Cycle 145: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (37,13) → dispatch to worker
+[Dispatcher d23] Cycle 1455: Issued syndr (37, 13) to worker[1]
+[Dispatcher d23] Cycle 1505: Worker[0] DONE (active=1, stored_coord=(9,29))
+[MATRIX] Release at (9, 29) - cells cleared: (8-10, 28-30)
+[FSM d23] Cycle 153: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 154: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,21) → collision=0
+[MATRIX] Lock at (32, 21) - cells set: (31-33, 20-22)
+[FSM d23] Cycle 155: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,21) → dispatch to worker
+[Dispatcher d23] Cycle 1555: Issued syndr (32, 21) to worker[0]
+[Dispatcher d23] Cycle 1605: Worker[1] DONE (active=1, stored_coord=(37,13))
+[MATRIX] Release at (37, 13) - cells cleared: (36-38, 12-14)
+[FSM d23] Cycle 163: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 164: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,46) → collision=0
+[MATRIX] Lock at (5, 46) - cells set: (4-6, 45-46)
+[FSM d23] Cycle 165: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,46) → dispatch to worker
+[Dispatcher d23] Cycle 1655: Issued syndr (5, 46) to worker[1]
+[Dispatcher d23] Cycle 1705: Worker[0] DONE (active=1, stored_coord=(32,21))
+[MATRIX] Release at (32, 21) - cells cleared: (31-33, 20-22)
+[FSM d23] Cycle 173: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 174: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,13) → collision=0
+[MATRIX] Lock at (37, 13) - cells set: (36-38, 12-14)
+[FSM d23] Cycle 175: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,13) → dispatch to worker
+[Dispatcher d23] Cycle 1755: Issued syndr (37, 13) to worker[0]
+[Dispatcher d23] Cycle 1805: Worker[1] DONE (active=1, stored_coord=(5,46))
+[MATRIX] Release at (5, 46) - cells cleared: (4-6, 45-46)
+[FSM d23] Cycle 183: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 184: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (23,25) → collision=0
+[MATRIX] Lock at (23, 25) - cells set: (22-24, 24-26)
+[FSM d23] Cycle 185: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (23,25) → dispatch to worker
+[Dispatcher d23] Cycle 1855: Issued syndr (23, 25) to worker[1]
+[Dispatcher d23] Cycle 1905: Worker[0] DONE (active=1, stored_coord=(37,13))
+[MATRIX] Release at (37, 13) - cells cleared: (36-38, 12-14)
+[FSM d23] Cycle 193: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 194: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,29) → collision=0
+[MATRIX] Lock at (18, 29) - cells set: (17-19, 28-30)
+[FSM d23] Cycle 195: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,29) → dispatch to worker
+[Dispatcher d23] Cycle 1955: Issued syndr (18, 29) to worker[0]
+[Dispatcher d23] Cycle 2005: Worker[1] DONE (active=1, stored_coord=(23,25))
+[MATRIX] Release at (23, 25) - cells cleared: (22-24, 24-26)
+[FSM d23] Cycle 203: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 204: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (23,29) → collision=0
+[MATRIX] Lock at (23, 29) - cells set: (22-24, 28-30)
+[FSM d23] Cycle 205: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (23,29) → dispatch to worker
+[Dispatcher d23] Cycle 2055: Issued syndr (23, 29) to worker[1]
+[Dispatcher d23] Cycle 2105: Worker[0] DONE (active=1, stored_coord=(18,29))
+[MATRIX] Release at (18, 29) - cells cleared: (17-19, 28-30)
+[FSM d23] Cycle 213: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 214: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (0,33) → collision=0
+[MATRIX] Lock at (0, 33) - cells set: (0-1, 32-34)
+[FSM d23] Cycle 215: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (0,33) → dispatch to worker
+[Dispatcher d23] Cycle 2155: Issued syndr (0, 33) to worker[0]
+[Dispatcher d23] Cycle 2205: Worker[1] DONE (active=1, stored_coord=(23,29))
+[MATRIX] Release at (23, 29) - cells cleared: (22-24, 28-30)
+[FSM d23] Cycle 223: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 224: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (46,38) → collision=0
+[MATRIX] Lock at (46, 38) - cells set: (45-46, 37-39)
+[FSM d23] Cycle 225: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (46,38) → dispatch to worker
+[Dispatcher d23] Cycle 2255: Issued syndr (46, 38) to worker[1]
+[Dispatcher d23] Cycle 2305: Worker[0] DONE (active=1, stored_coord=(0,33))
+[MATRIX] Release at (0, 33) - cells cleared: (0-1, 32-34)
+[FSM d23] Cycle 233: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 234: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,46) → collision=0
+[MATRIX] Lock at (5, 46) - cells set: (4-6, 45-46)
+[FSM d23] Cycle 235: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,46) → dispatch to worker
+[Dispatcher d23] Cycle 2355: Issued syndr (5, 46) to worker[0]
+[Dispatcher d23] Cycle 2405: Worker[1] DONE (active=1, stored_coord=(46,38))
+[MATRIX] Release at (46, 38) - cells cleared: (45-46, 37-39)
+[FSM d23] Cycle 243: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 244: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,8) → collision=0
+[MATRIX] Lock at (32, 8) - cells set: (31-33, 7-9)
+[FSM d23] Cycle 245: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,8) → dispatch to worker
+[Dispatcher d23] Cycle 2455: Issued syndr (32, 8) to worker[1]
+[Dispatcher d23] Cycle 2505: Worker[0] DONE (active=1, stored_coord=(5,46))
+[MATRIX] Release at (5, 46) - cells cleared: (4-6, 45-46)
+[FSM d23] Cycle 253: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 254: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,25) → collision=0
+[MATRIX] Lock at (18, 25) - cells set: (17-19, 24-26)
+[FSM d23] Cycle 255: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,25) → dispatch to worker
+[Dispatcher d23] Cycle 2555: Issued syndr (18, 25) to worker[0]
+[Dispatcher d23] Cycle 2605: Worker[1] DONE (active=1, stored_coord=(32,8))
+[MATRIX] Release at (32, 8) - cells cleared: (31-33, 7-9)
+[FSM d23] Cycle 263: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 264: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (46,38) → collision=0
+[MATRIX] Lock at (46, 38) - cells set: (45-46, 37-39)
+[FSM d23] Cycle 265: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (46,38) → dispatch to worker
+[Dispatcher d23] Cycle 2655: Issued syndr (46, 38) to worker[1]
+[Dispatcher d23] Cycle 2705: Worker[0] DONE (active=1, stored_coord=(18,25))
+[MATRIX] Release at (18, 25) - cells cleared: (17-19, 24-26)
+[FSM d23] Cycle 273: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 274: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,8) → collision=0
+[MATRIX] Lock at (32, 8) - cells set: (31-33, 7-9)
+[FSM d23] Cycle 275: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,8) → dispatch to worker
+[Dispatcher d23] Cycle 2755: Issued syndr (32, 8) to worker[0]
+[Dispatcher d23] Cycle 2805: Worker[1] DONE (active=1, stored_coord=(46,38))
+[MATRIX] Release at (46, 38) - cells cleared: (45-46, 37-39)
+[FSM d23] Cycle 283: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 284: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,38) → collision=0
+[MATRIX] Lock at (32, 38) - cells set: (31-33, 37-39)
+[FSM d23] Cycle 285: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,38) → dispatch to worker
+[Dispatcher d23] Cycle 2855: Issued syndr (32, 38) to worker[1]
+[Dispatcher d23] Cycle 2905: Worker[0] DONE (active=1, stored_coord=(32,8))
+[MATRIX] Release at (32, 8) - cells cleared: (31-33, 7-9)
+[FSM d23] Cycle 293: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 294: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,42) → collision=0
+[MATRIX] Lock at (37, 42) - cells set: (36-38, 41-43)
+[FSM d23] Cycle 295: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,42) → dispatch to worker
+[Dispatcher d23] Cycle 2955: Issued syndr (37, 42) to worker[0]
+[Dispatcher d23] Cycle 3005: Worker[1] DONE (active=1, stored_coord=(32,38))
+[MATRIX] Release at (32, 38) - cells cleared: (31-33, 37-39)
+[FSM d23] Cycle 303: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 304: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (23,42) → collision=0
+[MATRIX] Lock at (23, 42) - cells set: (22-24, 41-43)
+[FSM d23] Cycle 305: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (23,42) → dispatch to worker
+[Dispatcher d23] Cycle 3055: Issued syndr (23, 42) to worker[1]
+[Dispatcher d23] Cycle 3105: Worker[0] DONE (active=1, stored_coord=(37,42))
+[MATRIX] Release at (37, 42) - cells cleared: (36-38, 41-43)
+[FSM d23] Cycle 313: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 314: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 315: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 3155: Issued syndr (28, 38) to worker[0]
+[Dispatcher d23] Cycle 3205: Worker[1] DONE (active=1, stored_coord=(23,42))
+[MATRIX] Release at (23, 42) - cells cleared: (22-24, 41-43)
+[FSM d23] Cycle 323: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 324: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,42) → collision=0
+[MATRIX] Lock at (5, 42) - cells set: (4-6, 41-43)
+[FSM d23] Cycle 325: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,42) → dispatch to worker
+[Dispatcher d23] Cycle 3255: Issued syndr (5, 42) to worker[1]
+[Dispatcher d23] Cycle 3305: Worker[0] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[FSM d23] Cycle 333: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 334: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (23,29) → collision=0
+[MATRIX] Lock at (23, 29) - cells set: (22-24, 28-30)
+[FSM d23] Cycle 335: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (23,29) → dispatch to worker
+[Dispatcher d23] Cycle 3355: Issued syndr (23, 29) to worker[0]
+[Dispatcher d23] Cycle 3405: Worker[1] DONE (active=1, stored_coord=(5,42))
+[MATRIX] Release at (5, 42) - cells cleared: (4-6, 41-43)
+[FSM d23] Cycle 343: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 344: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,33) → collision=0
+[MATRIX] Lock at (0, 33) - cells set: (0-1, 32-34)
+[FSM d23] Cycle 345: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,33) → dispatch to worker
+[Dispatcher d23] Cycle 3455: Issued syndr (0, 33) to worker[1]
+[Dispatcher d23] Cycle 3505: Worker[0] DONE (active=1, stored_coord=(23,29))
+[MATRIX] Release at (23, 29) - cells cleared: (22-24, 28-30)
+[FSM d23] Cycle 353: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 354: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,42) → collision=0
+[MATRIX] Lock at (5, 42) - cells set: (4-6, 41-43)
+[FSM d23] Cycle 355: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,42) → dispatch to worker
+[Dispatcher d23] Cycle 3555: Issued syndr (5, 42) to worker[0]
+[Dispatcher d23] Cycle 3605: Worker[1] DONE (active=1, stored_coord=(0,33))
+[MATRIX] Release at (0, 33) - cells cleared: (0-1, 32-34)
+[FSM d23] Cycle 363: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 364: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,29) → collision=0
+[MATRIX] Lock at (14, 29) - cells set: (13-15, 28-30)
+[FSM d23] Cycle 365: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,29) → dispatch to worker
+[Dispatcher d23] Cycle 3655: Issued syndr (14, 29) to worker[1]
+[Dispatcher d23] Cycle 3705: Worker[0] DONE (active=1, stored_coord=(5,42))
+[MATRIX] Release at (5, 42) - cells cleared: (4-6, 41-43)
+[FSM d23] Cycle 373: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 374: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (23,29) → collision=0
+[MATRIX] Lock at (23, 29) - cells set: (22-24, 28-30)
+[FSM d23] Cycle 375: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (23,29) → dispatch to worker
+[Dispatcher d23] Cycle 3755: Issued syndr (23, 29) to worker[0]
+[Dispatcher d23] Cycle 3805: Worker[1] DONE (active=1, stored_coord=(14,29))
+[MATRIX] Release at (14, 29) - cells cleared: (13-15, 28-30)
+[FSM d23] Cycle 383: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 384: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,33) → collision=0
+[MATRIX] Lock at (0, 33) - cells set: (0-1, 32-34)
+[FSM d23] Cycle 385: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,33) → dispatch to worker
+[Dispatcher d23] Cycle 3855: Issued syndr (0, 33) to worker[1]
+[Dispatcher d23] Cycle 3905: Worker[0] DONE (active=1, stored_coord=(23,29))
+[MATRIX] Release at (23, 29) - cells cleared: (22-24, 28-30)
+[FSM d23] Cycle 393: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 394: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,29) → collision=0
+[MATRIX] Lock at (14, 29) - cells set: (13-15, 28-30)
+[FSM d23] Cycle 395: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,29) → dispatch to worker
+[Dispatcher d23] Cycle 3955: Issued syndr (14, 29) to worker[0]
+[Dispatcher d23] Cycle 4005: Worker[1] DONE (active=1, stored_coord=(0,33))
+[MATRIX] Release at (0, 33) - cells cleared: (0-1, 32-34)
+[FSM d23] Cycle 403: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 404: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,25) → collision=0
+[MATRIX] Lock at (14, 25) - cells set: (13-15, 24-26)
+[FSM d23] Cycle 405: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,25) → dispatch to worker
+[Dispatcher d23] Cycle 4055: Issued syndr (14, 25) to worker[1]
+[Dispatcher d23] Cycle 4105: Worker[0] DONE (active=1, stored_coord=(14,29))
+[MATRIX] Release at (14, 29) - cells cleared: (13-15, 28-30)
+[FSM d23] Cycle 413: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 414: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,29) → collision=0
+[MATRIX] Lock at (9, 29) - cells set: (8-10, 28-30)
+[FSM d23] Cycle 415: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,29) → dispatch to worker
+[Dispatcher d23] Cycle 4155: Issued syndr (9, 29) to worker[0]
+[Dispatcher d23] Cycle 4205: Worker[1] DONE (active=1, stored_coord=(14,25))
+[MATRIX] Release at (14, 25) - cells cleared: (13-15, 24-26)
+[FSM d23] Cycle 423: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 424: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,17) → collision=0
+[MATRIX] Lock at (28, 17) - cells set: (27-29, 16-18)
+[FSM d23] Cycle 425: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,17) → dispatch to worker
+[Dispatcher d23] Cycle 4255: Issued syndr (28, 17) to worker[1]
+[Dispatcher d23] Cycle 4305: Worker[0] DONE (active=1, stored_coord=(9,29))
+[MATRIX] Release at (9, 29) - cells cleared: (8-10, 28-30)
+[FSM d23] Cycle 433: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 434: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,21) → collision=0
+[MATRIX] Lock at (14, 21) - cells set: (13-15, 20-22)
+[FSM d23] Cycle 435: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,21) → dispatch to worker
+[Dispatcher d23] Cycle 4355: Issued syndr (14, 21) to worker[0]
+[Dispatcher d23] Cycle 4405: Worker[1] DONE (active=1, stored_coord=(28,17))
+[MATRIX] Release at (28, 17) - cells cleared: (27-29, 16-18)
+[FSM d23] Cycle 443: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 444: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,25) → collision=0
+[MATRIX] Lock at (9, 25) - cells set: (8-10, 24-26)
+[FSM d23] Cycle 445: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,25) → dispatch to worker
+[Dispatcher d23] Cycle 4455: Issued syndr (9, 25) to worker[1]
+[Dispatcher d23] Cycle 4505: Worker[0] DONE (active=1, stored_coord=(14,21))
+[MATRIX] Release at (14, 21) - cells cleared: (13-15, 20-22)
+[FSM d23] Cycle 453: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 454: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,25) → collision=0
+[MATRIX] Lock at (14, 25) - cells set: (13-15, 24-26)
+[FSM d23] Cycle 455: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,25) → dispatch to worker
+[Dispatcher d23] Cycle 4555: Issued syndr (14, 25) to worker[0]
+[Dispatcher d23] Cycle 4605: Worker[1] DONE (active=1, stored_coord=(9,25))
+[MATRIX] Release at (9, 25) - cells cleared: (8-10, 24-26)
+[FSM d23] Cycle 463: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 464: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (41,33) → collision=0
+[MATRIX] Lock at (41, 33) - cells set: (40-42, 32-34)
+[FSM d23] Cycle 465: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (41,33) → dispatch to worker
+[Dispatcher d23] Cycle 4655: Issued syndr (41, 33) to worker[1]
+[Dispatcher d23] Cycle 4705: Worker[0] DONE (active=1, stored_coord=(14,25))
+[MATRIX] Release at (14, 25) - cells cleared: (13-15, 24-26)
+[FSM d23] Cycle 473: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 474: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,17) → collision=0
+[MATRIX] Lock at (28, 17) - cells set: (27-29, 16-18)
+[FSM d23] Cycle 475: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,17) → dispatch to worker
+[Dispatcher d23] Cycle 4755: Issued syndr (28, 17) to worker[0]
+[Dispatcher d23] Cycle 4805: Worker[1] DONE (active=1, stored_coord=(41,33))
+[MATRIX] Release at (41, 33) - cells cleared: (40-42, 32-34)
+[FSM d23] Cycle 483: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 484: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,21) → collision=0
+[MATRIX] Lock at (9, 21) - cells set: (8-10, 20-22)
+[FSM d23] Cycle 485: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,21) → dispatch to worker
+[Dispatcher d23] Cycle 4855: Issued syndr (9, 21) to worker[1]
+[Dispatcher d23] Cycle 4905: Worker[0] DONE (active=1, stored_coord=(28,17))
+[MATRIX] Release at (28, 17) - cells cleared: (27-29, 16-18)
+[FSM d23] Cycle 493: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 494: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (41,33) → collision=0
+[MATRIX] Lock at (41, 33) - cells set: (40-42, 32-34)
+[FSM d23] Cycle 495: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (41,33) → dispatch to worker
+[Dispatcher d23] Cycle 4955: Issued syndr (41, 33) to worker[0]
+[Dispatcher d23] Cycle 5005: Worker[1] DONE (active=1, stored_coord=(9,21))
+[MATRIX] Release at (9, 21) - cells cleared: (8-10, 20-22)
+[FSM d23] Cycle 503: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 504: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,8) → collision=0
+[MATRIX] Lock at (14, 8) - cells set: (13-15, 7-9)
+[FSM d23] Cycle 505: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,8) → dispatch to worker
+[Dispatcher d23] Cycle 5055: Issued syndr (14, 8) to worker[1]
+[Dispatcher d23] Cycle 5105: Worker[0] DONE (active=1, stored_coord=(41,33))
+[MATRIX] Release at (41, 33) - cells cleared: (40-42, 32-34)
+[FSM d23] Cycle 513: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 514: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,13) → collision=0
+[MATRIX] Lock at (18, 13) - cells set: (17-19, 12-14)
+[FSM d23] Cycle 515: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,13) → dispatch to worker
+[Dispatcher d23] Cycle 5155: Issued syndr (18, 13) to worker[0]
+[Dispatcher d23] Cycle 5205: Worker[1] DONE (active=1, stored_coord=(14,8))
+[MATRIX] Release at (14, 8) - cells cleared: (13-15, 7-9)
+[FSM d23] Cycle 523: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 524: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,21) → collision=0
+[MATRIX] Lock at (18, 21) - cells set: (17-19, 20-22)
+[FSM d23] Cycle 525: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,21) → dispatch to worker
+[Dispatcher d23] Cycle 5255: Issued syndr (18, 21) to worker[1]
+[Dispatcher d23] Cycle 5305: Worker[0] DONE (active=1, stored_coord=(18,13))
+[MATRIX] Release at (18, 13) - cells cleared: (17-19, 12-14)
+[FSM d23] Cycle 533: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 534: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,17) → collision=0
+[MATRIX] Lock at (18, 17) - cells set: (17-19, 16-18)
+[FSM d23] Cycle 535: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,17) → dispatch to worker
+[Dispatcher d23] Cycle 5355: Issued syndr (18, 17) to worker[0]
+[Dispatcher d23] Cycle 5405: Worker[1] DONE (active=1, stored_coord=(18,21))
+[MATRIX] Release at (18, 21) - cells cleared: (17-19, 20-22)
+[FSM d23] Cycle 543: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 544: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,21) → collision=0
+[MATRIX] Lock at (14, 21) - cells set: (13-15, 20-22)
+[FSM d23] Cycle 545: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,21) → dispatch to worker
+[Dispatcher d23] Cycle 5455: Issued syndr (14, 21) to worker[1]
+[Dispatcher d23] Cycle 5505: Worker[0] DONE (active=1, stored_coord=(18,17))
+[MATRIX] Release at (18, 17) - cells cleared: (17-19, 16-18)
+[FSM d23] Cycle 553: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 554: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,21) → collision=0
+[MATRIX] Lock at (18, 21) - cells set: (17-19, 20-22)
+[FSM d23] Cycle 555: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,21) → dispatch to worker
+[Dispatcher d23] Cycle 5555: Issued syndr (18, 21) to worker[0]
+[Dispatcher d23] Cycle 5605: Worker[1] DONE (active=1, stored_coord=(14,21))
+[MATRIX] Release at (14, 21) - cells cleared: (13-15, 20-22)
+[FSM d23] Cycle 563: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 564: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,4) → collision=0
+[MATRIX] Lock at (18, 4) - cells set: (17-19, 3-5)
+[FSM d23] Cycle 565: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,4) → dispatch to worker
+[Dispatcher d23] Cycle 5655: Issued syndr (18, 4) to worker[1]
+[Dispatcher d23] Cycle 5705: Worker[0] DONE (active=1, stored_coord=(18,21))
+[MATRIX] Release at (18, 21) - cells cleared: (17-19, 20-22)
+[FSM d23] Cycle 573: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 574: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,8) → collision=0
+[MATRIX] Lock at (18, 8) - cells set: (17-19, 7-9)
+[FSM d23] Cycle 575: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,8) → dispatch to worker
+[Dispatcher d23] Cycle 5755: Issued syndr (18, 8) to worker[0]
+[Dispatcher d23] Cycle 5805: Worker[1] DONE (active=1, stored_coord=(18,4))
+[MATRIX] Release at (18, 4) - cells cleared: (17-19, 3-5)
+[FSM d23] Cycle 583: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 584: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,13) → collision=0
+[MATRIX] Lock at (14, 13) - cells set: (13-15, 12-14)
+[FSM d23] Cycle 585: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,13) → dispatch to worker
+[Dispatcher d23] Cycle 5855: Issued syndr (14, 13) to worker[1]
+[Dispatcher d23] Cycle 5905: Worker[0] DONE (active=1, stored_coord=(18,8))
+[MATRIX] Release at (18, 8) - cells cleared: (17-19, 7-9)
+[FSM d23] Cycle 593: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 594: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,8) → collision=0
+[MATRIX] Lock at (14, 8) - cells set: (13-15, 7-9)
+[FSM d23] Cycle 595: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,8) → dispatch to worker
+[Dispatcher d23] Cycle 5955: Issued syndr (14, 8) to worker[0]
+[Dispatcher d23] Cycle 6005: Worker[1] DONE (active=1, stored_coord=(14,13))
+[MATRIX] Release at (14, 13) - cells cleared: (13-15, 12-14)
+[FSM d23] Cycle 603: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 604: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,42) → collision=0
+[MATRIX] Lock at (32, 42) - cells set: (31-33, 41-43)
+[FSM d23] Cycle 605: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,42) → dispatch to worker
+[Dispatcher d23] Cycle 6055: Issued syndr (32, 42) to worker[1]
+[Dispatcher d23] Cycle 6105: Worker[0] DONE (active=1, stored_coord=(14,8))
+[MATRIX] Release at (14, 8) - cells cleared: (13-15, 7-9)
+[FSM d23] Cycle 613: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 614: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,46) → collision=0
+[MATRIX] Lock at (32, 46) - cells set: (31-33, 45-46)
+[FSM d23] Cycle 615: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,46) → dispatch to worker
+[Dispatcher d23] Cycle 6155: Issued syndr (32, 46) to worker[0]
+[Dispatcher d23] Cycle 6205: Worker[1] DONE (active=1, stored_coord=(32,42))
+[MATRIX] Release at (32, 42) - cells cleared: (31-33, 41-43)
+[FSM d23] Cycle 623: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 624: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,4) → collision=0
+[MATRIX] Lock at (32, 4) - cells set: (31-33, 3-5)
+[FSM d23] Cycle 625: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,4) → dispatch to worker
+[Dispatcher d23] Cycle 6255: Issued syndr (32, 4) to worker[1]
+[Dispatcher d23] Cycle 6305: Worker[0] DONE (active=1, stored_coord=(32,46))
+[MATRIX] Release at (32, 46) - cells cleared: (31-33, 45-46)
+[FSM d23] Cycle 633: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 634: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,4) → collision=0
+[MATRIX] Lock at (37, 4) - cells set: (36-38, 3-5)
+[FSM d23] Cycle 635: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,4) → dispatch to worker
+[Dispatcher d23] Cycle 6355: Issued syndr (37, 4) to worker[0]
+[Dispatcher d23] Cycle 6405: Worker[1] DONE (active=1, stored_coord=(32,4))
+[MATRIX] Release at (32, 4) - cells cleared: (31-33, 3-5)
+[FSM d23] Cycle 643: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 644: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (23,25) → collision=0
+[MATRIX] Lock at (23, 25) - cells set: (22-24, 24-26)
+[FSM d23] Cycle 645: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (23,25) → dispatch to worker
+[Dispatcher d23] Cycle 6455: Issued syndr (23, 25) to worker[1]
+[Dispatcher d23] Cycle 6505: Worker[0] DONE (active=1, stored_coord=(37,4))
+[MATRIX] Release at (37, 4) - cells cleared: (36-38, 3-5)
+[FSM d23] Cycle 653: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 654: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,29) → collision=0
+[MATRIX] Lock at (18, 29) - cells set: (17-19, 28-30)
+[FSM d23] Cycle 655: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,29) → dispatch to worker
+[Dispatcher d23] Cycle 6555: Issued syndr (18, 29) to worker[0]
+[Dispatcher d23] Cycle 6605: Worker[1] DONE (active=1, stored_coord=(23,25))
+[MATRIX] Release at (23, 25) - cells cleared: (22-24, 24-26)
+[FSM d23] Cycle 663: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 664: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,33) → collision=0
+[MATRIX] Lock at (18, 33) - cells set: (17-19, 32-34)
+[FSM d23] Cycle 665: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,33) → dispatch to worker
+[Dispatcher d23] Cycle 6655: Issued syndr (18, 33) to worker[1]
+[Dispatcher d23] Cycle 6705: Worker[0] DONE (active=1, stored_coord=(18,29))
+[MATRIX] Release at (18, 29) - cells cleared: (17-19, 28-30)
+[FSM d23] Cycle 673: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 674: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,38) → collision=0
+[MATRIX] Lock at (18, 38) - cells set: (17-19, 37-39)
+[FSM d23] Cycle 675: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,38) → dispatch to worker
+[Dispatcher d23] Cycle 6755: Issued syndr (18, 38) to worker[0]
+[Dispatcher d23] Cycle 6805: Worker[1] DONE (active=1, stored_coord=(18,33))
+[MATRIX] Release at (18, 33) - cells cleared: (17-19, 32-34)
+[FSM d23] Cycle 683: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 684: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,38) → collision=0
+[MATRIX] Lock at (32, 38) - cells set: (31-33, 37-39)
+[FSM d23] Cycle 685: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,38) → dispatch to worker
+[Dispatcher d23] Cycle 6855: Issued syndr (32, 38) to worker[1]
+[Dispatcher d23] Cycle 6905: Worker[0] DONE (active=1, stored_coord=(18,38))
+[MATRIX] Release at (18, 38) - cells cleared: (17-19, 37-39)
+[FSM d23] Cycle 693: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 694: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,4) → collision=0
+[MATRIX] Lock at (32, 4) - cells set: (31-33, 3-5)
+[FSM d23] Cycle 695: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,4) → dispatch to worker
+[Dispatcher d23] Cycle 6955: Issued syndr (32, 4) to worker[0]
+[Dispatcher d23] Cycle 7005: Worker[1] DONE (active=1, stored_coord=(32,38))
+[MATRIX] Release at (32, 38) - cells cleared: (31-33, 37-39)
+[FSM d23] Cycle 703: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 704: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,25) → collision=0
+[MATRIX] Lock at (18, 25) - cells set: (17-19, 24-26)
+[FSM d23] Cycle 705: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,25) → dispatch to worker
+[Dispatcher d23] Cycle 7055: Issued syndr (18, 25) to worker[1]
+[Dispatcher d23] Cycle 7105: Worker[0] DONE (active=1, stored_coord=(32,4))
+[MATRIX] Release at (32, 4) - cells cleared: (31-33, 3-5)
+[FSM d23] Cycle 713: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 714: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,42) → collision=0
+[MATRIX] Lock at (14, 42) - cells set: (13-15, 41-43)
+[FSM d23] Cycle 715: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,42) → dispatch to worker
+[Dispatcher d23] Cycle 7155: Issued syndr (14, 42) to worker[0]
+[Dispatcher d23] Cycle 7205: Worker[1] DONE (active=1, stored_coord=(18,25))
+[MATRIX] Release at (18, 25) - cells cleared: (17-19, 24-26)
+[FSM d23] Cycle 723: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 724: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (37,25) → collision=0
+[MATRIX] Lock at (37, 25) - cells set: (36-38, 24-26)
+[FSM d23] Cycle 725: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (37,25) → dispatch to worker
+[Dispatcher d23] Cycle 7255: Issued syndr (37, 25) to worker[1]
+[Dispatcher d23] Cycle 7305: Worker[0] DONE (active=1, stored_coord=(14,42))
+[MATRIX] Release at (14, 42) - cells cleared: (13-15, 41-43)
+[FSM d23] Cycle 733: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 734: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (37,25) → collision=1
+[FSM d23] Cycle 735: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 736: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (37,25) → collision=1
+[FSM d23] Cycle 737: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 738: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (37,25) → collision=1
+[FSM d23] Cycle 739: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 740: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (37,25) → collision=1
+[Dispatcher d23] Cycle 7405: Worker[1] DONE (active=1, stored_coord=(37,25))
+[MATRIX] Release at (37, 25) - cells cleared: (36-38, 24-26)
+[FSM d23] Cycle 741: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Cycle 742: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (37,25) → collision=0
+[MATRIX] Lock at (37, 25) - cells set: (36-38, 24-26)
+[FSM d23] Cycle 743: FSM_ISSUE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (37,25) → dispatch to worker
+[Dispatcher d23] Cycle 7435: Issued syndr (37, 25) to worker[0]
+[FSM d23] Cycle 744: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,42) → collision=0
+[MATRIX] Lock at (14, 42) - cells set: (13-15, 41-43)
+[FSM d23] Cycle 745: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,42) → dispatch to worker
+[Dispatcher d23] Cycle 7455: Issued syndr (14, 42) to worker[1]
+[FSM d23] Cycle 753: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1100)
+[FSM d23] Cycle 754: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1100)
+[FSM d23] Collision check: (28,21) → collision=0
+[MATRIX] Lock at (28, 21) - cells set: (27-29, 20-22)
+[FSM d23] Cycle 755: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1100)
+[FSM d23] Lock issued: (28,21) → dispatch to worker
+[Dispatcher d23] Cycle 7555: Issued syndr (28, 21) to worker[2]
+[Dispatcher d23] Cycle 7585: Worker[0] DONE (active=1, stored_coord=(37,25))
+[MATRIX] Release at (37, 25) - cells cleared: (36-38, 24-26)
+[Dispatcher d23] Cycle 7605: Worker[1] DONE (active=1, stored_coord=(14,42))
+[MATRIX] Release at (14, 42) - cells cleared: (13-15, 41-43)
+[FSM d23] Cycle 763: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1011)
+[FSM d23] Cycle 764: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1011)
+[FSM d23] Collision check: (28,21) → collision=1
+[FSM d23] Cycle 765: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Cycle 766: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1011)
+[FSM d23] Collision check: (28,21) → collision=1
+[FSM d23] Cycle 767: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Cycle 768: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1011)
+[FSM d23] Collision check: (28,21) → collision=1
+[FSM d23] Cycle 769: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Cycle 770: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1011)
+[FSM d23] Collision check: (28,21) → collision=1
+[Dispatcher d23] Cycle 7705: Worker[2] DONE (active=1, stored_coord=(28,21))
+[MATRIX] Release at (28, 21) - cells cleared: (27-29, 20-22)
+[FSM d23] Cycle 771: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Cycle 772: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (28,21) → collision=0
+[MATRIX] Lock at (28, 21) - cells set: (27-29, 20-22)
+[FSM d23] Cycle 773: FSM_ISSUE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (28,21) → dispatch to worker
+[Dispatcher d23] Cycle 7735: Issued syndr (28, 21) to worker[0]
+[FSM d23] Cycle 774: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,29) → collision=0
+[MATRIX] Lock at (9, 29) - cells set: (8-10, 28-30)
+[FSM d23] Cycle 775: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,29) → dispatch to worker
+[Dispatcher d23] Cycle 7755: Issued syndr (9, 29) to worker[1]
+[FSM d23] Cycle 783: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1100)
+[FSM d23] Cycle 784: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1100)
+[FSM d23] Collision check: (14,33) → collision=0
+[MATRIX] Lock at (14, 33) - cells set: (13-15, 32-34)
+[FSM d23] Cycle 785: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1100)
+[FSM d23] Lock issued: (14,33) → dispatch to worker
+[Dispatcher d23] Cycle 7855: Issued syndr (14, 33) to worker[2]
+[Dispatcher d23] Cycle 7885: Worker[0] DONE (active=1, stored_coord=(28,21))
+[MATRIX] Release at (28, 21) - cells cleared: (27-29, 20-22)
+[Dispatcher d23] Cycle 7905: Worker[1] DONE (active=1, stored_coord=(9,29))
+[MATRIX] Release at (9, 29) - cells cleared: (8-10, 28-30)
+[FSM d23] Cycle 793: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1011)
+[FSM d23] Cycle 794: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1011)
+[FSM d23] Collision check: (28,42) → collision=0
+[MATRIX] Lock at (28, 42) - cells set: (27-29, 41-43)
+[FSM d23] Cycle 795: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Lock issued: (28,42) → dispatch to worker
+[Dispatcher d23] Cycle 7955: Issued syndr (28, 42) to worker[0]
+[Dispatcher d23] Cycle 8005: Worker[2] DONE (active=1, stored_coord=(14,33))
+[MATRIX] Release at (14, 33) - cells cleared: (13-15, 32-34)
+[FSM d23] Cycle 803: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 804: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=1
+[FSM d23] Cycle 805: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Cycle 806: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=1
+[FSM d23] Cycle 807: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Cycle 808: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=1
+[FSM d23] Cycle 809: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Cycle 810: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=1
+[Dispatcher d23] Cycle 8105: Worker[0] DONE (active=1, stored_coord=(28,42))
+[MATRIX] Release at (28, 42) - cells cleared: (27-29, 41-43)
+[FSM d23] Cycle 811: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Cycle 812: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (28,42) → collision=0
+[MATRIX] Lock at (28, 42) - cells set: (27-29, 41-43)
+[FSM d23] Cycle 813: FSM_ISSUE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (28,42) → dispatch to worker
+[Dispatcher d23] Cycle 8135: Issued syndr (28, 42) to worker[0]
+[FSM d23] Cycle 814: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,25) → collision=0
+[MATRIX] Lock at (28, 25) - cells set: (27-29, 24-26)
+[FSM d23] Cycle 815: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,25) → dispatch to worker
+[Dispatcher d23] Cycle 8155: Issued syndr (28, 25) to worker[1]
+[FSM d23] Cycle 823: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1100)
+[FSM d23] Cycle 824: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1100)
+[FSM d23] Collision check: (32,25) → collision=0
+[MATRIX] Lock at (32, 25) - cells set: (31-33, 24-26)
+[FSM d23] Cycle 825: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1100)
+[FSM d23] Lock issued: (32,25) → dispatch to worker
+[Dispatcher d23] Cycle 8255: Issued syndr (32, 25) to worker[2]
+[Dispatcher d23] Cycle 8285: Worker[0] DONE (active=1, stored_coord=(28,42))
+[MATRIX] Release at (28, 42) - cells cleared: (27-29, 41-43)
+[Dispatcher d23] Cycle 8305: Worker[1] DONE (active=1, stored_coord=(28,25))
+[MATRIX] Release at (28, 25) - cells cleared: (27-29, 24-26)
+[FSM d23] Cycle 833: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1011)
+[FSM d23] Cycle 834: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1011)
+[FSM d23] Collision check: (28,29) → collision=0
+[MATRIX] Lock at (28, 29) - cells set: (27-29, 28-30)
+[FSM d23] Cycle 835: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Lock issued: (28,29) → dispatch to worker
+[Dispatcher d23] Cycle 8355: Issued syndr (28, 29) to worker[0]
+[Dispatcher d23] Cycle 8405: Worker[2] DONE (active=1, stored_coord=(32,25))
+[MATRIX] Release at (32, 25) - cells cleared: (31-33, 24-26)
+[FSM d23] Cycle 843: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 844: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,29) → collision=0
+[MATRIX] Lock at (32, 29) - cells set: (31-33, 28-30)
+[FSM d23] Cycle 845: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,29) → dispatch to worker
+[Dispatcher d23] Cycle 8455: Issued syndr (32, 29) to worker[1]
+[Dispatcher d23] Cycle 8505: Worker[0] DONE (active=1, stored_coord=(28,29))
+[MATRIX] Release at (28, 29) - cells cleared: (27-29, 28-30)
+[FSM d23] Cycle 853: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 854: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,8) → collision=0
+[MATRIX] Lock at (14, 8) - cells set: (13-15, 7-9)
+[FSM d23] Cycle 855: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,8) → dispatch to worker
+[Dispatcher d23] Cycle 8555: Issued syndr (14, 8) to worker[0]
+[Dispatcher d23] Cycle 8605: Worker[1] DONE (active=1, stored_coord=(32,29))
+[MATRIX] Release at (32, 29) - cells cleared: (31-33, 28-30)
+[FSM d23] Cycle 863: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 864: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,17) → collision=0
+[MATRIX] Lock at (9, 17) - cells set: (8-10, 16-18)
+[FSM d23] Cycle 865: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,17) → dispatch to worker
+[Dispatcher d23] Cycle 8655: Issued syndr (9, 17) to worker[1]
+[Dispatcher d23] Cycle 8705: Worker[0] DONE (active=1, stored_coord=(14,8))
+[MATRIX] Release at (14, 8) - cells cleared: (13-15, 7-9)
+[FSM d23] Cycle 873: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 874: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,8) → collision=0
+[MATRIX] Lock at (9, 8) - cells set: (8-10, 7-9)
+[FSM d23] Cycle 875: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,8) → dispatch to worker
+[Dispatcher d23] Cycle 8755: Issued syndr (9, 8) to worker[0]
+[Dispatcher d23] Cycle 8805: Worker[1] DONE (active=1, stored_coord=(9,17))
+[MATRIX] Release at (9, 17) - cells cleared: (8-10, 16-18)
+[FSM d23] Cycle 883: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 884: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,13) → collision=0
+[MATRIX] Lock at (9, 13) - cells set: (8-10, 12-14)
+[FSM d23] Cycle 885: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,13) → dispatch to worker
+[Dispatcher d23] Cycle 8855: Issued syndr (9, 13) to worker[1]
+[Dispatcher d23] Cycle 8905: Worker[0] DONE (active=1, stored_coord=(9,8))
+[MATRIX] Release at (9, 8) - cells cleared: (8-10, 7-9)
+[FSM d23] Cycle 893: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 894: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,25) → collision=0
+[MATRIX] Lock at (37, 25) - cells set: (36-38, 24-26)
+[FSM d23] Cycle 895: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,25) → dispatch to worker
+[Dispatcher d23] Cycle 8955: Issued syndr (37, 25) to worker[0]
+[Dispatcher d23] Cycle 9005: Worker[1] DONE (active=1, stored_coord=(9,13))
+[MATRIX] Release at (9, 13) - cells cleared: (8-10, 12-14)
+[FSM d23] Cycle 903: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 904: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,29) → collision=0
+[MATRIX] Lock at (28, 29) - cells set: (27-29, 28-30)
+[FSM d23] Cycle 905: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,29) → dispatch to worker
+[Dispatcher d23] Cycle 9055: Issued syndr (28, 29) to worker[1]
+[Dispatcher d23] Cycle 9105: Worker[0] DONE (active=1, stored_coord=(37,25))
+[MATRIX] Release at (37, 25) - cells cleared: (36-38, 24-26)
+[FSM d23] Cycle 913: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 914: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,29) → collision=0
+[MATRIX] Lock at (32, 29) - cells set: (31-33, 28-30)
+[FSM d23] Cycle 915: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,29) → dispatch to worker
+[Dispatcher d23] Cycle 9155: Issued syndr (32, 29) to worker[0]
+[Dispatcher d23] Cycle 9205: Worker[1] DONE (active=1, stored_coord=(28,29))
+[MATRIX] Release at (28, 29) - cells cleared: (27-29, 28-30)
+[FSM d23] Cycle 923: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 924: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,29) → collision=0
+[MATRIX] Lock at (28, 29) - cells set: (27-29, 28-30)
+[FSM d23] Cycle 925: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,29) → dispatch to worker
+[Dispatcher d23] Cycle 9255: Issued syndr (28, 29) to worker[1]
+[Dispatcher d23] Cycle 9305: Worker[0] DONE (active=1, stored_coord=(32,29))
+[MATRIX] Release at (32, 29) - cells cleared: (31-33, 28-30)
+[FSM d23] Cycle 933: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 934: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,42) → collision=0
+[MATRIX] Lock at (32, 42) - cells set: (31-33, 41-43)
+[FSM d23] Cycle 935: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,42) → dispatch to worker
+[Dispatcher d23] Cycle 9355: Issued syndr (32, 42) to worker[0]
+[Dispatcher d23] Cycle 9405: Worker[1] DONE (active=1, stored_coord=(28,29))
+[MATRIX] Release at (28, 29) - cells cleared: (27-29, 28-30)
+[FSM d23] Cycle 943: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 944: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,4) → collision=0
+[MATRIX] Lock at (5, 4) - cells set: (4-6, 3-5)
+[FSM d23] Cycle 945: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,4) → dispatch to worker
+[Dispatcher d23] Cycle 9455: Issued syndr (5, 4) to worker[1]
+[Dispatcher d23] Cycle 9505: Worker[0] DONE (active=1, stored_coord=(32,42))
+[MATRIX] Release at (32, 42) - cells cleared: (31-33, 41-43)
+[FSM d23] Cycle 953: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 954: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,17) → collision=0
+[MATRIX] Lock at (14, 17) - cells set: (13-15, 16-18)
+[FSM d23] Cycle 955: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,17) → dispatch to worker
+[Dispatcher d23] Cycle 9555: Issued syndr (14, 17) to worker[0]
+[Dispatcher d23] Cycle 9605: Worker[1] DONE (active=1, stored_coord=(5,4))
+[MATRIX] Release at (5, 4) - cells cleared: (4-6, 3-5)
+[FSM d23] Cycle 963: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 964: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,17) → collision=0
+[MATRIX] Lock at (18, 17) - cells set: (17-19, 16-18)
+[FSM d23] Cycle 965: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,17) → dispatch to worker
+[Dispatcher d23] Cycle 9655: Issued syndr (18, 17) to worker[1]
+[Dispatcher d23] Cycle 9705: Worker[0] DONE (active=1, stored_coord=(14,17))
+[MATRIX] Release at (14, 17) - cells cleared: (13-15, 16-18)
+[FSM d23] Cycle 973: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 974: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,21) → collision=0
+[MATRIX] Lock at (14, 21) - cells set: (13-15, 20-22)
+[FSM d23] Cycle 975: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,21) → dispatch to worker
+[Dispatcher d23] Cycle 9755: Issued syndr (14, 21) to worker[0]
+[Dispatcher d23] Cycle 9805: Worker[1] DONE (active=1, stored_coord=(18,17))
+[MATRIX] Release at (18, 17) - cells cleared: (17-19, 16-18)
+[FSM d23] Cycle 983: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 984: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,21) → collision=0
+[MATRIX] Lock at (18, 21) - cells set: (17-19, 20-22)
+[FSM d23] Cycle 985: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,21) → dispatch to worker
+[Dispatcher d23] Cycle 9855: Issued syndr (18, 21) to worker[1]
+[Dispatcher d23] Cycle 9905: Worker[0] DONE (active=1, stored_coord=(14,21))
+[MATRIX] Release at (14, 21) - cells cleared: (13-15, 20-22)
+[FSM d23] Cycle 993: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 994: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,4) → collision=0
+[MATRIX] Lock at (5, 4) - cells set: (4-6, 3-5)
+[FSM d23] Cycle 995: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,4) → dispatch to worker
+[Dispatcher d23] Cycle 9955: Issued syndr (5, 4) to worker[0]
+[Dispatcher d23] Cycle 10005: Worker[1] DONE (active=1, stored_coord=(18,21))
+[MATRIX] Release at (18, 21) - cells cleared: (17-19, 20-22)
+[FSM d23] Cycle 1003: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1004: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,13) → collision=0
+[MATRIX] Lock at (32, 13) - cells set: (31-33, 12-14)
+[FSM d23] Cycle 1005: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,13) → dispatch to worker
+[Dispatcher d23] Cycle 10055: Issued syndr (32, 13) to worker[1]
+[Dispatcher d23] Cycle 10105: Worker[0] DONE (active=1, stored_coord=(5,4))
+[MATRIX] Release at (5, 4) - cells cleared: (4-6, 3-5)
+[FSM d23] Cycle 1013: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1014: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,29) → collision=0
+[MATRIX] Lock at (37, 29) - cells set: (36-38, 28-30)
+[FSM d23] Cycle 1015: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,29) → dispatch to worker
+[Dispatcher d23] Cycle 10155: Issued syndr (37, 29) to worker[0]
+[Dispatcher d23] Cycle 10205: Worker[1] DONE (active=1, stored_coord=(32,13))
+[MATRIX] Release at (32, 13) - cells cleared: (31-33, 12-14)
+[FSM d23] Cycle 1023: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1024: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,33) → collision=0
+[MATRIX] Lock at (28, 33) - cells set: (27-29, 32-34)
+[FSM d23] Cycle 1025: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,33) → dispatch to worker
+[Dispatcher d23] Cycle 10255: Issued syndr (28, 33) to worker[1]
+[Dispatcher d23] Cycle 10305: Worker[0] DONE (active=1, stored_coord=(37,29))
+[MATRIX] Release at (37, 29) - cells cleared: (36-38, 28-30)
+[FSM d23] Cycle 1033: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1034: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,33) → collision=0
+[MATRIX] Lock at (32, 33) - cells set: (31-33, 32-34)
+[FSM d23] Cycle 1035: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,33) → dispatch to worker
+[Dispatcher d23] Cycle 10355: Issued syndr (32, 33) to worker[0]
+[Dispatcher d23] Cycle 10405: Worker[1] DONE (active=1, stored_coord=(28,33))
+[MATRIX] Release at (28, 33) - cells cleared: (27-29, 32-34)
+[FSM d23] Cycle 1043: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1044: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,13) → collision=0
+[MATRIX] Lock at (32, 13) - cells set: (31-33, 12-14)
+[FSM d23] Cycle 1045: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,13) → dispatch to worker
+[Dispatcher d23] Cycle 10455: Issued syndr (32, 13) to worker[1]
+[Dispatcher d23] Cycle 10505: Worker[0] DONE (active=1, stored_coord=(32,33))
+[MATRIX] Release at (32, 33) - cells cleared: (31-33, 32-34)
+[FSM d23] Cycle 1053: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1054: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,29) → collision=0
+[MATRIX] Lock at (32, 29) - cells set: (31-33, 28-30)
+[FSM d23] Cycle 1055: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,29) → dispatch to worker
+[Dispatcher d23] Cycle 10555: Issued syndr (32, 29) to worker[0]
+[Dispatcher d23] Cycle 10605: Worker[1] DONE (active=1, stored_coord=(32,13))
+[MATRIX] Release at (32, 13) - cells cleared: (31-33, 12-14)
+[FSM d23] Cycle 1063: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1064: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (41,8) → collision=0
+[MATRIX] Lock at (41, 8) - cells set: (40-42, 7-9)
+[FSM d23] Cycle 1065: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (41,8) → dispatch to worker
+[Dispatcher d23] Cycle 10655: Issued syndr (41, 8) to worker[1]
+[Dispatcher d23] Cycle 10705: Worker[0] DONE (active=1, stored_coord=(32,29))
+[MATRIX] Release at (32, 29) - cells cleared: (31-33, 28-30)
+[FSM d23] Cycle 1073: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1074: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,33) → collision=0
+[MATRIX] Lock at (14, 33) - cells set: (13-15, 32-34)
+[FSM d23] Cycle 1075: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,33) → dispatch to worker
+[Dispatcher d23] Cycle 10755: Issued syndr (14, 33) to worker[0]
+[Dispatcher d23] Cycle 10805: Worker[1] DONE (active=1, stored_coord=(41,8))
+[MATRIX] Release at (41, 8) - cells cleared: (40-42, 7-9)
+[FSM d23] Cycle 1083: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1084: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (41,4) → collision=0
+[MATRIX] Lock at (41, 4) - cells set: (40-42, 3-5)
+[FSM d23] Cycle 1085: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (41,4) → dispatch to worker
+[Dispatcher d23] Cycle 10855: Issued syndr (41, 4) to worker[1]
+[Dispatcher d23] Cycle 10905: Worker[0] DONE (active=1, stored_coord=(14,33))
+[MATRIX] Release at (14, 33) - cells cleared: (13-15, 32-34)
+[FSM d23] Cycle 1093: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1094: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,8) → collision=0
+[MATRIX] Lock at (37, 8) - cells set: (36-38, 7-9)
+[FSM d23] Cycle 1095: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,8) → dispatch to worker
+[Dispatcher d23] Cycle 10955: Issued syndr (37, 8) to worker[0]
+[Dispatcher d23] Cycle 11005: Worker[1] DONE (active=1, stored_coord=(41,4))
+[MATRIX] Release at (41, 4) - cells cleared: (40-42, 3-5)
+[FSM d23] Cycle 1103: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1104: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (41,8) → collision=0
+[MATRIX] Lock at (41, 8) - cells set: (40-42, 7-9)
+[FSM d23] Cycle 1105: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (41,8) → dispatch to worker
+[Dispatcher d23] Cycle 11055: Issued syndr (41, 8) to worker[1]
+[Dispatcher d23] Cycle 11105: Worker[0] DONE (active=1, stored_coord=(37,8))
+[MATRIX] Release at (37, 8) - cells cleared: (36-38, 7-9)
+[FSM d23] Cycle 1113: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1114: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,13) → collision=0
+[MATRIX] Lock at (5, 13) - cells set: (4-6, 12-14)
+[FSM d23] Cycle 1115: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,13) → dispatch to worker
+[Dispatcher d23] Cycle 11155: Issued syndr (5, 13) to worker[0]
+[Dispatcher d23] Cycle 11205: Worker[1] DONE (active=1, stored_coord=(41,8))
+[MATRIX] Release at (41, 8) - cells cleared: (40-42, 7-9)
+[FSM d23] Cycle 1123: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1124: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,17) → collision=0
+[MATRIX] Lock at (9, 17) - cells set: (8-10, 16-18)
+[FSM d23] Cycle 1125: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,17) → dispatch to worker
+[Dispatcher d23] Cycle 11255: Issued syndr (9, 17) to worker[1]
+[Dispatcher d23] Cycle 11305: Worker[0] DONE (active=1, stored_coord=(5,13))
+[MATRIX] Release at (5, 13) - cells cleared: (4-6, 12-14)
+[FSM d23] Cycle 1133: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1134: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (0,25) → collision=0
+[MATRIX] Lock at (0, 25) - cells set: (0-1, 24-26)
+[FSM d23] Cycle 1135: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (0,25) → dispatch to worker
+[Dispatcher d23] Cycle 11355: Issued syndr (0, 25) to worker[0]
+[Dispatcher d23] Cycle 11405: Worker[1] DONE (active=1, stored_coord=(9,17))
+[MATRIX] Release at (9, 17) - cells cleared: (8-10, 16-18)
+[FSM d23] Cycle 1143: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1144: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,25) → collision=0
+[MATRIX] Lock at (5, 25) - cells set: (4-6, 24-26)
+[FSM d23] Cycle 1145: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,25) → dispatch to worker
+[Dispatcher d23] Cycle 11455: Issued syndr (5, 25) to worker[1]
+[Dispatcher d23] Cycle 11505: Worker[0] DONE (active=1, stored_coord=(0,25))
+[MATRIX] Release at (0, 25) - cells cleared: (0-1, 24-26)
+[FSM d23] Cycle 1153: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1154: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (0,29) → collision=0
+[MATRIX] Lock at (0, 29) - cells set: (0-1, 28-30)
+[FSM d23] Cycle 1155: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (0,29) → dispatch to worker
+[Dispatcher d23] Cycle 11555: Issued syndr (0, 29) to worker[0]
+[Dispatcher d23] Cycle 11605: Worker[1] DONE (active=1, stored_coord=(5,25))
+[MATRIX] Release at (5, 25) - cells cleared: (4-6, 24-26)
+[FSM d23] Cycle 1163: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1164: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,29) → collision=0
+[MATRIX] Lock at (5, 29) - cells set: (4-6, 28-30)
+[FSM d23] Cycle 1165: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,29) → dispatch to worker
+[Dispatcher d23] Cycle 11655: Issued syndr (5, 29) to worker[1]
+[Dispatcher d23] Cycle 11705: Worker[0] DONE (active=1, stored_coord=(0,29))
+[MATRIX] Release at (0, 29) - cells cleared: (0-1, 28-30)
+[FSM d23] Cycle 1173: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1174: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,33) → collision=0
+[MATRIX] Lock at (14, 33) - cells set: (13-15, 32-34)
+[FSM d23] Cycle 1175: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,33) → dispatch to worker
+[Dispatcher d23] Cycle 11755: Issued syndr (14, 33) to worker[0]
+[Dispatcher d23] Cycle 11805: Worker[1] DONE (active=1, stored_coord=(5,29))
+[MATRIX] Release at (5, 29) - cells cleared: (4-6, 28-30)
+[FSM d23] Cycle 1183: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1184: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,17) → collision=0
+[MATRIX] Lock at (9, 17) - cells set: (8-10, 16-18)
+[FSM d23] Cycle 1185: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,17) → dispatch to worker
+[Dispatcher d23] Cycle 11855: Issued syndr (9, 17) to worker[1]
+[Dispatcher d23] Cycle 11905: Worker[0] DONE (active=1, stored_coord=(14,33))
+[MATRIX] Release at (14, 33) - cells cleared: (13-15, 32-34)
+[FSM d23] Cycle 1193: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1194: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,46) → collision=0
+[MATRIX] Lock at (32, 46) - cells set: (31-33, 45-46)
+[FSM d23] Cycle 1195: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,46) → dispatch to worker
+[Dispatcher d23] Cycle 11955: Issued syndr (32, 46) to worker[0]
+[Dispatcher d23] Cycle 12005: Worker[1] DONE (active=1, stored_coord=(9,17))
+[MATRIX] Release at (9, 17) - cells cleared: (8-10, 16-18)
+[FSM d23] Cycle 1203: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1204: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,13) → collision=0
+[MATRIX] Lock at (5, 13) - cells set: (4-6, 12-14)
+[FSM d23] Cycle 1205: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,13) → dispatch to worker
+[Dispatcher d23] Cycle 12055: Issued syndr (5, 13) to worker[1]
+[Dispatcher d23] Cycle 12105: Worker[0] DONE (active=1, stored_coord=(32,46))
+[MATRIX] Release at (32, 46) - cells cleared: (31-33, 45-46)
+[FSM d23] Cycle 1213: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1214: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,13) → collision=0
+[MATRIX] Lock at (9, 13) - cells set: (8-10, 12-14)
+[FSM d23] Cycle 1215: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,13) → dispatch to worker
+[Dispatcher d23] Cycle 12155: Issued syndr (9, 13) to worker[0]
+[Dispatcher d23] Cycle 12205: Worker[1] DONE (active=1, stored_coord=(5,13))
+[MATRIX] Release at (5, 13) - cells cleared: (4-6, 12-14)
+[FSM d23] Cycle 1223: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1224: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,17) → collision=0
+[MATRIX] Lock at (5, 17) - cells set: (4-6, 16-18)
+[FSM d23] Cycle 1225: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,17) → dispatch to worker
+[Dispatcher d23] Cycle 12255: Issued syndr (5, 17) to worker[1]
+[Dispatcher d23] Cycle 12305: Worker[0] DONE (active=1, stored_coord=(9,13))
+[MATRIX] Release at (9, 13) - cells cleared: (8-10, 12-14)
+[FSM d23] Cycle 1233: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1234: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,38) → collision=0
+[MATRIX] Lock at (32, 38) - cells set: (31-33, 37-39)
+[FSM d23] Cycle 1235: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,38) → dispatch to worker
+[Dispatcher d23] Cycle 12355: Issued syndr (32, 38) to worker[0]
+[Dispatcher d23] Cycle 12405: Worker[1] DONE (active=1, stored_coord=(5,17))
+[MATRIX] Release at (5, 17) - cells cleared: (4-6, 16-18)
+[FSM d23] Cycle 1243: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1244: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,4) → collision=0
+[MATRIX] Lock at (18, 4) - cells set: (17-19, 3-5)
+[FSM d23] Cycle 1245: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,4) → dispatch to worker
+[Dispatcher d23] Cycle 12455: Issued syndr (18, 4) to worker[1]
+[Dispatcher d23] Cycle 12505: Worker[0] DONE (active=1, stored_coord=(32,38))
+[MATRIX] Release at (32, 38) - cells cleared: (31-33, 37-39)
+[FSM d23] Cycle 1253: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1254: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,8) → collision=0
+[MATRIX] Lock at (14, 8) - cells set: (13-15, 7-9)
+[FSM d23] Cycle 1255: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,8) → dispatch to worker
+[Dispatcher d23] Cycle 12555: Issued syndr (14, 8) to worker[0]
+[Dispatcher d23] Cycle 12605: Worker[1] DONE (active=1, stored_coord=(18,4))
+[MATRIX] Release at (18, 4) - cells cleared: (17-19, 3-5)
+[FSM d23] Cycle 1263: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1264: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,13) → collision=0
+[MATRIX] Lock at (14, 13) - cells set: (13-15, 12-14)
+[FSM d23] Cycle 1265: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,13) → dispatch to worker
+[Dispatcher d23] Cycle 12655: Issued syndr (14, 13) to worker[1]
+[Dispatcher d23] Cycle 12705: Worker[0] DONE (active=1, stored_coord=(14,8))
+[MATRIX] Release at (14, 8) - cells cleared: (13-15, 7-9)
+[FSM d23] Cycle 1273: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1274: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,17) → collision=0
+[MATRIX] Lock at (37, 17) - cells set: (36-38, 16-18)
+[FSM d23] Cycle 1275: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,17) → dispatch to worker
+[Dispatcher d23] Cycle 12755: Issued syndr (37, 17) to worker[0]
+[Dispatcher d23] Cycle 12805: Worker[1] DONE (active=1, stored_coord=(14,13))
+[MATRIX] Release at (14, 13) - cells cleared: (13-15, 12-14)
+[FSM d23] Cycle 1283: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1284: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,21) → collision=0
+[MATRIX] Lock at (32, 21) - cells set: (31-33, 20-22)
+[FSM d23] Cycle 1285: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,21) → dispatch to worker
+[Dispatcher d23] Cycle 12855: Issued syndr (32, 21) to worker[1]
+[Dispatcher d23] Cycle 12905: Worker[0] DONE (active=1, stored_coord=(37,17))
+[MATRIX] Release at (37, 17) - cells cleared: (36-38, 16-18)
+[FSM d23] Cycle 1293: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1294: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,21) → collision=0
+[MATRIX] Lock at (37, 21) - cells set: (36-38, 20-22)
+[FSM d23] Cycle 1295: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,21) → dispatch to worker
+[Dispatcher d23] Cycle 12955: Issued syndr (37, 21) to worker[0]
+[Dispatcher d23] Cycle 13005: Worker[1] DONE (active=1, stored_coord=(32,21))
+[MATRIX] Release at (32, 21) - cells cleared: (31-33, 20-22)
+[FSM d23] Cycle 1303: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1304: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,17) → collision=0
+[MATRIX] Lock at (32, 17) - cells set: (31-33, 16-18)
+[FSM d23] Cycle 1305: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,17) → dispatch to worker
+[Dispatcher d23] Cycle 13055: Issued syndr (32, 17) to worker[1]
+[Dispatcher d23] Cycle 13105: Worker[0] DONE (active=1, stored_coord=(37,21))
+[MATRIX] Release at (37, 21) - cells cleared: (36-38, 20-22)
+[FSM d23] Cycle 1313: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1314: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,29) → collision=0
+[MATRIX] Lock at (14, 29) - cells set: (13-15, 28-30)
+[FSM d23] Cycle 1315: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,29) → dispatch to worker
+[Dispatcher d23] Cycle 13155: Issued syndr (14, 29) to worker[0]
+[Dispatcher d23] Cycle 13205: Worker[1] DONE (active=1, stored_coord=(32,17))
+[MATRIX] Release at (32, 17) - cells cleared: (31-33, 16-18)
+[FSM d23] Cycle 1323: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1324: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,29) → collision=0
+[MATRIX] Lock at (28, 29) - cells set: (27-29, 28-30)
+[FSM d23] Cycle 1325: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,29) → dispatch to worker
+[Dispatcher d23] Cycle 13255: Issued syndr (28, 29) to worker[1]
+[Dispatcher d23] Cycle 13305: Worker[0] DONE (active=1, stored_coord=(14,29))
+[MATRIX] Release at (14, 29) - cells cleared: (13-15, 28-30)
+[FSM d23] Cycle 1333: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1334: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 1335: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 13355: Issued syndr (28, 38) to worker[0]
+[Dispatcher d23] Cycle 13405: Worker[1] DONE (active=1, stored_coord=(28,29))
+[MATRIX] Release at (28, 29) - cells cleared: (27-29, 28-30)
+[FSM d23] Cycle 1343: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1344: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,25) → collision=0
+[MATRIX] Lock at (9, 25) - cells set: (8-10, 24-26)
+[FSM d23] Cycle 1345: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,25) → dispatch to worker
+[Dispatcher d23] Cycle 13455: Issued syndr (9, 25) to worker[1]
+[Dispatcher d23] Cycle 13505: Worker[0] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[FSM d23] Cycle 1353: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1354: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,29) → collision=0
+[MATRIX] Lock at (28, 29) - cells set: (27-29, 28-30)
+[FSM d23] Cycle 1355: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,29) → dispatch to worker
+[Dispatcher d23] Cycle 13555: Issued syndr (28, 29) to worker[0]
+[Dispatcher d23] Cycle 13605: Worker[1] DONE (active=1, stored_coord=(9,25))
+[MATRIX] Release at (9, 25) - cells cleared: (8-10, 24-26)
+[FSM d23] Cycle 1363: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1364: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 1365: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 13655: Issued syndr (28, 38) to worker[1]
+[Dispatcher d23] Cycle 13705: Worker[0] DONE (active=1, stored_coord=(28,29))
+[MATRIX] Release at (28, 29) - cells cleared: (27-29, 28-30)
+[FSM d23] Cycle 1373: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1374: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,42) → collision=0
+[MATRIX] Lock at (9, 42) - cells set: (8-10, 41-43)
+[FSM d23] Cycle 1375: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,42) → dispatch to worker
+[Dispatcher d23] Cycle 13755: Issued syndr (9, 42) to worker[0]
+[Dispatcher d23] Cycle 13805: Worker[1] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[FSM d23] Cycle 1383: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1384: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,46) → collision=0
+[MATRIX] Lock at (14, 46) - cells set: (13-15, 45-46)
+[FSM d23] Cycle 1385: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,46) → dispatch to worker
+[Dispatcher d23] Cycle 13855: Issued syndr (14, 46) to worker[1]
+[Dispatcher d23] Cycle 13905: Worker[0] DONE (active=1, stored_coord=(9,42))
+[MATRIX] Release at (9, 42) - cells cleared: (8-10, 41-43)
+[FSM d23] Cycle 1393: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1394: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,33) → collision=0
+[MATRIX] Lock at (9, 33) - cells set: (8-10, 32-34)
+[FSM d23] Cycle 1395: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,33) → dispatch to worker
+[Dispatcher d23] Cycle 13955: Issued syndr (9, 33) to worker[0]
+[Dispatcher d23] Cycle 14005: Worker[1] DONE (active=1, stored_coord=(14,46))
+[MATRIX] Release at (14, 46) - cells cleared: (13-15, 45-46)
+[FSM d23] Cycle 1403: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1404: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=0
+[MATRIX] Lock at (28, 42) - cells set: (27-29, 41-43)
+[FSM d23] Cycle 1405: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,42) → dispatch to worker
+[Dispatcher d23] Cycle 14055: Issued syndr (28, 42) to worker[1]
+[Dispatcher d23] Cycle 14105: Worker[0] DONE (active=1, stored_coord=(9,33))
+[MATRIX] Release at (9, 33) - cells cleared: (8-10, 32-34)
+[FSM d23] Cycle 1413: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1414: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,29) → collision=0
+[MATRIX] Lock at (14, 29) - cells set: (13-15, 28-30)
+[FSM d23] Cycle 1415: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,29) → dispatch to worker
+[Dispatcher d23] Cycle 14155: Issued syndr (14, 29) to worker[0]
+[Dispatcher d23] Cycle 14205: Worker[1] DONE (active=1, stored_coord=(28,42))
+[MATRIX] Release at (28, 42) - cells cleared: (27-29, 41-43)
+[FSM d23] Cycle 1423: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1424: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=0
+[MATRIX] Lock at (28, 42) - cells set: (27-29, 41-43)
+[FSM d23] Cycle 1425: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,42) → dispatch to worker
+[Dispatcher d23] Cycle 14255: Issued syndr (28, 42) to worker[1]
+[Dispatcher d23] Cycle 14305: Worker[0] DONE (active=1, stored_coord=(14,29))
+[MATRIX] Release at (14, 29) - cells cleared: (13-15, 28-30)
+[FSM d23] Cycle 1433: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1434: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,29) → collision=0
+[MATRIX] Lock at (5, 29) - cells set: (4-6, 28-30)
+[FSM d23] Cycle 1435: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,29) → dispatch to worker
+[Dispatcher d23] Cycle 14355: Issued syndr (5, 29) to worker[0]
+[Dispatcher d23] Cycle 14405: Worker[1] DONE (active=1, stored_coord=(28,42))
+[MATRIX] Release at (28, 42) - cells cleared: (27-29, 41-43)
+[FSM d23] Cycle 1443: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1444: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,33) → collision=0
+[MATRIX] Lock at (5, 33) - cells set: (4-6, 32-34)
+[FSM d23] Cycle 1445: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,33) → dispatch to worker
+[Dispatcher d23] Cycle 14455: Issued syndr (5, 33) to worker[1]
+[Dispatcher d23] Cycle 14505: Worker[0] DONE (active=1, stored_coord=(5,29))
+[MATRIX] Release at (5, 29) - cells cleared: (4-6, 28-30)
+[FSM d23] Cycle 1453: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1454: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (0,38) → collision=0
+[MATRIX] Lock at (0, 38) - cells set: (0-1, 37-39)
+[FSM d23] Cycle 1455: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (0,38) → dispatch to worker
+[Dispatcher d23] Cycle 14555: Issued syndr (0, 38) to worker[0]
+[Dispatcher d23] Cycle 14605: Worker[1] DONE (active=1, stored_coord=(5,33))
+[MATRIX] Release at (5, 33) - cells cleared: (4-6, 32-34)
+[FSM d23] Cycle 1463: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1464: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,42) → collision=0
+[MATRIX] Lock at (0, 42) - cells set: (0-1, 41-43)
+[FSM d23] Cycle 1465: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,42) → dispatch to worker
+[Dispatcher d23] Cycle 14655: Issued syndr (0, 42) to worker[1]
+[Dispatcher d23] Cycle 14705: Worker[0] DONE (active=1, stored_coord=(0,38))
+[MATRIX] Release at (0, 38) - cells cleared: (0-1, 37-39)
+[FSM d23] Cycle 1473: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1474: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,21) → collision=0
+[MATRIX] Lock at (18, 21) - cells set: (17-19, 20-22)
+[FSM d23] Cycle 1475: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,21) → dispatch to worker
+[Dispatcher d23] Cycle 14755: Issued syndr (18, 21) to worker[0]
+[Dispatcher d23] Cycle 14805: Worker[1] DONE (active=1, stored_coord=(0,42))
+[MATRIX] Release at (0, 42) - cells cleared: (0-1, 41-43)
+[FSM d23] Cycle 1483: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1484: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,25) → collision=0
+[MATRIX] Lock at (14, 25) - cells set: (13-15, 24-26)
+[FSM d23] Cycle 1485: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,25) → dispatch to worker
+[Dispatcher d23] Cycle 14855: Issued syndr (14, 25) to worker[1]
+[Dispatcher d23] Cycle 14905: Worker[0] DONE (active=1, stored_coord=(18,21))
+[MATRIX] Release at (18, 21) - cells cleared: (17-19, 20-22)
+[FSM d23] Cycle 1493: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1494: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,29) → collision=0
+[MATRIX] Lock at (14, 29) - cells set: (13-15, 28-30)
+[FSM d23] Cycle 1495: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,29) → dispatch to worker
+[Dispatcher d23] Cycle 14955: Issued syndr (14, 29) to worker[0]
+[Dispatcher d23] Cycle 15005: Worker[1] DONE (active=1, stored_coord=(14,25))
+[MATRIX] Release at (14, 25) - cells cleared: (13-15, 24-26)
+[FSM d23] Cycle 1503: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1504: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (14,29) → collision=1
+[FSM d23] Cycle 1505: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1506: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (14,29) → collision=1
+[FSM d23] Cycle 1507: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1508: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (14,29) → collision=1
+[FSM d23] Cycle 1509: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1510: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1110)
+[FSM d23] Collision check: (14,29) → collision=1
+[Dispatcher d23] Cycle 15105: Worker[0] DONE (active=1, stored_coord=(14,29))
+[MATRIX] Release at (14, 29) - cells cleared: (13-15, 28-30)
+[FSM d23] Cycle 1511: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Cycle 1512: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (14,29) → collision=0
+[MATRIX] Lock at (14, 29) - cells set: (13-15, 28-30)
+[FSM d23] Cycle 1513: FSM_ISSUE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (14,29) → dispatch to worker
+[Dispatcher d23] Cycle 15135: Issued syndr (14, 29) to worker[0]
+[FSM d23] Cycle 1514: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,46) → collision=0
+[MATRIX] Lock at (14, 46) - cells set: (13-15, 45-46)
+[FSM d23] Cycle 1515: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,46) → dispatch to worker
+[Dispatcher d23] Cycle 15155: Issued syndr (14, 46) to worker[1]
+[FSM d23] Cycle 1523: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1100)
+[FSM d23] Cycle 1524: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1100)
+[FSM d23] Collision check: (18,42) → collision=0
+[MATRIX] Lock at (18, 42) - cells set: (17-19, 41-43)
+[FSM d23] Cycle 1525: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1100)
+[FSM d23] Lock issued: (18,42) → dispatch to worker
+[Dispatcher d23] Cycle 15255: Issued syndr (18, 42) to worker[2]
+[Dispatcher d23] Cycle 15285: Worker[0] DONE (active=1, stored_coord=(14,29))
+[MATRIX] Release at (14, 29) - cells cleared: (13-15, 28-30)
+[Dispatcher d23] Cycle 15305: Worker[1] DONE (active=1, stored_coord=(14,46))
+[MATRIX] Release at (14, 46) - cells cleared: (13-15, 45-46)
+[FSM d23] Cycle 1533: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1011)
+[FSM d23] Cycle 1534: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1011)
+[FSM d23] Collision check: (23,42) → collision=0
+[MATRIX] Lock at (23, 42) - cells set: (22-24, 41-43)
+[FSM d23] Cycle 1535: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Lock issued: (23,42) → dispatch to worker
+[Dispatcher d23] Cycle 15355: Issued syndr (23, 42) to worker[0]
+[Dispatcher d23] Cycle 15405: Worker[2] DONE (active=1, stored_coord=(18,42))
+[MATRIX] Release at (18, 42) - cells cleared: (17-19, 41-43)
+[FSM d23] Cycle 1543: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1544: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,42) → collision=0
+[MATRIX] Lock at (28, 42) - cells set: (27-29, 41-43)
+[FSM d23] Cycle 1545: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,42) → dispatch to worker
+[Dispatcher d23] Cycle 15455: Issued syndr (28, 42) to worker[1]
+[Dispatcher d23] Cycle 15505: Worker[0] DONE (active=1, stored_coord=(23,42))
+[MATRIX] Release at (23, 42) - cells cleared: (22-24, 41-43)
+[FSM d23] Cycle 1553: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1554: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,42) → collision=0
+[MATRIX] Lock at (32, 42) - cells set: (31-33, 41-43)
+[FSM d23] Cycle 1555: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,42) → dispatch to worker
+[Dispatcher d23] Cycle 15555: Issued syndr (32, 42) to worker[0]
+[Dispatcher d23] Cycle 15605: Worker[1] DONE (active=1, stored_coord=(28,42))
+[MATRIX] Release at (28, 42) - cells cleared: (27-29, 41-43)
+[FSM d23] Cycle 1563: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1564: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,46) → collision=0
+[MATRIX] Lock at (14, 46) - cells set: (13-15, 45-46)
+[FSM d23] Cycle 1565: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,46) → dispatch to worker
+[Dispatcher d23] Cycle 15655: Issued syndr (14, 46) to worker[1]
+[Dispatcher d23] Cycle 15705: Worker[0] DONE (active=1, stored_coord=(32,42))
+[MATRIX] Release at (32, 42) - cells cleared: (31-33, 41-43)
+[FSM d23] Cycle 1573: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1574: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (23,46) → collision=0
+[MATRIX] Lock at (23, 46) - cells set: (22-24, 45-46)
+[FSM d23] Cycle 1575: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (23,46) → dispatch to worker
+[Dispatcher d23] Cycle 15755: Issued syndr (23, 46) to worker[0]
+[Dispatcher d23] Cycle 15805: Worker[1] DONE (active=1, stored_coord=(14,46))
+[MATRIX] Release at (14, 46) - cells cleared: (13-15, 45-46)
+[FSM d23] Cycle 1583: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1584: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 1585: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 15855: Issued syndr (28, 38) to worker[1]
+[Dispatcher d23] Cycle 15905: Worker[0] DONE (active=1, stored_coord=(23,46))
+[MATRIX] Release at (23, 46) - cells cleared: (22-24, 45-46)
+[FSM d23] Cycle 1593: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1594: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (32,38) → collision=0
+[MATRIX] Lock at (32, 38) - cells set: (31-33, 37-39)
+[FSM d23] Cycle 1595: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (32,38) → dispatch to worker
+[Dispatcher d23] Cycle 15955: Issued syndr (32, 38) to worker[0]
+[Dispatcher d23] Cycle 16005: Worker[1] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[FSM d23] Cycle 1603: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1604: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,42) → collision=0
+[MATRIX] Lock at (18, 42) - cells set: (17-19, 41-43)
+[FSM d23] Cycle 1605: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,42) → dispatch to worker
+[Dispatcher d23] Cycle 16055: Issued syndr (18, 42) to worker[1]
+[Dispatcher d23] Cycle 16105: Worker[0] DONE (active=1, stored_coord=(32,38))
+[MATRIX] Release at (32, 38) - cells cleared: (31-33, 37-39)
+[FSM d23] Cycle 1613: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1614: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,42) → collision=0
+[MATRIX] Lock at (28, 42) - cells set: (27-29, 41-43)
+[FSM d23] Cycle 1615: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,42) → dispatch to worker
+[Dispatcher d23] Cycle 16155: Issued syndr (28, 42) to worker[0]
+[Dispatcher d23] Cycle 16205: Worker[1] DONE (active=1, stored_coord=(18,42))
+[MATRIX] Release at (18, 42) - cells cleared: (17-19, 41-43)
+[FSM d23] Cycle 1623: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1624: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (23,46) → collision=0
+[MATRIX] Lock at (23, 46) - cells set: (22-24, 45-46)
+[FSM d23] Cycle 1625: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (23,46) → dispatch to worker
+[Dispatcher d23] Cycle 16255: Issued syndr (23, 46) to worker[1]
+[Dispatcher d23] Cycle 16305: Worker[0] DONE (active=1, stored_coord=(28,42))
+[MATRIX] Release at (28, 42) - cells cleared: (27-29, 41-43)
+[FSM d23] Cycle 1633: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1634: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,42) → collision=0
+[MATRIX] Lock at (18, 42) - cells set: (17-19, 41-43)
+[FSM d23] Cycle 1635: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,42) → dispatch to worker
+[Dispatcher d23] Cycle 16355: Issued syndr (18, 42) to worker[0]
+[Dispatcher d23] Cycle 16405: Worker[1] DONE (active=1, stored_coord=(23,46))
+[MATRIX] Release at (23, 46) - cells cleared: (22-24, 45-46)
+[FSM d23] Cycle 1643: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1644: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,25) → collision=0
+[MATRIX] Lock at (32, 25) - cells set: (31-33, 24-26)
+[FSM d23] Cycle 1645: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,25) → dispatch to worker
+[Dispatcher d23] Cycle 16455: Issued syndr (32, 25) to worker[1]
+[Dispatcher d23] Cycle 16505: Worker[0] DONE (active=1, stored_coord=(18,42))
+[MATRIX] Release at (18, 42) - cells cleared: (17-19, 41-43)
+[FSM d23] Cycle 1653: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1654: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (32,25) → collision=1
+[FSM d23] Cycle 1655: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1656: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (32,25) → collision=1
+[FSM d23] Cycle 1657: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1658: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (32,25) → collision=1
+[FSM d23] Cycle 1659: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1660: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (32,25) → collision=1
+[Dispatcher d23] Cycle 16605: Worker[1] DONE (active=1, stored_coord=(32,25))
+[MATRIX] Release at (32, 25) - cells cleared: (31-33, 24-26)
+[FSM d23] Cycle 1661: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Cycle 1662: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (32,25) → collision=0
+[MATRIX] Lock at (32, 25) - cells set: (31-33, 24-26)
+[FSM d23] Cycle 1663: FSM_ISSUE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (32,25) → dispatch to worker
+[Dispatcher d23] Cycle 16635: Issued syndr (32, 25) to worker[0]
+[FSM d23] Cycle 1664: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,21) → collision=0
+[MATRIX] Lock at (0, 21) - cells set: (0-1, 20-22)
+[FSM d23] Cycle 1665: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,21) → dispatch to worker
+[Dispatcher d23] Cycle 16655: Issued syndr (0, 21) to worker[1]
+[FSM d23] Cycle 1673: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1100)
+[FSM d23] Cycle 1674: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1100)
+[FSM d23] Collision check: (32,8) → collision=0
+[MATRIX] Lock at (32, 8) - cells set: (31-33, 7-9)
+[FSM d23] Cycle 1675: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1100)
+[FSM d23] Lock issued: (32,8) → dispatch to worker
+[Dispatcher d23] Cycle 16755: Issued syndr (32, 8) to worker[2]
+[Dispatcher d23] Cycle 16785: Worker[0] DONE (active=1, stored_coord=(32,25))
+[MATRIX] Release at (32, 25) - cells cleared: (31-33, 24-26)
+[Dispatcher d23] Cycle 16805: Worker[1] DONE (active=1, stored_coord=(0,21))
+[MATRIX] Release at (0, 21) - cells cleared: (0-1, 20-22)
+[FSM d23] Cycle 1683: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1011)
+[FSM d23] Cycle 1684: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1011)
+[FSM d23] Collision check: (37,8) → collision=0
+[MATRIX] Lock at (37, 8) - cells set: (36-38, 7-9)
+[FSM d23] Cycle 1685: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Lock issued: (37,8) → dispatch to worker
+[Dispatcher d23] Cycle 16855: Issued syndr (37, 8) to worker[0]
+[Dispatcher d23] Cycle 16905: Worker[2] DONE (active=1, stored_coord=(32,8))
+[MATRIX] Release at (32, 8) - cells cleared: (31-33, 7-9)
+[FSM d23] Cycle 1693: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1694: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,13) → collision=0
+[MATRIX] Lock at (14, 13) - cells set: (13-15, 12-14)
+[FSM d23] Cycle 1695: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,13) → dispatch to worker
+[Dispatcher d23] Cycle 16955: Issued syndr (14, 13) to worker[1]
+[Dispatcher d23] Cycle 17005: Worker[0] DONE (active=1, stored_coord=(37,8))
+[MATRIX] Release at (37, 8) - cells cleared: (36-38, 7-9)
+[FSM d23] Cycle 1703: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1704: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,13) → collision=0
+[MATRIX] Lock at (18, 13) - cells set: (17-19, 12-14)
+[FSM d23] Cycle 1705: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,13) → dispatch to worker
+[Dispatcher d23] Cycle 17055: Issued syndr (18, 13) to worker[0]
+[Dispatcher d23] Cycle 17105: Worker[1] DONE (active=1, stored_coord=(14,13))
+[MATRIX] Release at (14, 13) - cells cleared: (13-15, 12-14)
+[FSM d23] Cycle 1713: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1714: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,13) → collision=0
+[MATRIX] Lock at (32, 13) - cells set: (31-33, 12-14)
+[FSM d23] Cycle 1715: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,13) → dispatch to worker
+[Dispatcher d23] Cycle 17155: Issued syndr (32, 13) to worker[1]
+[Dispatcher d23] Cycle 17205: Worker[0] DONE (active=1, stored_coord=(18,13))
+[MATRIX] Release at (18, 13) - cells cleared: (17-19, 12-14)
+[FSM d23] Cycle 1723: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1724: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,13) → collision=0
+[MATRIX] Lock at (37, 13) - cells set: (36-38, 12-14)
+[FSM d23] Cycle 1725: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,13) → dispatch to worker
+[Dispatcher d23] Cycle 17255: Issued syndr (37, 13) to worker[0]
+[Dispatcher d23] Cycle 17305: Worker[1] DONE (active=1, stored_coord=(32,13))
+[MATRIX] Release at (32, 13) - cells cleared: (31-33, 12-14)
+[FSM d23] Cycle 1733: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1734: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,17) → collision=0
+[MATRIX] Lock at (14, 17) - cells set: (13-15, 16-18)
+[FSM d23] Cycle 1735: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,17) → dispatch to worker
+[Dispatcher d23] Cycle 17355: Issued syndr (14, 17) to worker[1]
+[Dispatcher d23] Cycle 17405: Worker[0] DONE (active=1, stored_coord=(37,13))
+[MATRIX] Release at (37, 13) - cells cleared: (36-38, 12-14)
+[FSM d23] Cycle 1743: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1744: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (18,17) → collision=0
+[MATRIX] Lock at (18, 17) - cells set: (17-19, 16-18)
+[FSM d23] Cycle 1745: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (18,17) → dispatch to worker
+[Dispatcher d23] Cycle 17455: Issued syndr (18, 17) to worker[0]
+[Dispatcher d23] Cycle 17505: Worker[1] DONE (active=1, stored_coord=(14,17))
+[MATRIX] Release at (14, 17) - cells cleared: (13-15, 16-18)
+[FSM d23] Cycle 1753: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1754: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,21) → collision=0
+[MATRIX] Lock at (0, 21) - cells set: (0-1, 20-22)
+[FSM d23] Cycle 1755: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,21) → dispatch to worker
+[Dispatcher d23] Cycle 17555: Issued syndr (0, 21) to worker[1]
+[Dispatcher d23] Cycle 17605: Worker[0] DONE (active=1, stored_coord=(18,17))
+[MATRIX] Release at (18, 17) - cells cleared: (17-19, 16-18)
+[FSM d23] Cycle 1763: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1764: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,25) → collision=0
+[MATRIX] Lock at (28, 25) - cells set: (27-29, 24-26)
+[FSM d23] Cycle 1765: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,25) → dispatch to worker
+[Dispatcher d23] Cycle 17655: Issued syndr (28, 25) to worker[0]
+[Dispatcher d23] Cycle 17705: Worker[1] DONE (active=1, stored_coord=(0,21))
+[MATRIX] Release at (0, 21) - cells cleared: (0-1, 20-22)
+[FSM d23] Cycle 1773: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1774: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,42) → collision=0
+[MATRIX] Lock at (5, 42) - cells set: (4-6, 41-43)
+[FSM d23] Cycle 1775: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,42) → dispatch to worker
+[Dispatcher d23] Cycle 17755: Issued syndr (5, 42) to worker[1]
+[Dispatcher d23] Cycle 17805: Worker[0] DONE (active=1, stored_coord=(28,25))
+[MATRIX] Release at (28, 25) - cells cleared: (27-29, 24-26)
+[FSM d23] Cycle 1783: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1784: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,46) → collision=0
+[MATRIX] Lock at (5, 46) - cells set: (4-6, 45-46)
+[FSM d23] Cycle 1785: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,46) → dispatch to worker
+[Dispatcher d23] Cycle 17855: Issued syndr (5, 46) to worker[0]
+[Dispatcher d23] Cycle 17905: Worker[1] DONE (active=1, stored_coord=(5,42))
+[MATRIX] Release at (5, 42) - cells cleared: (4-6, 41-43)
+[FSM d23] Cycle 1793: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1794: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,21) → collision=0
+[MATRIX] Lock at (5, 21) - cells set: (4-6, 20-22)
+[FSM d23] Cycle 1795: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,21) → dispatch to worker
+[Dispatcher d23] Cycle 17955: Issued syndr (5, 21) to worker[1]
+[Dispatcher d23] Cycle 18005: Worker[0] DONE (active=1, stored_coord=(5,46))
+[MATRIX] Release at (5, 46) - cells cleared: (4-6, 45-46)
+[FSM d23] Cycle 1803: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1804: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (0,17) → collision=0
+[MATRIX] Lock at (0, 17) - cells set: (0-1, 16-18)
+[FSM d23] Cycle 1805: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (0,17) → dispatch to worker
+[Dispatcher d23] Cycle 18055: Issued syndr (0, 17) to worker[0]
+[Dispatcher d23] Cycle 18105: Worker[1] DONE (active=1, stored_coord=(5,21))
+[MATRIX] Release at (5, 21) - cells cleared: (4-6, 20-22)
+[FSM d23] Cycle 1813: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1814: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,17) → collision=0
+[MATRIX] Lock at (5, 17) - cells set: (4-6, 16-18)
+[FSM d23] Cycle 1815: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,17) → dispatch to worker
+[Dispatcher d23] Cycle 18155: Issued syndr (5, 17) to worker[1]
+[Dispatcher d23] Cycle 18205: Worker[0] DONE (active=1, stored_coord=(0,17))
+[MATRIX] Release at (0, 17) - cells cleared: (0-1, 16-18)
+[FSM d23] Cycle 1823: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1824: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (41,17) → collision=0
+[MATRIX] Lock at (41, 17) - cells set: (40-42, 16-18)
+[FSM d23] Cycle 1825: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (41,17) → dispatch to worker
+[Dispatcher d23] Cycle 18255: Issued syndr (41, 17) to worker[0]
+[Dispatcher d23] Cycle 18305: Worker[1] DONE (active=1, stored_coord=(5,17))
+[MATRIX] Release at (5, 17) - cells cleared: (4-6, 16-18)
+[FSM d23] Cycle 1833: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1834: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,21) → collision=0
+[MATRIX] Lock at (0, 21) - cells set: (0-1, 20-22)
+[FSM d23] Cycle 1835: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,21) → dispatch to worker
+[Dispatcher d23] Cycle 18355: Issued syndr (0, 21) to worker[1]
+[Dispatcher d23] Cycle 18405: Worker[0] DONE (active=1, stored_coord=(41,17))
+[MATRIX] Release at (41, 17) - cells cleared: (40-42, 16-18)
+[FSM d23] Cycle 1843: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1844: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (41,21) → collision=0
+[MATRIX] Lock at (41, 21) - cells set: (40-42, 20-22)
+[FSM d23] Cycle 1845: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (41,21) → dispatch to worker
+[Dispatcher d23] Cycle 18455: Issued syndr (41, 21) to worker[0]
+[Dispatcher d23] Cycle 18505: Worker[1] DONE (active=1, stored_coord=(0,21))
+[MATRIX] Release at (0, 21) - cells cleared: (0-1, 20-22)
+[FSM d23] Cycle 1853: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1854: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (46,21) → collision=0
+[MATRIX] Lock at (46, 21) - cells set: (45-46, 20-22)
+[FSM d23] Cycle 1855: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (46,21) → dispatch to worker
+[Dispatcher d23] Cycle 18555: Issued syndr (46, 21) to worker[1]
+[Dispatcher d23] Cycle 18605: Worker[0] DONE (active=1, stored_coord=(41,21))
+[MATRIX] Release at (41, 21) - cells cleared: (40-42, 20-22)
+[FSM d23] Cycle 1863: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1864: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,38) → collision=0
+[MATRIX] Lock at (5, 38) - cells set: (4-6, 37-39)
+[FSM d23] Cycle 1865: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,38) → dispatch to worker
+[Dispatcher d23] Cycle 18655: Issued syndr (5, 38) to worker[0]
+[Dispatcher d23] Cycle 18705: Worker[1] DONE (active=1, stored_coord=(46,21))
+[MATRIX] Release at (46, 21) - cells cleared: (45-46, 20-22)
+[FSM d23] Cycle 1873: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1874: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (41,17) → collision=0
+[MATRIX] Lock at (41, 17) - cells set: (40-42, 16-18)
+[FSM d23] Cycle 1875: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (41,17) → dispatch to worker
+[Dispatcher d23] Cycle 18755: Issued syndr (41, 17) to worker[1]
+[Dispatcher d23] Cycle 18805: Worker[0] DONE (active=1, stored_coord=(5,38))
+[MATRIX] Release at (5, 38) - cells cleared: (4-6, 37-39)
+[FSM d23] Cycle 1883: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1884: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,21) → collision=0
+[MATRIX] Lock at (37, 21) - cells set: (36-38, 20-22)
+[FSM d23] Cycle 1885: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,21) → dispatch to worker
+[Dispatcher d23] Cycle 18855: Issued syndr (37, 21) to worker[0]
+[Dispatcher d23] Cycle 18905: Worker[1] DONE (active=1, stored_coord=(41,17))
+[MATRIX] Release at (41, 17) - cells cleared: (40-42, 16-18)
+[FSM d23] Cycle 1893: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1894: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (5,29) → collision=0
+[MATRIX] Lock at (5, 29) - cells set: (4-6, 28-30)
+[FSM d23] Cycle 1895: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (5,29) → dispatch to worker
+[Dispatcher d23] Cycle 18955: Issued syndr (5, 29) to worker[1]
+[Dispatcher d23] Cycle 19005: Worker[0] DONE (active=1, stored_coord=(37,21))
+[MATRIX] Release at (37, 21) - cells cleared: (36-38, 20-22)
+[FSM d23] Cycle 1903: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1904: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,13) → collision=0
+[MATRIX] Lock at (9, 13) - cells set: (8-10, 12-14)
+[FSM d23] Cycle 1905: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,13) → dispatch to worker
+[Dispatcher d23] Cycle 19055: Issued syndr (9, 13) to worker[0]
+[Dispatcher d23] Cycle 19105: Worker[1] DONE (active=1, stored_coord=(5,29))
+[MATRIX] Release at (5, 29) - cells cleared: (4-6, 28-30)
+[FSM d23] Cycle 1913: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1914: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,17) → collision=0
+[MATRIX] Lock at (14, 17) - cells set: (13-15, 16-18)
+[FSM d23] Cycle 1915: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,17) → dispatch to worker
+[Dispatcher d23] Cycle 19155: Issued syndr (14, 17) to worker[1]
+[Dispatcher d23] Cycle 19205: Worker[0] DONE (active=1, stored_coord=(9,13))
+[MATRIX] Release at (9, 13) - cells cleared: (8-10, 12-14)
+[FSM d23] Cycle 1923: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1924: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (23,17) → collision=0
+[MATRIX] Lock at (23, 17) - cells set: (22-24, 16-18)
+[FSM d23] Cycle 1925: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (23,17) → dispatch to worker
+[Dispatcher d23] Cycle 19255: Issued syndr (23, 17) to worker[0]
+[Dispatcher d23] Cycle 19305: Worker[1] DONE (active=1, stored_coord=(14,17))
+[MATRIX] Release at (14, 17) - cells cleared: (13-15, 16-18)
+[FSM d23] Cycle 1933: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1934: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,21) → collision=0
+[MATRIX] Lock at (28, 21) - cells set: (27-29, 20-22)
+[FSM d23] Cycle 1935: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,21) → dispatch to worker
+[Dispatcher d23] Cycle 19355: Issued syndr (28, 21) to worker[1]
+[Dispatcher d23] Cycle 19405: Worker[0] DONE (active=1, stored_coord=(23,17))
+[MATRIX] Release at (23, 17) - cells cleared: (22-24, 16-18)
+[FSM d23] Cycle 1943: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1944: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,8) → collision=0
+[MATRIX] Lock at (14, 8) - cells set: (13-15, 7-9)
+[FSM d23] Cycle 1945: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,8) → dispatch to worker
+[Dispatcher d23] Cycle 19455: Issued syndr (14, 8) to worker[0]
+[Dispatcher d23] Cycle 19505: Worker[1] DONE (active=1, stored_coord=(28,21))
+[MATRIX] Release at (28, 21) - cells cleared: (27-29, 20-22)
+[FSM d23] Cycle 1953: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1954: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (18,4) → collision=0
+[MATRIX] Lock at (18, 4) - cells set: (17-19, 3-5)
+[FSM d23] Cycle 1955: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (18,4) → dispatch to worker
+[Dispatcher d23] Cycle 19555: Issued syndr (18, 4) to worker[1]
+[Dispatcher d23] Cycle 19605: Worker[0] DONE (active=1, stored_coord=(14,8))
+[MATRIX] Release at (14, 8) - cells cleared: (13-15, 7-9)
+[FSM d23] Cycle 1963: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1964: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (14,17) → collision=0
+[MATRIX] Lock at (14, 17) - cells set: (13-15, 16-18)
+[FSM d23] Cycle 1965: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (14,17) → dispatch to worker
+[Dispatcher d23] Cycle 19655: Issued syndr (14, 17) to worker[0]
+[Dispatcher d23] Cycle 19705: Worker[1] DONE (active=1, stored_coord=(18,4))
+[MATRIX] Release at (18, 4) - cells cleared: (17-19, 3-5)
+[FSM d23] Cycle 1973: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1974: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (9,25) → collision=0
+[MATRIX] Lock at (9, 25) - cells set: (8-10, 24-26)
+[FSM d23] Cycle 1975: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (9,25) → dispatch to worker
+[Dispatcher d23] Cycle 19755: Issued syndr (9, 25) to worker[1]
+[Dispatcher d23] Cycle 19805: Worker[0] DONE (active=1, stored_coord=(14,17))
+[MATRIX] Release at (14, 17) - cells cleared: (13-15, 16-18)
+[FSM d23] Cycle 1983: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 1984: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,8) → collision=0
+[MATRIX] Lock at (9, 8) - cells set: (8-10, 7-9)
+[FSM d23] Cycle 1985: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,8) → dispatch to worker
+[Dispatcher d23] Cycle 19855: Issued syndr (9, 8) to worker[0]
+[Dispatcher d23] Cycle 19905: Worker[1] DONE (active=1, stored_coord=(9,25))
+[MATRIX] Release at (9, 25) - cells cleared: (8-10, 24-26)
+[FSM d23] Cycle 1993: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 1994: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,17) → collision=0
+[MATRIX] Lock at (14, 17) - cells set: (13-15, 16-18)
+[FSM d23] Cycle 1995: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,17) → dispatch to worker
+[Dispatcher d23] Cycle 19955: Issued syndr (14, 17) to worker[1]
+[Dispatcher d23] Cycle 20005: Worker[0] DONE (active=1, stored_coord=(9,8))
+[MATRIX] Release at (9, 8) - cells cleared: (8-10, 7-9)
+[FSM d23] Cycle 2003: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2004: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,4) → collision=0
+[MATRIX] Lock at (5, 4) - cells set: (4-6, 3-5)
+[FSM d23] Cycle 2005: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,4) → dispatch to worker
+[Dispatcher d23] Cycle 20055: Issued syndr (5, 4) to worker[0]
+[Dispatcher d23] Cycle 20105: Worker[1] DONE (active=1, stored_coord=(14,17))
+[MATRIX] Release at (14, 17) - cells cleared: (13-15, 16-18)
+[FSM d23] Cycle 2013: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2014: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 2015: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 20155: Issued syndr (28, 38) to worker[1]
+[Dispatcher d23] Cycle 20205: Worker[0] DONE (active=1, stored_coord=(5,4))
+[MATRIX] Release at (5, 4) - cells cleared: (4-6, 3-5)
+[FSM d23] Cycle 2023: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2024: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=1
+[FSM d23] Cycle 2025: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2026: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=1
+[FSM d23] Cycle 2027: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2028: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=1
+[FSM d23] Cycle 2029: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2030: FSM_HAZARD_CHK → FSM_STALL (fifo_valid=0, collision=1, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=1
+[Dispatcher d23] Cycle 20305: Worker[1] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[FSM d23] Cycle 2031: FSM_STALL → FSM_HAZARD_CHK (fifo_valid=0, collision=x, workers_ready=1111)
+[FSM d23] Cycle 2032: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1111)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 2033: FSM_ISSUE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1111)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 20335: Issued syndr (28, 38) to worker[0]
+[FSM d23] Cycle 2034: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (37,0) → collision=0
+[MATRIX] Lock at (37, 0) - cells set: (36-38, 0-1)
+[FSM d23] Cycle 2035: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (37,0) → dispatch to worker
+[Dispatcher d23] Cycle 20355: Issued syndr (37, 0) to worker[1]
+[FSM d23] Cycle 2043: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1100)
+[FSM d23] Cycle 2044: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1100)
+[FSM d23] Collision check: (37,4) → collision=0
+[MATRIX] Lock at (37, 4) - cells set: (36-38, 3-5)
+[FSM d23] Cycle 2045: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1100)
+[FSM d23] Lock issued: (37,4) → dispatch to worker
+[Dispatcher d23] Cycle 20455: Issued syndr (37, 4) to worker[2]
+[Dispatcher d23] Cycle 20485: Worker[0] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[Dispatcher d23] Cycle 20505: Worker[1] DONE (active=1, stored_coord=(37,0))
+[MATRIX] Release at (37, 0) - cells cleared: (36-38, 0-1)
+[FSM d23] Cycle 2053: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1011)
+[FSM d23] Cycle 2054: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1011)
+[FSM d23] Collision check: (41,4) → collision=0
+[MATRIX] Lock at (41, 4) - cells set: (40-42, 3-5)
+[FSM d23] Cycle 2055: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1011)
+[FSM d23] Lock issued: (41,4) → dispatch to worker
+[Dispatcher d23] Cycle 20555: Issued syndr (41, 4) to worker[0]
+[Dispatcher d23] Cycle 20605: Worker[2] DONE (active=1, stored_coord=(37,4))
+[MATRIX] Release at (37, 4) - cells cleared: (36-38, 3-5)
+[FSM d23] Cycle 2063: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2064: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,13) → collision=0
+[MATRIX] Lock at (32, 13) - cells set: (31-33, 12-14)
+[FSM d23] Cycle 2065: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,13) → dispatch to worker
+[Dispatcher d23] Cycle 20655: Issued syndr (32, 13) to worker[1]
+[Dispatcher d23] Cycle 20705: Worker[0] DONE (active=1, stored_coord=(41,4))
+[MATRIX] Release at (41, 4) - cells cleared: (40-42, 3-5)
+[FSM d23] Cycle 2073: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2074: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,13) → collision=0
+[MATRIX] Lock at (37, 13) - cells set: (36-38, 12-14)
+[FSM d23] Cycle 2075: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,13) → dispatch to worker
+[Dispatcher d23] Cycle 20755: Issued syndr (37, 13) to worker[0]
+[Dispatcher d23] Cycle 20805: Worker[1] DONE (active=1, stored_coord=(32,13))
+[MATRIX] Release at (32, 13) - cells cleared: (31-33, 12-14)
+[FSM d23] Cycle 2083: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2084: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (37,17) → collision=0
+[MATRIX] Lock at (37, 17) - cells set: (36-38, 16-18)
+[FSM d23] Cycle 2085: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (37,17) → dispatch to worker
+[Dispatcher d23] Cycle 20855: Issued syndr (37, 17) to worker[1]
+[Dispatcher d23] Cycle 20905: Worker[0] DONE (active=1, stored_coord=(37,13))
+[MATRIX] Release at (37, 13) - cells cleared: (36-38, 12-14)
+[FSM d23] Cycle 2093: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2094: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (28,38) → collision=0
+[MATRIX] Lock at (28, 38) - cells set: (27-29, 37-39)
+[FSM d23] Cycle 2095: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (28,38) → dispatch to worker
+[Dispatcher d23] Cycle 20955: Issued syndr (28, 38) to worker[0]
+[Dispatcher d23] Cycle 21005: Worker[1] DONE (active=1, stored_coord=(37,17))
+[MATRIX] Release at (37, 17) - cells cleared: (36-38, 16-18)
+[FSM d23] Cycle 2103: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2104: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,4) → collision=0
+[MATRIX] Lock at (32, 4) - cells set: (31-33, 3-5)
+[FSM d23] Cycle 2105: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,4) → dispatch to worker
+[Dispatcher d23] Cycle 21055: Issued syndr (32, 4) to worker[1]
+[Dispatcher d23] Cycle 21105: Worker[0] DONE (active=1, stored_coord=(28,38))
+[MATRIX] Release at (28, 38) - cells cleared: (27-29, 37-39)
+[FSM d23] Cycle 2113: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2114: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,8) → collision=0
+[MATRIX] Lock at (37, 8) - cells set: (36-38, 7-9)
+[FSM d23] Cycle 2115: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,8) → dispatch to worker
+[Dispatcher d23] Cycle 21155: Issued syndr (37, 8) to worker[0]
+[Dispatcher d23] Cycle 21205: Worker[1] DONE (active=1, stored_coord=(32,4))
+[MATRIX] Release at (32, 4) - cells cleared: (31-33, 3-5)
+[FSM d23] Cycle 2123: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2124: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (37,13) → collision=0
+[MATRIX] Lock at (37, 13) - cells set: (36-38, 12-14)
+[FSM d23] Cycle 2125: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (37,13) → dispatch to worker
+[Dispatcher d23] Cycle 21255: Issued syndr (37, 13) to worker[1]
+[Dispatcher d23] Cycle 21305: Worker[0] DONE (active=1, stored_coord=(37,8))
+[MATRIX] Release at (37, 8) - cells cleared: (36-38, 7-9)
+[FSM d23] Cycle 2133: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2134: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (23,33) → collision=0
+[MATRIX] Lock at (23, 33) - cells set: (22-24, 32-34)
+[FSM d23] Cycle 2135: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (23,33) → dispatch to worker
+[Dispatcher d23] Cycle 21355: Issued syndr (23, 33) to worker[0]
+[Dispatcher d23] Cycle 21405: Worker[1] DONE (active=1, stored_coord=(37,13))
+[MATRIX] Release at (37, 13) - cells cleared: (36-38, 12-14)
+[FSM d23] Cycle 2143: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2144: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (28,33) → collision=0
+[MATRIX] Lock at (28, 33) - cells set: (27-29, 32-34)
+[FSM d23] Cycle 2145: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (28,33) → dispatch to worker
+[Dispatcher d23] Cycle 21455: Issued syndr (28, 33) to worker[1]
+[Dispatcher d23] Cycle 21505: Worker[0] DONE (active=1, stored_coord=(23,33))
+[MATRIX] Release at (23, 33) - cells cleared: (22-24, 32-34)
+[FSM d23] Cycle 2153: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2154: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (23,38) → collision=0
+[MATRIX] Lock at (23, 38) - cells set: (22-24, 37-39)
+[FSM d23] Cycle 2155: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (23,38) → dispatch to worker
+[Dispatcher d23] Cycle 21555: Issued syndr (23, 38) to worker[0]
+[Dispatcher d23] Cycle 21605: Worker[1] DONE (active=1, stored_coord=(28,33))
+[MATRIX] Release at (28, 33) - cells cleared: (27-29, 32-34)
+[FSM d23] Cycle 2163: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2164: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (32,46) → collision=0
+[MATRIX] Lock at (32, 46) - cells set: (31-33, 45-46)
+[FSM d23] Cycle 2165: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (32,46) → dispatch to worker
+[Dispatcher d23] Cycle 21655: Issued syndr (32, 46) to worker[1]
+[Dispatcher d23] Cycle 21705: Worker[0] DONE (active=1, stored_coord=(23,38))
+[MATRIX] Release at (23, 38) - cells cleared: (22-24, 37-39)
+[FSM d23] Cycle 2173: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2174: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (37,42) → collision=0
+[MATRIX] Lock at (37, 42) - cells set: (36-38, 41-43)
+[FSM d23] Cycle 2175: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (37,42) → dispatch to worker
+[Dispatcher d23] Cycle 21755: Issued syndr (37, 42) to worker[0]
+[Dispatcher d23] Cycle 21805: Worker[1] DONE (active=1, stored_coord=(32,46))
+[MATRIX] Release at (32, 46) - cells cleared: (31-33, 45-46)
+[FSM d23] Cycle 2183: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2184: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (14,46) → collision=0
+[MATRIX] Lock at (14, 46) - cells set: (13-15, 45-46)
+[FSM d23] Cycle 2185: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (14,46) → dispatch to worker
+[Dispatcher d23] Cycle 21855: Issued syndr (14, 46) to worker[1]
+[Dispatcher d23] Cycle 21905: Worker[0] DONE (active=1, stored_coord=(37,42))
+[MATRIX] Release at (37, 42) - cells cleared: (36-38, 41-43)
+[FSM d23] Cycle 2193: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2194: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (5,17) → collision=0
+[MATRIX] Lock at (5, 17) - cells set: (4-6, 16-18)
+[FSM d23] Cycle 2195: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (5,17) → dispatch to worker
+[Dispatcher d23] Cycle 21955: Issued syndr (5, 17) to worker[0]
+[Dispatcher d23] Cycle 22005: Worker[1] DONE (active=1, stored_coord=(14,46))
+[MATRIX] Release at (14, 46) - cells cleared: (13-15, 45-46)
+[FSM d23] Cycle 2203: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1110)
+[FSM d23] Cycle 2204: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1110)
+[FSM d23] Collision check: (0,21) → collision=0
+[MATRIX] Lock at (0, 21) - cells set: (0-1, 20-22)
+[FSM d23] Cycle 2205: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1110)
+[FSM d23] Lock issued: (0,21) → dispatch to worker
+[Dispatcher d23] Cycle 22055: Issued syndr (0, 21) to worker[1]
+[Dispatcher d23] Cycle 22105: Worker[0] DONE (active=1, stored_coord=(5,17))
+[MATRIX] Release at (5, 17) - cells cleared: (4-6, 16-18)
+[Testbench] All 221 syndromes injected at cycle 2211
+[FSM d23] Cycle 2213: FSM_IDLE → FSM_HAZARD_CHK (fifo_valid=1, collision=x, workers_ready=1101)
+[FSM d23] Cycle 2214: FSM_HAZARD_CHK → FSM_ISSUE (fifo_valid=0, collision=0, workers_ready=1101)
+[FSM d23] Collision check: (9,42) → collision=0
+[MATRIX] Lock at (9, 42) - cells set: (8-10, 41-43)
+[FSM d23] Cycle 2215: FSM_ISSUE → FSM_IDLE (fifo_valid=0, collision=x, workers_ready=1101)
+[FSM d23] Lock issued: (9,42) → dispatch to worker
+[Dispatcher d23] Cycle 22155: Issued syndr (9, 42) to worker[0]
+[Dispatcher d23] Cycle 22205: Worker[1] DONE (active=1, stored_coord=(0,21))
+[MATRIX] Release at (0, 21) - cells cleared: (0-1, 20-22)
+[Dispatcher d23] Cycle 22305: Worker[0] DONE (active=1, stored_coord=(9,42))
+[MATRIX] Release at (9, 42) - cells cleared: (8-10, 41-43)
+[Testbench] Dispatch log written to dispatch_log_d23.txt
+
+
+================================================
+DISPATCHER INTEGRATION TEST RESULTS (d=23)
+================================================
+Total Cycles:        2236
+Syndromes Issued:    221
+Syndromes Stalled:   221
+Collisions Detected: 24
+Completion status:   ALL WORKERS DONE
+================================================
+Expected: collision verification via verify_collisions.py
+================================================
+
+$finish called at time : 22485 ns : File "D:/College/4-2/SoP2/Code/queuebit/tb/tb_dispatcher_integration_d23.sv" Line 354
+

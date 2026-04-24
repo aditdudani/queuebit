@@ -3,7 +3,9 @@
 
 `timescale 1ns/1ps
 
-module dispatcher_fsm (
+module dispatcher_fsm #(
+    parameter bit ENABLE_COLLISION_CHECK = 1'b1  // Set to 0 for naive variant
+) (
     input  logic                            clk,
     input  logic                            rst_n,
 
@@ -80,15 +82,21 @@ module dispatcher_fsm (
 
             // HAZARD_CHK: Check for collision at latched coordinates
             FSM_HAZARD_CHK: begin
-                matrix_check_en = 1'b1;
-                matrix_check_x  = latched_x;
-                matrix_check_y  = latched_y;
+                // In standard mode, perform collision check; in naive mode, skip directly to ISSUE
+                if (ENABLE_COLLISION_CHECK) begin
+                    matrix_check_en = 1'b1;
+                    matrix_check_x  = latched_x;
+                    matrix_check_y  = latched_y;
 
-                if (matrix_collision) begin
-                    // Collision detected: wait for worker to complete
-                    next_state = FSM_STALL;
+                    if (matrix_collision) begin
+                        // Collision detected: wait for worker to complete
+                        next_state = FSM_STALL;
+                    end else begin
+                        // No collision: proceed to issue
+                        next_state = FSM_ISSUE;
+                    end
                 end else begin
-                    // No collision: proceed to issue
+                    // Naive mode: skip collision check, proceed directly to ISSUE
                     next_state = FSM_ISSUE;
                 end
             end

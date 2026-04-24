@@ -1,0 +1,15 @@
+d=11 DISPATCHER SYNTHESIS METRICS
+================================================================================
+
+Clock Frequency (MHz): 100.0
+Setup Slack (ns): 0.424
+Hold Slack (ns): 0.191
+
+LUT Used: 2804 / 53200 (5.27%)
+FF Used: 928 / 106400 (0.87%)
+DSP Used: 0 / 220 (0.00%)
+BRAM Used: 0 / 140 (0.00%)
+
+Total Power (mW): 115.0
+Dynamic Power (mW): 10.0
+Static Power (mW): 105.0

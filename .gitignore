@@ -1,6 +1,7 @@
 local_backup
 
 build/
+docs
 
 batch_run/queuebit_vivado/
 batch_run/dfx_runtime.txt
@@ -28,3 +29,10 @@ webtalk*.jou
 webtalk*.log
 vivado*.jou
 vivado*.log
+
+*/__pycache__/
+*/*.pyc
+*/*.pyo
+*/.ipynb_checkpoints/
+
+deliverables_old

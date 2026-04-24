@@ -1,113 +1,172 @@
 #!/usr/bin/env python3
 """
-Phase 4 Metrics Extraction Script
-Parses simulation logs for stall cycles and worker utilization
-Skips logs that failed (no XSIM output)
+Extract d=11 sweep metrics from batch_run/build logs.
+
+This version uses the final summary block for core run metrics and only falls
+back to detailed log-line counting for auxiliary values such as stall cycles
+and average active workers.
 """
 
-import os
 import csv
 import re
+import sys
 from collections import defaultdict
+from pathlib import Path
 
-# Define output CSV file
-OUTPUT_CSV = "build/metrics.csv"
-LOG_DIR = "build"
 
-# Parse logs
-results = []
-skipped = 0
+LOG_DIR = Path("build")
+OUTPUT_CSV = LOG_DIR / "metrics.csv"
 
-log_files = sorted([f for f in os.listdir(LOG_DIR) if f.startswith("log_K") and f.endswith(".txt")])
 
-for log_file in log_files:
-    # Extract K, injection_rate, run from filename
-    match = re.match(r"log_K(\d+)_inj([\d.]+)_(\d+)\.txt", log_file)
-    if not match:
-        continue
+def parse_run_log(log_path):
+    metrics = {
+        "cycles": None,
+        "injected": None,
+        "issued": None,
+        "stall_cycles": 0,
+        "avg_workers": 0.0,
+        "errors": 0,
+        "has_xsim_output": False,
+        "status": None,
+    }
 
-    K = int(match.group(1))
-    inj_rate = float(match.group(2))
-    run = int(match.group(3))
+    try:
+        content = log_path.read_text(errors="replace")
+    except Exception as exc:
+        print(f"ERROR reading {log_path}: {exc}", file=sys.stderr)
+        return None
 
-    filepath = os.path.join(LOG_DIR, log_file)
+    if "--- XSIM STDOUT ---" in content:
+        metrics["has_xsim_output"] = True
 
-    # Count FSM_STALL cycles and worker activity
-    stall_cycles = 0
-    total_cycles = 0
+    summary_match = re.search(
+        r"=+\s*\nDISPATCHER INTEGRATION TEST RESULTS\s*\n=+\s*\n(.*?)\n=+",
+        content,
+        re.DOTALL | re.IGNORECASE,
+    )
+    if summary_match:
+        block = summary_match.group(1)
+        patterns = [
+            (r"Total cycles run\s*:\s*(\d+)", "cycles"),
+            (r"Syndromes injected\s*:\s*(\d+)", "injected"),
+            (r"Syndromes issued\s*:\s*(\d+)", "issued"),
+            (r"Completion status\s*:\s*(.+)", "status"),
+        ]
+        for pattern, key in patterns:
+            match = re.search(pattern, block, re.IGNORECASE)
+            if match:
+                metrics[key] = match.group(1).strip() if key == "status" else int(match.group(1))
+
     worker_bits = defaultdict(int)
-    syndromes_issued = 0
-    errors = []
-    has_xsim_output = False
+    for line in content.splitlines():
+        if "FSM_STALL" in line:
+            metrics["stall_cycles"] += 1
 
-    with open(filepath, 'r') as f:
-        for line in f:
-            # Check if this is valid XSIM output
-            if "--- XSIM STDOUT ---" in line:
-                has_xsim_output = True
+        workers_match = re.search(r"workers_ready=(\d{4})", line)
+        if workers_match:
+            worker_state = workers_match.group(1)
+            active_workers = 4 - worker_state.count("1")
+            worker_bits[active_workers] += 1
 
-            # Count FSM_STALL state transitions
-            if "FSM_STALL" in line:
-                stall_cycles += 1
+        if "Error:" in line or "ERROR" in line:
+            metrics["errors"] += 1
 
-            # Count FSM cycles (every [FSM] Cycle line)
-            if "[FSM] Cycle" in line:
-                total_cycles += 1
+    total_worker_samples = sum(worker_bits.values())
+    if total_worker_samples > 0:
+        metrics["avg_workers"] = sum(k * v for k, v in worker_bits.items()) / total_worker_samples
 
-            # Extract worker state from workers_ready field
-            workers_match = re.search(r"workers_ready=(\d{4})", line)
-            if workers_match:
-                worker_state = workers_match.group(1)
-                # Active = total (4) minus ready (count of 1s)
-                active_workers = 4 - worker_state.count('1')
-                worker_bits[active_workers] += 1
+    return metrics
 
-            # Count issued syndromes
-            if "Issued syndr" in line:
-                syndromes_issued += 1
 
-            # Capture errors
-            if "Error:" in line or "ERROR" in line:
-                errors.append(line.strip())
+def main():
+    if not LOG_DIR.exists():
+        print(f"ERROR: Log directory not found: {LOG_DIR}")
+        print("Run: vivado -mode batch -source batch_simulate.tcl")
+        sys.exit(1)
 
-    # Skip logs without valid XSIM output
-    if not has_xsim_output or total_cycles == 0:
-        print(f"✗ {log_file}: SKIPPED (no valid XSIM output)")
-        skipped += 1
-        continue
+    results = []
+    skipped = 0
 
-    # Calculate metrics
-    stall_rate = (stall_cycles / total_cycles * 100) if total_cycles > 0 else 0
-    avg_workers = sum(k * v for k, v in worker_bits.items()) / sum(worker_bits.values()) if total_cycles > 0 else 0
+    log_files = sorted(LOG_DIR.glob("log_K*.txt"))
+    for log_file in log_files:
+        match = re.match(r"log_K(\d+)_inj([\d.]+)_(\d+)\.txt", log_file.name)
+        if not match:
+            continue
 
-    results.append({
-        'K': K,
-        'injection_rate': inj_rate,
-        'run': run,
-        'stall_cycles': stall_cycles,
-        'total_cycles': total_cycles,
-        'stall_rate_pct': round(stall_rate, 2),
-        'avg_workers': round(avg_workers, 2),
-        'syndromes_issued': syndromes_issued,
-        'errors': len(errors)
-    })
+        K = int(match.group(1))
+        inj_rate = float(match.group(2))
+        run = int(match.group(3))
 
-    print(f"✓ {log_file}: stall={stall_rate:.2f}%, workers={avg_workers:.2f}, issued={syndromes_issued}, errors={len(errors)}")
+        metrics = parse_run_log(log_file)
+        if metrics is None:
+            skipped += 1
+            continue
 
-# Write CSV
-with open(OUTPUT_CSV, 'w', newline='') as f:
-    writer = csv.DictWriter(f, fieldnames=['K', 'injection_rate', 'run', 'stall_cycles', 'total_cycles', 'stall_rate_pct', 'avg_workers', 'syndromes_issued', 'errors'])
-    writer.writeheader()
-    writer.writerows(results)
+        if not metrics["has_xsim_output"] or metrics["cycles"] is None:
+            print(f"SKIPPED {log_file.name}: no valid XSIM summary")
+            skipped += 1
+            continue
 
-print(f"\n✓ Metrics written to {OUTPUT_CSV}")
-print(f"✓ Valid runs: {len(results)}/60")
-print(f"✗ Skipped runs: {skipped}/60")
+        stall_rate = (
+            (metrics["stall_cycles"] / metrics["cycles"]) * 100.0
+            if metrics["cycles"] > 0
+            else 0.0
+        )
 
-# Summary statistics
-if results:
-    print("\n--- SUMMARY STATISTICS ---")
-    for K in sorted(set(r['K'] for r in results)):
-        k_results = [r for r in results if r['K'] == K]
-        avg_stall = sum(r['stall_rate_pct'] for r in k_results) / len(k_results)
-        print(f"K={K}: avg_stall_rate={avg_stall:.2f}%")
+        results.append(
+            {
+                "K": K,
+                "injection_rate": inj_rate,
+                "run": run,
+                "cycles": metrics["cycles"],
+                "syndromes_injected": metrics["injected"],
+                "syndromes_issued": metrics["issued"],
+                "stall_cycles": metrics["stall_cycles"],
+                "stall_rate_pct": round(stall_rate, 2),
+                "avg_workers": round(metrics["avg_workers"], 2),
+                "status": metrics["status"],
+                "errors": metrics["errors"],
+            }
+        )
+
+        print(
+            f"{log_file.name}: cycles={metrics['cycles']}, "
+            f"issued={metrics['issued']}, stall={stall_rate:.2f}%, "
+            f"workers={metrics['avg_workers']:.2f}, status={metrics['status']}"
+        )
+
+    with OUTPUT_CSV.open("w", newline="") as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=[
+                "K",
+                "injection_rate",
+                "run",
+                "cycles",
+                "syndromes_injected",
+                "syndromes_issued",
+                "stall_cycles",
+                "stall_rate_pct",
+                "avg_workers",
+                "status",
+                "errors",
+            ],
+        )
+        writer.writeheader()
+        writer.writerows(results)
+
+    print(f"\nMetrics written to {OUTPUT_CSV}")
+    print(f"Valid runs: {len(results)}/{len(log_files)}")
+    print(f"Skipped runs: {skipped}/{len(log_files)}")
+
+    if results:
+        print("\nSummary by K:")
+        for K in sorted(set(r["K"] for r in results)):
+            k_results = [r for r in results if r["K"] == K]
+            avg_stall = sum(r["stall_rate_pct"] for r in k_results) / len(k_results)
+            avg_cycles = sum(r["cycles"] for r in k_results) / len(k_results)
+            print(f"K={K}: avg_cycles={avg_cycles:.1f}, avg_stall_rate={avg_stall:.2f}%")
+
+
+if __name__ == "__main__":
+    main()

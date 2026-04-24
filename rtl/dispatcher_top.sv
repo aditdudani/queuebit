@@ -3,7 +3,9 @@
 
 `timescale 1ns/1ps
 
-module dispatcher_top (
+module dispatcher_top #(
+    parameter bit ENABLE_COLLISION_CHECK = 1'b1  // Set to 0 for naive variant (no collision avoidance)
+) (
     input  logic                            clk,
     input  logic                            rst_n,
 
@@ -168,7 +170,9 @@ module dispatcher_top (
     logic [9:0] dispatch_coord_internal;
     logic       dispatch_valid_internal;
 
-    dispatcher_fsm fsm_inst (
+    dispatcher_fsm #(
+        .ENABLE_COLLISION_CHECK(ENABLE_COLLISION_CHECK)
+    ) fsm_inst (
         .clk                (clk),
         .rst_n              (rst_n),
         .fifo_rd_valid      (fifo_rd_valid),
