@@ -1,0 +1,2309 @@
+====================================================================================================
+SYNDROME SEPARATION ANALYSIS
+====================================================================================================
+
+Dispatch Log: D:\College\4-2\SoP2\Code\queuebit\build\safety_d23\K20_INJ2000.dispatch_log_d23.txt
+Worker Latency (K): 20 cycles
+
+[SUMMARY]
+  Total concurrent syndrome pairs: 457
+  Safe pairs (Chebyshev distance > 2): 457
+  Unsafe pairs (Chebyshev distance <= 2): 0
+
+  [PASS] 0 spatial collisions detected
+
+[DISTANCE STATISTICS]
+  Min distance: 4
+  Max distance: 46
+  Mean distance: 15.49
+  Std dev: 10.35
+
+====================================================================================================
+DETAILED CONCURRENT PAIRS
+====================================================================================================
+
+Pair 1: [SAFE]
+  Worker 0 @ cycle 4: (5, 13)
+  Worker 1 @ cycle 6: (9, 13)
+  Chebyshev distance: 4
+
+Pair 2: [SAFE]
+  Worker 0 @ cycle 4: (5, 13)
+  Worker 2 @ cycle 8: (5, 17)
+  Chebyshev distance: 4
+
+Pair 3: [SAFE]
+  Worker 0 @ cycle 4: (5, 13)
+  Worker 3 @ cycle 10: (9, 17)
+  Chebyshev distance: 4
+
+Pair 4: [SAFE]
+  Worker 0 @ cycle 27: (9, 21)
+  Worker 1 @ cycle 29: (14, 21)
+  Chebyshev distance: 5
+
+Pair 5: [SAFE]
+  Worker 0 @ cycle 27: (9, 21)
+  Worker 2 @ cycle 8: (5, 17)
+  Chebyshev distance: 4
+
+Pair 6: [SAFE]
+  Worker 0 @ cycle 27: (9, 21)
+  Worker 2 @ cycle 31: (5, 25)
+  Chebyshev distance: 4
+
+Pair 7: [SAFE]
+  Worker 0 @ cycle 27: (9, 21)
+  Worker 3 @ cycle 10: (9, 17)
+  Chebyshev distance: 4
+
+Pair 8: [SAFE]
+  Worker 0 @ cycle 27: (9, 21)
+  Worker 3 @ cycle 33: (9, 25)
+  Chebyshev distance: 4
+
+Pair 9: [SAFE]
+  Worker 0 @ cycle 50: (32, 21)
+  Worker 1 @ cycle 52: (37, 21)
+  Chebyshev distance: 5
+
+Pair 10: [SAFE]
+  Worker 0 @ cycle 50: (32, 21)
+  Worker 2 @ cycle 31: (5, 25)
+  Chebyshev distance: 27
+
+Pair 11: [SAFE]
+  Worker 0 @ cycle 50: (32, 21)
+  Worker 2 @ cycle 54: (14, 25)
+  Chebyshev distance: 18
+
+Pair 12: [SAFE]
+  Worker 0 @ cycle 50: (32, 21)
+  Worker 3 @ cycle 33: (9, 25)
+  Chebyshev distance: 23
+
+Pair 13: [SAFE]
+  Worker 0 @ cycle 50: (32, 21)
+  Worker 3 @ cycle 56: (32, 25)
+  Chebyshev distance: 4
+
+Pair 14: [SAFE]
+  Worker 0 @ cycle 73: (9, 29)
+  Worker 1 @ cycle 75: (37, 13)
+  Chebyshev distance: 28
+
+Pair 15: [SAFE]
+  Worker 0 @ cycle 73: (9, 29)
+  Worker 2 @ cycle 54: (14, 25)
+  Chebyshev distance: 5
+
+Pair 16: [SAFE]
+  Worker 0 @ cycle 73: (9, 29)
+  Worker 2 @ cycle 77: (32, 21)
+  Chebyshev distance: 23
+
+Pair 17: [SAFE]
+  Worker 0 @ cycle 73: (9, 29)
+  Worker 3 @ cycle 56: (32, 25)
+  Chebyshev distance: 23
+
+Pair 18: [SAFE]
+  Worker 0 @ cycle 73: (9, 29)
+  Worker 3 @ cycle 79: (5, 46)
+  Chebyshev distance: 17
+
+Pair 19: [SAFE]
+  Worker 0 @ cycle 98: (37, 13)
+  Worker 1 @ cycle 100: (23, 25)
+  Chebyshev distance: 14
+
+Pair 20: [SAFE]
+  Worker 0 @ cycle 98: (37, 13)
+  Worker 2 @ cycle 102: (18, 29)
+  Chebyshev distance: 19
+
+Pair 21: [SAFE]
+  Worker 0 @ cycle 98: (37, 13)
+  Worker 3 @ cycle 79: (5, 46)
+  Chebyshev distance: 33
+
+Pair 22: [SAFE]
+  Worker 0 @ cycle 98: (37, 13)
+  Worker 3 @ cycle 104: (23, 29)
+  Chebyshev distance: 16
+
+Pair 23: [SAFE]
+  Worker 0 @ cycle 121: (0, 33)
+  Worker 1 @ cycle 123: (46, 38)
+  Chebyshev distance: 46
+
+Pair 24: [SAFE]
+  Worker 0 @ cycle 121: (0, 33)
+  Worker 2 @ cycle 102: (18, 29)
+  Chebyshev distance: 18
+
+Pair 25: [SAFE]
+  Worker 0 @ cycle 121: (0, 33)
+  Worker 2 @ cycle 125: (5, 46)
+  Chebyshev distance: 13
+
+Pair 26: [SAFE]
+  Worker 0 @ cycle 121: (0, 33)
+  Worker 3 @ cycle 104: (23, 29)
+  Chebyshev distance: 23
+
+Pair 27: [SAFE]
+  Worker 0 @ cycle 121: (0, 33)
+  Worker 3 @ cycle 127: (32, 8)
+  Chebyshev distance: 32
+
+Pair 28: [SAFE]
+  Worker 0 @ cycle 144: (18, 25)
+  Worker 1 @ cycle 146: (46, 38)
+  Chebyshev distance: 28
+
+Pair 29: [SAFE]
+  Worker 0 @ cycle 144: (18, 25)
+  Worker 2 @ cycle 125: (5, 46)
+  Chebyshev distance: 21
+
+Pair 30: [SAFE]
+  Worker 0 @ cycle 144: (18, 25)
+  Worker 2 @ cycle 150: (32, 8)
+  Chebyshev distance: 17
+
+Pair 31: [SAFE]
+  Worker 0 @ cycle 144: (18, 25)
+  Worker 3 @ cycle 127: (32, 8)
+  Chebyshev distance: 17
+
+Pair 32: [SAFE]
+  Worker 0 @ cycle 144: (18, 25)
+  Worker 3 @ cycle 152: (32, 38)
+  Chebyshev distance: 14
+
+Pair 33: [SAFE]
+  Worker 0 @ cycle 169: (37, 42)
+  Worker 1 @ cycle 171: (23, 42)
+  Chebyshev distance: 14
+
+Pair 34: [SAFE]
+  Worker 0 @ cycle 169: (37, 42)
+  Worker 2 @ cycle 150: (32, 8)
+  Chebyshev distance: 34
+
+Pair 35: [SAFE]
+  Worker 0 @ cycle 169: (37, 42)
+  Worker 2 @ cycle 173: (28, 38)
+  Chebyshev distance: 9
+
+Pair 36: [SAFE]
+  Worker 0 @ cycle 169: (37, 42)
+  Worker 3 @ cycle 152: (32, 38)
+  Chebyshev distance: 5
+
+Pair 37: [SAFE]
+  Worker 0 @ cycle 169: (37, 42)
+  Worker 3 @ cycle 175: (5, 42)
+  Chebyshev distance: 32
+
+Pair 38: [SAFE]
+  Worker 0 @ cycle 192: (23, 29)
+  Worker 1 @ cycle 194: (0, 33)
+  Chebyshev distance: 23
+
+Pair 39: [SAFE]
+  Worker 0 @ cycle 192: (23, 29)
+  Worker 2 @ cycle 173: (28, 38)
+  Chebyshev distance: 9
+
+Pair 40: [SAFE]
+  Worker 0 @ cycle 192: (23, 29)
+  Worker 2 @ cycle 198: (5, 42)
+  Chebyshev distance: 18
+
+Pair 41: [SAFE]
+  Worker 0 @ cycle 192: (23, 29)
+  Worker 3 @ cycle 175: (5, 42)
+  Chebyshev distance: 18
+
+Pair 42: [SAFE]
+  Worker 0 @ cycle 192: (23, 29)
+  Worker 3 @ cycle 200: (14, 29)
+  Chebyshev distance: 9
+
+Pair 43: [SAFE]
+  Worker 0 @ cycle 217: (23, 29)
+  Worker 1 @ cycle 219: (0, 33)
+  Chebyshev distance: 23
+
+Pair 44: [SAFE]
+  Worker 0 @ cycle 217: (23, 29)
+  Worker 2 @ cycle 198: (5, 42)
+  Chebyshev distance: 18
+
+Pair 45: [SAFE]
+  Worker 0 @ cycle 217: (23, 29)
+  Worker 2 @ cycle 223: (14, 29)
+  Chebyshev distance: 9
+
+Pair 46: [SAFE]
+  Worker 0 @ cycle 217: (23, 29)
+  Worker 3 @ cycle 200: (14, 29)
+  Chebyshev distance: 9
+
+Pair 47: [SAFE]
+  Worker 0 @ cycle 217: (23, 29)
+  Worker 3 @ cycle 225: (14, 25)
+  Chebyshev distance: 9
+
+Pair 48: [SAFE]
+  Worker 0 @ cycle 242: (9, 29)
+  Worker 1 @ cycle 244: (28, 17)
+  Chebyshev distance: 19
+
+Pair 49: [SAFE]
+  Worker 0 @ cycle 242: (9, 29)
+  Worker 2 @ cycle 223: (14, 29)
+  Chebyshev distance: 5
+
+Pair 50: [SAFE]
+  Worker 0 @ cycle 242: (9, 29)
+  Worker 2 @ cycle 246: (14, 21)
+  Chebyshev distance: 8
+
+Pair 51: [SAFE]
+  Worker 0 @ cycle 242: (9, 29)
+  Worker 3 @ cycle 225: (14, 25)
+  Chebyshev distance: 5
+
+Pair 52: [SAFE]
+  Worker 0 @ cycle 242: (9, 29)
+  Worker 3 @ cycle 248: (9, 25)
+  Chebyshev distance: 4
+
+Pair 53: [SAFE]
+  Worker 0 @ cycle 265: (14, 25)
+  Worker 1 @ cycle 267: (41, 33)
+  Chebyshev distance: 27
+
+Pair 54: [SAFE]
+  Worker 0 @ cycle 265: (14, 25)
+  Worker 2 @ cycle 246: (14, 21)
+  Chebyshev distance: 4
+
+Pair 55: [SAFE]
+  Worker 0 @ cycle 265: (14, 25)
+  Worker 2 @ cycle 269: (28, 17)
+  Chebyshev distance: 14
+
+Pair 56: [SAFE]
+  Worker 0 @ cycle 265: (14, 25)
+  Worker 3 @ cycle 248: (9, 25)
+  Chebyshev distance: 5
+
+Pair 57: [SAFE]
+  Worker 0 @ cycle 265: (14, 25)
+  Worker 3 @ cycle 271: (9, 21)
+  Chebyshev distance: 5
+
+Pair 58: [SAFE]
+  Worker 0 @ cycle 290: (41, 33)
+  Worker 1 @ cycle 292: (14, 8)
+  Chebyshev distance: 27
+
+Pair 59: [SAFE]
+  Worker 0 @ cycle 290: (41, 33)
+  Worker 2 @ cycle 294: (18, 13)
+  Chebyshev distance: 23
+
+Pair 60: [SAFE]
+  Worker 0 @ cycle 290: (41, 33)
+  Worker 3 @ cycle 271: (9, 21)
+  Chebyshev distance: 32
+
+Pair 61: [SAFE]
+  Worker 0 @ cycle 290: (41, 33)
+  Worker 3 @ cycle 296: (18, 21)
+  Chebyshev distance: 23
+
+Pair 62: [SAFE]
+  Worker 0 @ cycle 313: (18, 17)
+  Worker 1 @ cycle 315: (14, 21)
+  Chebyshev distance: 4
+
+Pair 63: [SAFE]
+  Worker 0 @ cycle 313: (18, 17)
+  Worker 2 @ cycle 294: (18, 13)
+  Chebyshev distance: 4
+
+Pair 64: [SAFE]
+  Worker 0 @ cycle 313: (18, 17)
+  Worker 2 @ cycle 319: (18, 21)
+  Chebyshev distance: 4
+
+Pair 65: [SAFE]
+  Worker 0 @ cycle 313: (18, 17)
+  Worker 3 @ cycle 296: (18, 21)
+  Chebyshev distance: 4
+
+Pair 66: [SAFE]
+  Worker 0 @ cycle 313: (18, 17)
+  Worker 3 @ cycle 321: (18, 4)
+  Chebyshev distance: 13
+
+Pair 67: [SAFE]
+  Worker 0 @ cycle 338: (18, 8)
+  Worker 1 @ cycle 340: (14, 13)
+  Chebyshev distance: 5
+
+Pair 68: [SAFE]
+  Worker 0 @ cycle 338: (18, 8)
+  Worker 2 @ cycle 319: (18, 21)
+  Chebyshev distance: 13
+
+Pair 69: [SAFE]
+  Worker 0 @ cycle 338: (18, 8)
+  Worker 2 @ cycle 342: (14, 8)
+  Chebyshev distance: 4
+
+Pair 70: [SAFE]
+  Worker 0 @ cycle 338: (18, 8)
+  Worker 3 @ cycle 321: (18, 4)
+  Chebyshev distance: 4
+
+Pair 71: [SAFE]
+  Worker 0 @ cycle 338: (18, 8)
+  Worker 3 @ cycle 344: (32, 42)
+  Chebyshev distance: 34
+
+Pair 72: [SAFE]
+  Worker 0 @ cycle 361: (32, 46)
+  Worker 1 @ cycle 363: (32, 4)
+  Chebyshev distance: 42
+
+Pair 73: [SAFE]
+  Worker 0 @ cycle 361: (32, 46)
+  Worker 2 @ cycle 342: (14, 8)
+  Chebyshev distance: 38
+
+Pair 74: [SAFE]
+  Worker 0 @ cycle 361: (32, 46)
+  Worker 2 @ cycle 365: (37, 4)
+  Chebyshev distance: 42
+
+Pair 75: [SAFE]
+  Worker 0 @ cycle 361: (32, 46)
+  Worker 3 @ cycle 344: (32, 42)
+  Chebyshev distance: 4
+
+Pair 76: [SAFE]
+  Worker 0 @ cycle 361: (32, 46)
+  Worker 3 @ cycle 367: (23, 25)
+  Chebyshev distance: 21
+
+Pair 77: [SAFE]
+  Worker 0 @ cycle 384: (18, 29)
+  Worker 1 @ cycle 386: (18, 33)
+  Chebyshev distance: 4
+
+Pair 78: [SAFE]
+  Worker 0 @ cycle 384: (18, 29)
+  Worker 2 @ cycle 365: (37, 4)
+  Chebyshev distance: 25
+
+Pair 79: [SAFE]
+  Worker 0 @ cycle 384: (18, 29)
+  Worker 2 @ cycle 388: (18, 38)
+  Chebyshev distance: 9
+
+Pair 80: [SAFE]
+  Worker 0 @ cycle 384: (18, 29)
+  Worker 3 @ cycle 367: (23, 25)
+  Chebyshev distance: 5
+
+Pair 81: [SAFE]
+  Worker 0 @ cycle 384: (18, 29)
+  Worker 3 @ cycle 390: (32, 38)
+  Chebyshev distance: 14
+
+Pair 82: [SAFE]
+  Worker 0 @ cycle 407: (32, 4)
+  Worker 1 @ cycle 409: (18, 25)
+  Chebyshev distance: 21
+
+Pair 83: [SAFE]
+  Worker 0 @ cycle 407: (32, 4)
+  Worker 2 @ cycle 388: (18, 38)
+  Chebyshev distance: 34
+
+Pair 84: [SAFE]
+  Worker 0 @ cycle 407: (32, 4)
+  Worker 2 @ cycle 411: (14, 42)
+  Chebyshev distance: 38
+
+Pair 85: [SAFE]
+  Worker 0 @ cycle 407: (32, 4)
+  Worker 3 @ cycle 390: (32, 38)
+  Chebyshev distance: 34
+
+Pair 86: [SAFE]
+  Worker 0 @ cycle 407: (32, 4)
+  Worker 3 @ cycle 413: (37, 25)
+  Chebyshev distance: 21
+
+Pair 87: [SAFE]
+  Worker 0 @ cycle 436: (37, 25)
+  Worker 1 @ cycle 438: (14, 42)
+  Chebyshev distance: 23
+
+Pair 88: [SAFE]
+  Worker 0 @ cycle 436: (37, 25)
+  Worker 2 @ cycle 440: (28, 21)
+  Chebyshev distance: 9
+
+Pair 89: [SAFE]
+  Worker 0 @ cycle 463: (28, 21)
+  Worker 1 @ cycle 465: (9, 29)
+  Chebyshev distance: 19
+
+Pair 90: [SAFE]
+  Worker 0 @ cycle 463: (28, 21)
+  Worker 2 @ cycle 467: (14, 33)
+  Chebyshev distance: 14
+
+Pair 91: [SAFE]
+  Worker 0 @ cycle 463: (28, 21)
+  Worker 3 @ cycle 469: (28, 42)
+  Chebyshev distance: 21
+
+Pair 92: [SAFE]
+  Worker 0 @ cycle 492: (28, 42)
+  Worker 1 @ cycle 494: (28, 25)
+  Chebyshev distance: 17
+
+Pair 93: [SAFE]
+  Worker 0 @ cycle 492: (28, 42)
+  Worker 2 @ cycle 496: (32, 25)
+  Chebyshev distance: 17
+
+Pair 94: [SAFE]
+  Worker 0 @ cycle 492: (28, 42)
+  Worker 3 @ cycle 498: (28, 29)
+  Chebyshev distance: 13
+
+Pair 95: [SAFE]
+  Worker 0 @ cycle 515: (32, 29)
+  Worker 1 @ cycle 517: (14, 8)
+  Chebyshev distance: 21
+
+Pair 96: [SAFE]
+  Worker 0 @ cycle 515: (32, 29)
+  Worker 2 @ cycle 496: (32, 25)
+  Chebyshev distance: 4
+
+Pair 97: [SAFE]
+  Worker 0 @ cycle 515: (32, 29)
+  Worker 2 @ cycle 519: (9, 17)
+  Chebyshev distance: 23
+
+Pair 98: [SAFE]
+  Worker 0 @ cycle 515: (32, 29)
+  Worker 3 @ cycle 498: (28, 29)
+  Chebyshev distance: 4
+
+Pair 99: [SAFE]
+  Worker 0 @ cycle 515: (32, 29)
+  Worker 3 @ cycle 521: (9, 8)
+  Chebyshev distance: 23
+
+Pair 100: [SAFE]
+  Worker 0 @ cycle 538: (9, 13)
+  Worker 1 @ cycle 540: (37, 25)
+  Chebyshev distance: 28
+
+Pair 101: [SAFE]
+  Worker 0 @ cycle 538: (9, 13)
+  Worker 2 @ cycle 519: (9, 17)
+  Chebyshev distance: 4
+
+Pair 102: [SAFE]
+  Worker 0 @ cycle 538: (9, 13)
+  Worker 2 @ cycle 542: (28, 29)
+  Chebyshev distance: 19
+
+Pair 103: [SAFE]
+  Worker 0 @ cycle 538: (9, 13)
+  Worker 3 @ cycle 521: (9, 8)
+  Chebyshev distance: 5
+
+Pair 104: [SAFE]
+  Worker 0 @ cycle 538: (9, 13)
+  Worker 3 @ cycle 544: (32, 29)
+  Chebyshev distance: 23
+
+Pair 105: [SAFE]
+  Worker 0 @ cycle 565: (28, 29)
+  Worker 1 @ cycle 567: (32, 42)
+  Chebyshev distance: 13
+
+Pair 106: [SAFE]
+  Worker 0 @ cycle 565: (28, 29)
+  Worker 2 @ cycle 569: (5, 4)
+  Chebyshev distance: 25
+
+Pair 107: [SAFE]
+  Worker 0 @ cycle 565: (28, 29)
+  Worker 3 @ cycle 571: (14, 17)
+  Chebyshev distance: 14
+
+Pair 108: [SAFE]
+  Worker 0 @ cycle 588: (18, 17)
+  Worker 1 @ cycle 590: (14, 21)
+  Chebyshev distance: 4
+
+Pair 109: [SAFE]
+  Worker 0 @ cycle 588: (18, 17)
+  Worker 2 @ cycle 569: (5, 4)
+  Chebyshev distance: 13
+
+Pair 110: [SAFE]
+  Worker 0 @ cycle 588: (18, 17)
+  Worker 2 @ cycle 592: (18, 21)
+  Chebyshev distance: 4
+
+Pair 111: [SAFE]
+  Worker 0 @ cycle 588: (18, 17)
+  Worker 3 @ cycle 571: (14, 17)
+  Chebyshev distance: 4
+
+Pair 112: [SAFE]
+  Worker 0 @ cycle 588: (18, 17)
+  Worker 3 @ cycle 594: (5, 4)
+  Chebyshev distance: 13
+
+Pair 113: [SAFE]
+  Worker 0 @ cycle 611: (32, 13)
+  Worker 1 @ cycle 613: (37, 29)
+  Chebyshev distance: 16
+
+Pair 114: [SAFE]
+  Worker 0 @ cycle 611: (32, 13)
+  Worker 2 @ cycle 592: (18, 21)
+  Chebyshev distance: 14
+
+Pair 115: [SAFE]
+  Worker 0 @ cycle 611: (32, 13)
+  Worker 2 @ cycle 615: (28, 33)
+  Chebyshev distance: 20
+
+Pair 116: [SAFE]
+  Worker 0 @ cycle 611: (32, 13)
+  Worker 3 @ cycle 594: (5, 4)
+  Chebyshev distance: 27
+
+Pair 117: [SAFE]
+  Worker 0 @ cycle 611: (32, 13)
+  Worker 3 @ cycle 617: (32, 33)
+  Chebyshev distance: 20
+
+Pair 118: [SAFE]
+  Worker 0 @ cycle 636: (32, 13)
+  Worker 1 @ cycle 638: (32, 29)
+  Chebyshev distance: 16
+
+Pair 119: [SAFE]
+  Worker 0 @ cycle 636: (32, 13)
+  Worker 2 @ cycle 640: (41, 8)
+  Chebyshev distance: 9
+
+Pair 120: [SAFE]
+  Worker 0 @ cycle 636: (32, 13)
+  Worker 3 @ cycle 617: (32, 33)
+  Chebyshev distance: 20
+
+Pair 121: [SAFE]
+  Worker 0 @ cycle 636: (32, 13)
+  Worker 3 @ cycle 642: (14, 33)
+  Chebyshev distance: 20
+
+Pair 122: [SAFE]
+  Worker 0 @ cycle 659: (41, 4)
+  Worker 1 @ cycle 661: (37, 8)
+  Chebyshev distance: 4
+
+Pair 123: [SAFE]
+  Worker 0 @ cycle 659: (41, 4)
+  Worker 2 @ cycle 640: (41, 8)
+  Chebyshev distance: 4
+
+Pair 124: [SAFE]
+  Worker 0 @ cycle 659: (41, 4)
+  Worker 2 @ cycle 663: (41, 8)
+  Chebyshev distance: 4
+
+Pair 125: [SAFE]
+  Worker 0 @ cycle 659: (41, 4)
+  Worker 3 @ cycle 642: (14, 33)
+  Chebyshev distance: 29
+
+Pair 126: [SAFE]
+  Worker 0 @ cycle 659: (41, 4)
+  Worker 3 @ cycle 665: (5, 13)
+  Chebyshev distance: 36
+
+Pair 127: [SAFE]
+  Worker 0 @ cycle 682: (9, 17)
+  Worker 1 @ cycle 684: (0, 25)
+  Chebyshev distance: 9
+
+Pair 128: [SAFE]
+  Worker 0 @ cycle 682: (9, 17)
+  Worker 2 @ cycle 663: (41, 8)
+  Chebyshev distance: 32
+
+Pair 129: [SAFE]
+  Worker 0 @ cycle 682: (9, 17)
+  Worker 2 @ cycle 686: (5, 25)
+  Chebyshev distance: 8
+
+Pair 130: [SAFE]
+  Worker 0 @ cycle 682: (9, 17)
+  Worker 3 @ cycle 665: (5, 13)
+  Chebyshev distance: 4
+
+Pair 131: [SAFE]
+  Worker 0 @ cycle 682: (9, 17)
+  Worker 3 @ cycle 688: (0, 29)
+  Chebyshev distance: 12
+
+Pair 132: [SAFE]
+  Worker 0 @ cycle 705: (5, 29)
+  Worker 1 @ cycle 707: (14, 33)
+  Chebyshev distance: 9
+
+Pair 133: [SAFE]
+  Worker 0 @ cycle 705: (5, 29)
+  Worker 2 @ cycle 686: (5, 25)
+  Chebyshev distance: 4
+
+Pair 134: [SAFE]
+  Worker 0 @ cycle 705: (5, 29)
+  Worker 2 @ cycle 709: (9, 17)
+  Chebyshev distance: 12
+
+Pair 135: [SAFE]
+  Worker 0 @ cycle 705: (5, 29)
+  Worker 3 @ cycle 688: (0, 29)
+  Chebyshev distance: 5
+
+Pair 136: [SAFE]
+  Worker 0 @ cycle 705: (5, 29)
+  Worker 3 @ cycle 711: (32, 46)
+  Chebyshev distance: 27
+
+Pair 137: [SAFE]
+  Worker 0 @ cycle 728: (5, 13)
+  Worker 1 @ cycle 730: (9, 13)
+  Chebyshev distance: 4
+
+Pair 138: [SAFE]
+  Worker 0 @ cycle 728: (5, 13)
+  Worker 2 @ cycle 709: (9, 17)
+  Chebyshev distance: 4
+
+Pair 139: [SAFE]
+  Worker 0 @ cycle 728: (5, 13)
+  Worker 2 @ cycle 732: (5, 17)
+  Chebyshev distance: 4
+
+Pair 140: [SAFE]
+  Worker 0 @ cycle 728: (5, 13)
+  Worker 3 @ cycle 711: (32, 46)
+  Chebyshev distance: 33
+
+Pair 141: [SAFE]
+  Worker 0 @ cycle 728: (5, 13)
+  Worker 3 @ cycle 734: (32, 38)
+  Chebyshev distance: 27
+
+Pair 142: [SAFE]
+  Worker 0 @ cycle 751: (18, 4)
+  Worker 1 @ cycle 753: (14, 8)
+  Chebyshev distance: 4
+
+Pair 143: [SAFE]
+  Worker 0 @ cycle 751: (18, 4)
+  Worker 2 @ cycle 732: (5, 17)
+  Chebyshev distance: 13
+
+Pair 144: [SAFE]
+  Worker 0 @ cycle 751: (18, 4)
+  Worker 2 @ cycle 755: (14, 13)
+  Chebyshev distance: 9
+
+Pair 145: [SAFE]
+  Worker 0 @ cycle 751: (18, 4)
+  Worker 3 @ cycle 734: (32, 38)
+  Chebyshev distance: 34
+
+Pair 146: [SAFE]
+  Worker 0 @ cycle 751: (18, 4)
+  Worker 3 @ cycle 757: (37, 17)
+  Chebyshev distance: 19
+
+Pair 147: [SAFE]
+  Worker 0 @ cycle 774: (32, 21)
+  Worker 1 @ cycle 776: (37, 21)
+  Chebyshev distance: 5
+
+Pair 148: [SAFE]
+  Worker 0 @ cycle 774: (32, 21)
+  Worker 2 @ cycle 755: (14, 13)
+  Chebyshev distance: 18
+
+Pair 149: [SAFE]
+  Worker 0 @ cycle 774: (32, 21)
+  Worker 2 @ cycle 778: (32, 17)
+  Chebyshev distance: 4
+
+Pair 150: [SAFE]
+  Worker 0 @ cycle 774: (32, 21)
+  Worker 3 @ cycle 757: (37, 17)
+  Chebyshev distance: 5
+
+Pair 151: [SAFE]
+  Worker 0 @ cycle 774: (32, 21)
+  Worker 3 @ cycle 780: (14, 29)
+  Chebyshev distance: 18
+
+Pair 152: [SAFE]
+  Worker 0 @ cycle 797: (28, 29)
+  Worker 1 @ cycle 799: (28, 38)
+  Chebyshev distance: 9
+
+Pair 153: [SAFE]
+  Worker 0 @ cycle 797: (28, 29)
+  Worker 2 @ cycle 778: (32, 17)
+  Chebyshev distance: 12
+
+Pair 154: [SAFE]
+  Worker 0 @ cycle 797: (28, 29)
+  Worker 2 @ cycle 801: (9, 25)
+  Chebyshev distance: 19
+
+Pair 155: [SAFE]
+  Worker 0 @ cycle 797: (28, 29)
+  Worker 3 @ cycle 780: (14, 29)
+  Chebyshev distance: 14
+
+Pair 156: [SAFE]
+  Worker 0 @ cycle 822: (28, 29)
+  Worker 1 @ cycle 824: (28, 38)
+  Chebyshev distance: 9
+
+Pair 157: [SAFE]
+  Worker 0 @ cycle 822: (28, 29)
+  Worker 2 @ cycle 826: (9, 42)
+  Chebyshev distance: 19
+
+Pair 158: [SAFE]
+  Worker 0 @ cycle 822: (28, 29)
+  Worker 3 @ cycle 828: (14, 46)
+  Chebyshev distance: 17
+
+Pair 159: [SAFE]
+  Worker 0 @ cycle 845: (9, 33)
+  Worker 1 @ cycle 847: (28, 42)
+  Chebyshev distance: 19
+
+Pair 160: [SAFE]
+  Worker 0 @ cycle 845: (9, 33)
+  Worker 2 @ cycle 826: (9, 42)
+  Chebyshev distance: 9
+
+Pair 161: [SAFE]
+  Worker 0 @ cycle 845: (9, 33)
+  Worker 2 @ cycle 849: (14, 29)
+  Chebyshev distance: 5
+
+Pair 162: [SAFE]
+  Worker 0 @ cycle 845: (9, 33)
+  Worker 3 @ cycle 828: (14, 46)
+  Chebyshev distance: 13
+
+Pair 163: [SAFE]
+  Worker 0 @ cycle 870: (28, 42)
+  Worker 1 @ cycle 872: (5, 29)
+  Chebyshev distance: 23
+
+Pair 164: [SAFE]
+  Worker 0 @ cycle 870: (28, 42)
+  Worker 2 @ cycle 874: (5, 33)
+  Chebyshev distance: 23
+
+Pair 165: [SAFE]
+  Worker 0 @ cycle 870: (28, 42)
+  Worker 3 @ cycle 876: (0, 38)
+  Chebyshev distance: 28
+
+Pair 166: [SAFE]
+  Worker 0 @ cycle 893: (0, 42)
+  Worker 1 @ cycle 895: (18, 21)
+  Chebyshev distance: 21
+
+Pair 167: [SAFE]
+  Worker 0 @ cycle 893: (0, 42)
+  Worker 2 @ cycle 874: (5, 33)
+  Chebyshev distance: 9
+
+Pair 168: [SAFE]
+  Worker 0 @ cycle 893: (0, 42)
+  Worker 2 @ cycle 897: (14, 25)
+  Chebyshev distance: 17
+
+Pair 169: [SAFE]
+  Worker 0 @ cycle 893: (0, 42)
+  Worker 3 @ cycle 876: (0, 38)
+  Chebyshev distance: 4
+
+Pair 170: [SAFE]
+  Worker 0 @ cycle 893: (0, 42)
+  Worker 3 @ cycle 899: (14, 29)
+  Chebyshev distance: 14
+
+Pair 171: [SAFE]
+  Worker 0 @ cycle 922: (14, 29)
+  Worker 1 @ cycle 924: (14, 46)
+  Chebyshev distance: 17
+
+Pair 172: [SAFE]
+  Worker 0 @ cycle 922: (14, 29)
+  Worker 2 @ cycle 926: (18, 42)
+  Chebyshev distance: 13
+
+Pair 173: [SAFE]
+  Worker 0 @ cycle 922: (14, 29)
+  Worker 3 @ cycle 928: (23, 42)
+  Chebyshev distance: 13
+
+Pair 174: [SAFE]
+  Worker 0 @ cycle 945: (28, 42)
+  Worker 1 @ cycle 947: (32, 42)
+  Chebyshev distance: 4
+
+Pair 175: [SAFE]
+  Worker 0 @ cycle 945: (28, 42)
+  Worker 2 @ cycle 926: (18, 42)
+  Chebyshev distance: 10
+
+Pair 176: [SAFE]
+  Worker 0 @ cycle 945: (28, 42)
+  Worker 2 @ cycle 949: (14, 46)
+  Chebyshev distance: 14
+
+Pair 177: [SAFE]
+  Worker 0 @ cycle 945: (28, 42)
+  Worker 3 @ cycle 928: (23, 42)
+  Chebyshev distance: 5
+
+Pair 178: [SAFE]
+  Worker 0 @ cycle 945: (28, 42)
+  Worker 3 @ cycle 951: (23, 46)
+  Chebyshev distance: 5
+
+Pair 179: [SAFE]
+  Worker 0 @ cycle 968: (28, 38)
+  Worker 1 @ cycle 970: (32, 38)
+  Chebyshev distance: 4
+
+Pair 180: [SAFE]
+  Worker 0 @ cycle 968: (28, 38)
+  Worker 2 @ cycle 949: (14, 46)
+  Chebyshev distance: 14
+
+Pair 181: [SAFE]
+  Worker 0 @ cycle 968: (28, 38)
+  Worker 2 @ cycle 972: (18, 42)
+  Chebyshev distance: 10
+
+Pair 182: [SAFE]
+  Worker 0 @ cycle 968: (28, 38)
+  Worker 3 @ cycle 951: (23, 46)
+  Chebyshev distance: 8
+
+Pair 183: [SAFE]
+  Worker 0 @ cycle 968: (28, 38)
+  Worker 3 @ cycle 974: (28, 42)
+  Chebyshev distance: 4
+
+Pair 184: [SAFE]
+  Worker 0 @ cycle 991: (23, 46)
+  Worker 1 @ cycle 995: (18, 42)
+  Chebyshev distance: 5
+
+Pair 185: [SAFE]
+  Worker 0 @ cycle 991: (23, 46)
+  Worker 2 @ cycle 972: (18, 42)
+  Chebyshev distance: 5
+
+Pair 186: [SAFE]
+  Worker 0 @ cycle 991: (23, 46)
+  Worker 2 @ cycle 997: (32, 25)
+  Chebyshev distance: 21
+
+Pair 187: [SAFE]
+  Worker 0 @ cycle 991: (23, 46)
+  Worker 3 @ cycle 974: (28, 42)
+  Chebyshev distance: 5
+
+Pair 188: [SAFE]
+  Worker 0 @ cycle 1020: (32, 25)
+  Worker 1 @ cycle 1022: (0, 21)
+  Chebyshev distance: 32
+
+Pair 189: [SAFE]
+  Worker 0 @ cycle 1020: (32, 25)
+  Worker 2 @ cycle 1024: (32, 8)
+  Chebyshev distance: 17
+
+Pair 190: [SAFE]
+  Worker 0 @ cycle 1020: (32, 25)
+  Worker 3 @ cycle 1026: (37, 8)
+  Chebyshev distance: 17
+
+Pair 191: [SAFE]
+  Worker 0 @ cycle 1043: (14, 13)
+  Worker 1 @ cycle 1045: (18, 13)
+  Chebyshev distance: 4
+
+Pair 192: [SAFE]
+  Worker 0 @ cycle 1043: (14, 13)
+  Worker 2 @ cycle 1024: (32, 8)
+  Chebyshev distance: 18
+
+Pair 193: [SAFE]
+  Worker 0 @ cycle 1043: (14, 13)
+  Worker 2 @ cycle 1047: (32, 13)
+  Chebyshev distance: 18
+
+Pair 194: [SAFE]
+  Worker 0 @ cycle 1043: (14, 13)
+  Worker 3 @ cycle 1026: (37, 8)
+  Chebyshev distance: 23
+
+Pair 195: [SAFE]
+  Worker 0 @ cycle 1043: (14, 13)
+  Worker 3 @ cycle 1049: (37, 13)
+  Chebyshev distance: 23
+
+Pair 196: [SAFE]
+  Worker 0 @ cycle 1066: (14, 17)
+  Worker 1 @ cycle 1068: (18, 17)
+  Chebyshev distance: 4
+
+Pair 197: [SAFE]
+  Worker 0 @ cycle 1066: (14, 17)
+  Worker 2 @ cycle 1047: (32, 13)
+  Chebyshev distance: 18
+
+Pair 198: [SAFE]
+  Worker 0 @ cycle 1066: (14, 17)
+  Worker 2 @ cycle 1070: (0, 21)
+  Chebyshev distance: 14
+
+Pair 199: [SAFE]
+  Worker 0 @ cycle 1066: (14, 17)
+  Worker 3 @ cycle 1049: (37, 13)
+  Chebyshev distance: 23
+
+Pair 200: [SAFE]
+  Worker 0 @ cycle 1066: (14, 17)
+  Worker 3 @ cycle 1072: (28, 25)
+  Chebyshev distance: 14
+
+Pair 201: [SAFE]
+  Worker 0 @ cycle 1089: (5, 42)
+  Worker 1 @ cycle 1091: (5, 46)
+  Chebyshev distance: 4
+
+Pair 202: [SAFE]
+  Worker 0 @ cycle 1089: (5, 42)
+  Worker 2 @ cycle 1070: (0, 21)
+  Chebyshev distance: 21
+
+Pair 203: [SAFE]
+  Worker 0 @ cycle 1089: (5, 42)
+  Worker 2 @ cycle 1093: (5, 21)
+  Chebyshev distance: 21
+
+Pair 204: [SAFE]
+  Worker 0 @ cycle 1089: (5, 42)
+  Worker 3 @ cycle 1072: (28, 25)
+  Chebyshev distance: 23
+
+Pair 205: [SAFE]
+  Worker 0 @ cycle 1089: (5, 42)
+  Worker 3 @ cycle 1095: (0, 17)
+  Chebyshev distance: 25
+
+Pair 206: [SAFE]
+  Worker 0 @ cycle 1112: (5, 17)
+  Worker 1 @ cycle 1114: (41, 17)
+  Chebyshev distance: 36
+
+Pair 207: [SAFE]
+  Worker 0 @ cycle 1112: (5, 17)
+  Worker 2 @ cycle 1093: (5, 21)
+  Chebyshev distance: 4
+
+Pair 208: [SAFE]
+  Worker 0 @ cycle 1112: (5, 17)
+  Worker 2 @ cycle 1116: (0, 21)
+  Chebyshev distance: 5
+
+Pair 209: [SAFE]
+  Worker 0 @ cycle 1112: (5, 17)
+  Worker 3 @ cycle 1095: (0, 17)
+  Chebyshev distance: 5
+
+Pair 210: [SAFE]
+  Worker 0 @ cycle 1112: (5, 17)
+  Worker 3 @ cycle 1118: (41, 21)
+  Chebyshev distance: 36
+
+Pair 211: [SAFE]
+  Worker 0 @ cycle 1135: (46, 21)
+  Worker 1 @ cycle 1137: (5, 38)
+  Chebyshev distance: 41
+
+Pair 212: [SAFE]
+  Worker 0 @ cycle 1135: (46, 21)
+  Worker 2 @ cycle 1116: (0, 21)
+  Chebyshev distance: 46
+
+Pair 213: [SAFE]
+  Worker 0 @ cycle 1135: (46, 21)
+  Worker 2 @ cycle 1139: (41, 17)
+  Chebyshev distance: 5
+
+Pair 214: [SAFE]
+  Worker 0 @ cycle 1135: (46, 21)
+  Worker 3 @ cycle 1118: (41, 21)
+  Chebyshev distance: 5
+
+Pair 215: [SAFE]
+  Worker 0 @ cycle 1135: (46, 21)
+  Worker 3 @ cycle 1141: (37, 21)
+  Chebyshev distance: 9
+
+Pair 216: [SAFE]
+  Worker 0 @ cycle 1158: (5, 29)
+  Worker 1 @ cycle 1160: (9, 13)
+  Chebyshev distance: 16
+
+Pair 217: [SAFE]
+  Worker 0 @ cycle 1158: (5, 29)
+  Worker 2 @ cycle 1139: (41, 17)
+  Chebyshev distance: 36
+
+Pair 218: [SAFE]
+  Worker 0 @ cycle 1158: (5, 29)
+  Worker 2 @ cycle 1162: (14, 17)
+  Chebyshev distance: 12
+
+Pair 219: [SAFE]
+  Worker 0 @ cycle 1158: (5, 29)
+  Worker 3 @ cycle 1141: (37, 21)
+  Chebyshev distance: 32
+
+Pair 220: [SAFE]
+  Worker 0 @ cycle 1158: (5, 29)
+  Worker 3 @ cycle 1164: (23, 17)
+  Chebyshev distance: 18
+
+Pair 221: [SAFE]
+  Worker 0 @ cycle 1181: (28, 21)
+  Worker 1 @ cycle 1183: (14, 8)
+  Chebyshev distance: 14
+
+Pair 222: [SAFE]
+  Worker 0 @ cycle 1181: (28, 21)
+  Worker 2 @ cycle 1162: (14, 17)
+  Chebyshev distance: 14
+
+Pair 223: [SAFE]
+  Worker 0 @ cycle 1181: (28, 21)
+  Worker 2 @ cycle 1185: (18, 4)
+  Chebyshev distance: 17
+
+Pair 224: [SAFE]
+  Worker 0 @ cycle 1181: (28, 21)
+  Worker 3 @ cycle 1164: (23, 17)
+  Chebyshev distance: 5
+
+Pair 225: [SAFE]
+  Worker 0 @ cycle 1181: (28, 21)
+  Worker 3 @ cycle 1187: (14, 17)
+  Chebyshev distance: 14
+
+Pair 226: [SAFE]
+  Worker 0 @ cycle 1204: (9, 25)
+  Worker 1 @ cycle 1206: (9, 8)
+  Chebyshev distance: 17
+
+Pair 227: [SAFE]
+  Worker 0 @ cycle 1204: (9, 25)
+  Worker 2 @ cycle 1185: (18, 4)
+  Chebyshev distance: 21
+
+Pair 228: [SAFE]
+  Worker 0 @ cycle 1204: (9, 25)
+  Worker 2 @ cycle 1210: (14, 17)
+  Chebyshev distance: 8
+
+Pair 229: [SAFE]
+  Worker 0 @ cycle 1204: (9, 25)
+  Worker 3 @ cycle 1187: (14, 17)
+  Chebyshev distance: 8
+
+Pair 230: [SAFE]
+  Worker 0 @ cycle 1204: (9, 25)
+  Worker 3 @ cycle 1212: (5, 4)
+  Chebyshev distance: 21
+
+Pair 231: [SAFE]
+  Worker 0 @ cycle 1229: (28, 38)
+  Worker 2 @ cycle 1210: (14, 17)
+  Chebyshev distance: 21
+
+Pair 232: [SAFE]
+  Worker 0 @ cycle 1229: (28, 38)
+  Worker 3 @ cycle 1212: (5, 4)
+  Chebyshev distance: 34
+
+Pair 233: [SAFE]
+  Worker 0 @ cycle 1254: (28, 38)
+  Worker 1 @ cycle 1256: (37, 0)
+  Chebyshev distance: 38
+
+Pair 234: [SAFE]
+  Worker 0 @ cycle 1254: (28, 38)
+  Worker 2 @ cycle 1258: (37, 4)
+  Chebyshev distance: 34
+
+Pair 235: [SAFE]
+  Worker 0 @ cycle 1254: (28, 38)
+  Worker 3 @ cycle 1260: (41, 4)
+  Chebyshev distance: 34
+
+Pair 236: [SAFE]
+  Worker 0 @ cycle 1277: (32, 13)
+  Worker 1 @ cycle 1279: (37, 13)
+  Chebyshev distance: 5
+
+Pair 237: [SAFE]
+  Worker 0 @ cycle 1277: (32, 13)
+  Worker 2 @ cycle 1258: (37, 4)
+  Chebyshev distance: 9
+
+Pair 238: [SAFE]
+  Worker 0 @ cycle 1277: (32, 13)
+  Worker 2 @ cycle 1281: (37, 17)
+  Chebyshev distance: 5
+
+Pair 239: [SAFE]
+  Worker 0 @ cycle 1277: (32, 13)
+  Worker 3 @ cycle 1260: (41, 4)
+  Chebyshev distance: 9
+
+Pair 240: [SAFE]
+  Worker 0 @ cycle 1277: (32, 13)
+  Worker 3 @ cycle 1283: (28, 38)
+  Chebyshev distance: 25
+
+Pair 241: [SAFE]
+  Worker 0 @ cycle 1300: (32, 4)
+  Worker 1 @ cycle 1302: (37, 8)
+  Chebyshev distance: 5
+
+Pair 242: [SAFE]
+  Worker 0 @ cycle 1300: (32, 4)
+  Worker 2 @ cycle 1281: (37, 17)
+  Chebyshev distance: 13
+
+Pair 243: [SAFE]
+  Worker 0 @ cycle 1300: (32, 4)
+  Worker 2 @ cycle 1304: (37, 13)
+  Chebyshev distance: 9
+
+Pair 244: [SAFE]
+  Worker 0 @ cycle 1300: (32, 4)
+  Worker 3 @ cycle 1283: (28, 38)
+  Chebyshev distance: 34
+
+Pair 245: [SAFE]
+  Worker 0 @ cycle 1300: (32, 4)
+  Worker 3 @ cycle 1306: (23, 33)
+  Chebyshev distance: 29
+
+Pair 246: [SAFE]
+  Worker 0 @ cycle 1323: (28, 33)
+  Worker 1 @ cycle 1325: (23, 38)
+  Chebyshev distance: 5
+
+Pair 247: [SAFE]
+  Worker 0 @ cycle 1323: (28, 33)
+  Worker 2 @ cycle 1304: (37, 13)
+  Chebyshev distance: 20
+
+Pair 248: [SAFE]
+  Worker 0 @ cycle 1323: (28, 33)
+  Worker 2 @ cycle 1327: (32, 46)
+  Chebyshev distance: 13
+
+Pair 249: [SAFE]
+  Worker 0 @ cycle 1323: (28, 33)
+  Worker 3 @ cycle 1306: (23, 33)
+  Chebyshev distance: 5
+
+Pair 250: [SAFE]
+  Worker 0 @ cycle 1323: (28, 33)
+  Worker 3 @ cycle 1329: (37, 42)
+  Chebyshev distance: 9
+
+Pair 251: [SAFE]
+  Worker 0 @ cycle 1346: (14, 46)
+  Worker 1 @ cycle 1348: (5, 17)
+  Chebyshev distance: 29
+
+Pair 252: [SAFE]
+  Worker 0 @ cycle 1346: (14, 46)
+  Worker 2 @ cycle 1327: (32, 46)
+  Chebyshev distance: 18
+
+Pair 253: [SAFE]
+  Worker 0 @ cycle 1346: (14, 46)
+  Worker 2 @ cycle 1350: (0, 21)
+  Chebyshev distance: 25
+
+Pair 254: [SAFE]
+  Worker 0 @ cycle 1346: (14, 46)
+  Worker 3 @ cycle 1329: (37, 42)
+  Chebyshev distance: 23
+
+Pair 255: [SAFE]
+  Worker 0 @ cycle 1346: (14, 46)
+  Worker 3 @ cycle 1352: (9, 42)
+  Chebyshev distance: 5
+
+Pair 256: [SAFE]
+  Worker 1 @ cycle 6: (9, 13)
+  Worker 2 @ cycle 8: (5, 17)
+  Chebyshev distance: 4
+
+Pair 257: [SAFE]
+  Worker 1 @ cycle 6: (9, 13)
+  Worker 3 @ cycle 10: (9, 17)
+  Chebyshev distance: 4
+
+Pair 258: [SAFE]
+  Worker 1 @ cycle 29: (14, 21)
+  Worker 2 @ cycle 31: (5, 25)
+  Chebyshev distance: 9
+
+Pair 259: [SAFE]
+  Worker 1 @ cycle 29: (14, 21)
+  Worker 3 @ cycle 10: (9, 17)
+  Chebyshev distance: 5
+
+Pair 260: [SAFE]
+  Worker 1 @ cycle 29: (14, 21)
+  Worker 3 @ cycle 33: (9, 25)
+  Chebyshev distance: 5
+
+Pair 261: [SAFE]
+  Worker 1 @ cycle 52: (37, 21)
+  Worker 2 @ cycle 54: (14, 25)
+  Chebyshev distance: 23
+
+Pair 262: [SAFE]
+  Worker 1 @ cycle 52: (37, 21)
+  Worker 3 @ cycle 33: (9, 25)
+  Chebyshev distance: 28
+
+Pair 263: [SAFE]
+  Worker 1 @ cycle 52: (37, 21)
+  Worker 3 @ cycle 56: (32, 25)
+  Chebyshev distance: 5
+
+Pair 264: [SAFE]
+  Worker 1 @ cycle 75: (37, 13)
+  Worker 2 @ cycle 77: (32, 21)
+  Chebyshev distance: 8
+
+Pair 265: [SAFE]
+  Worker 1 @ cycle 75: (37, 13)
+  Worker 3 @ cycle 56: (32, 25)
+  Chebyshev distance: 12
+
+Pair 266: [SAFE]
+  Worker 1 @ cycle 75: (37, 13)
+  Worker 3 @ cycle 79: (5, 46)
+  Chebyshev distance: 33
+
+Pair 267: [SAFE]
+  Worker 1 @ cycle 100: (23, 25)
+  Worker 2 @ cycle 102: (18, 29)
+  Chebyshev distance: 5
+
+Pair 268: [SAFE]
+  Worker 1 @ cycle 100: (23, 25)
+  Worker 3 @ cycle 104: (23, 29)
+  Chebyshev distance: 4
+
+Pair 269: [SAFE]
+  Worker 1 @ cycle 123: (46, 38)
+  Worker 2 @ cycle 125: (5, 46)
+  Chebyshev distance: 41
+
+Pair 270: [SAFE]
+  Worker 1 @ cycle 123: (46, 38)
+  Worker 3 @ cycle 104: (23, 29)
+  Chebyshev distance: 23
+
+Pair 271: [SAFE]
+  Worker 1 @ cycle 123: (46, 38)
+  Worker 3 @ cycle 127: (32, 8)
+  Chebyshev distance: 30
+
+Pair 272: [SAFE]
+  Worker 1 @ cycle 146: (46, 38)
+  Worker 2 @ cycle 150: (32, 8)
+  Chebyshev distance: 30
+
+Pair 273: [SAFE]
+  Worker 1 @ cycle 146: (46, 38)
+  Worker 3 @ cycle 127: (32, 8)
+  Chebyshev distance: 30
+
+Pair 274: [SAFE]
+  Worker 1 @ cycle 146: (46, 38)
+  Worker 3 @ cycle 152: (32, 38)
+  Chebyshev distance: 14
+
+Pair 275: [SAFE]
+  Worker 1 @ cycle 171: (23, 42)
+  Worker 2 @ cycle 173: (28, 38)
+  Chebyshev distance: 5
+
+Pair 276: [SAFE]
+  Worker 1 @ cycle 171: (23, 42)
+  Worker 3 @ cycle 152: (32, 38)
+  Chebyshev distance: 9
+
+Pair 277: [SAFE]
+  Worker 1 @ cycle 171: (23, 42)
+  Worker 3 @ cycle 175: (5, 42)
+  Chebyshev distance: 18
+
+Pair 278: [SAFE]
+  Worker 1 @ cycle 194: (0, 33)
+  Worker 2 @ cycle 198: (5, 42)
+  Chebyshev distance: 9
+
+Pair 279: [SAFE]
+  Worker 1 @ cycle 194: (0, 33)
+  Worker 3 @ cycle 175: (5, 42)
+  Chebyshev distance: 9
+
+Pair 280: [SAFE]
+  Worker 1 @ cycle 194: (0, 33)
+  Worker 3 @ cycle 200: (14, 29)
+  Chebyshev distance: 14
+
+Pair 281: [SAFE]
+  Worker 1 @ cycle 219: (0, 33)
+  Worker 2 @ cycle 223: (14, 29)
+  Chebyshev distance: 14
+
+Pair 282: [SAFE]
+  Worker 1 @ cycle 219: (0, 33)
+  Worker 3 @ cycle 200: (14, 29)
+  Chebyshev distance: 14
+
+Pair 283: [SAFE]
+  Worker 1 @ cycle 219: (0, 33)
+  Worker 3 @ cycle 225: (14, 25)
+  Chebyshev distance: 14
+
+Pair 284: [SAFE]
+  Worker 1 @ cycle 244: (28, 17)
+  Worker 2 @ cycle 246: (14, 21)
+  Chebyshev distance: 14
+
+Pair 285: [SAFE]
+  Worker 1 @ cycle 244: (28, 17)
+  Worker 3 @ cycle 225: (14, 25)
+  Chebyshev distance: 14
+
+Pair 286: [SAFE]
+  Worker 1 @ cycle 244: (28, 17)
+  Worker 3 @ cycle 248: (9, 25)
+  Chebyshev distance: 19
+
+Pair 287: [SAFE]
+  Worker 1 @ cycle 267: (41, 33)
+  Worker 2 @ cycle 269: (28, 17)
+  Chebyshev distance: 16
+
+Pair 288: [SAFE]
+  Worker 1 @ cycle 267: (41, 33)
+  Worker 3 @ cycle 248: (9, 25)
+  Chebyshev distance: 32
+
+Pair 289: [SAFE]
+  Worker 1 @ cycle 267: (41, 33)
+  Worker 3 @ cycle 271: (9, 21)
+  Chebyshev distance: 32
+
+Pair 290: [SAFE]
+  Worker 1 @ cycle 292: (14, 8)
+  Worker 2 @ cycle 294: (18, 13)
+  Chebyshev distance: 5
+
+Pair 291: [SAFE]
+  Worker 1 @ cycle 292: (14, 8)
+  Worker 3 @ cycle 296: (18, 21)
+  Chebyshev distance: 13
+
+Pair 292: [SAFE]
+  Worker 1 @ cycle 315: (14, 21)
+  Worker 2 @ cycle 319: (18, 21)
+  Chebyshev distance: 4
+
+Pair 293: [SAFE]
+  Worker 1 @ cycle 315: (14, 21)
+  Worker 3 @ cycle 296: (18, 21)
+  Chebyshev distance: 4
+
+Pair 294: [SAFE]
+  Worker 1 @ cycle 315: (14, 21)
+  Worker 3 @ cycle 321: (18, 4)
+  Chebyshev distance: 17
+
+Pair 295: [SAFE]
+  Worker 1 @ cycle 340: (14, 13)
+  Worker 2 @ cycle 342: (14, 8)
+  Chebyshev distance: 5
+
+Pair 296: [SAFE]
+  Worker 1 @ cycle 340: (14, 13)
+  Worker 3 @ cycle 321: (18, 4)
+  Chebyshev distance: 9
+
+Pair 297: [SAFE]
+  Worker 1 @ cycle 340: (14, 13)
+  Worker 3 @ cycle 344: (32, 42)
+  Chebyshev distance: 29
+
+Pair 298: [SAFE]
+  Worker 1 @ cycle 363: (32, 4)
+  Worker 2 @ cycle 365: (37, 4)
+  Chebyshev distance: 5
+
+Pair 299: [SAFE]
+  Worker 1 @ cycle 363: (32, 4)
+  Worker 3 @ cycle 344: (32, 42)
+  Chebyshev distance: 38
+
+Pair 300: [SAFE]
+  Worker 1 @ cycle 363: (32, 4)
+  Worker 3 @ cycle 367: (23, 25)
+  Chebyshev distance: 21
+
+Pair 301: [SAFE]
+  Worker 1 @ cycle 386: (18, 33)
+  Worker 2 @ cycle 388: (18, 38)
+  Chebyshev distance: 5
+
+Pair 302: [SAFE]
+  Worker 1 @ cycle 386: (18, 33)
+  Worker 3 @ cycle 367: (23, 25)
+  Chebyshev distance: 8
+
+Pair 303: [SAFE]
+  Worker 1 @ cycle 386: (18, 33)
+  Worker 3 @ cycle 390: (32, 38)
+  Chebyshev distance: 14
+
+Pair 304: [SAFE]
+  Worker 1 @ cycle 409: (18, 25)
+  Worker 2 @ cycle 411: (14, 42)
+  Chebyshev distance: 17
+
+Pair 305: [SAFE]
+  Worker 1 @ cycle 409: (18, 25)
+  Worker 3 @ cycle 390: (32, 38)
+  Chebyshev distance: 14
+
+Pair 306: [SAFE]
+  Worker 1 @ cycle 409: (18, 25)
+  Worker 3 @ cycle 413: (37, 25)
+  Chebyshev distance: 19
+
+Pair 307: [SAFE]
+  Worker 1 @ cycle 438: (14, 42)
+  Worker 2 @ cycle 440: (28, 21)
+  Chebyshev distance: 21
+
+Pair 308: [SAFE]
+  Worker 1 @ cycle 465: (9, 29)
+  Worker 2 @ cycle 467: (14, 33)
+  Chebyshev distance: 5
+
+Pair 309: [SAFE]
+  Worker 1 @ cycle 465: (9, 29)
+  Worker 3 @ cycle 469: (28, 42)
+  Chebyshev distance: 19
+
+Pair 310: [SAFE]
+  Worker 1 @ cycle 494: (28, 25)
+  Worker 2 @ cycle 496: (32, 25)
+  Chebyshev distance: 4
+
+Pair 311: [SAFE]
+  Worker 1 @ cycle 494: (28, 25)
+  Worker 3 @ cycle 498: (28, 29)
+  Chebyshev distance: 4
+
+Pair 312: [SAFE]
+  Worker 1 @ cycle 517: (14, 8)
+  Worker 2 @ cycle 519: (9, 17)
+  Chebyshev distance: 9
+
+Pair 313: [SAFE]
+  Worker 1 @ cycle 517: (14, 8)
+  Worker 3 @ cycle 498: (28, 29)
+  Chebyshev distance: 21
+
+Pair 314: [SAFE]
+  Worker 1 @ cycle 517: (14, 8)
+  Worker 3 @ cycle 521: (9, 8)
+  Chebyshev distance: 5
+
+Pair 315: [SAFE]
+  Worker 1 @ cycle 540: (37, 25)
+  Worker 2 @ cycle 542: (28, 29)
+  Chebyshev distance: 9
+
+Pair 316: [SAFE]
+  Worker 1 @ cycle 540: (37, 25)
+  Worker 3 @ cycle 521: (9, 8)
+  Chebyshev distance: 28
+
+Pair 317: [SAFE]
+  Worker 1 @ cycle 540: (37, 25)
+  Worker 3 @ cycle 544: (32, 29)
+  Chebyshev distance: 5
+
+Pair 318: [SAFE]
+  Worker 1 @ cycle 567: (32, 42)
+  Worker 2 @ cycle 569: (5, 4)
+  Chebyshev distance: 38
+
+Pair 319: [SAFE]
+  Worker 1 @ cycle 567: (32, 42)
+  Worker 3 @ cycle 571: (14, 17)
+  Chebyshev distance: 25
+
+Pair 320: [SAFE]
+  Worker 1 @ cycle 590: (14, 21)
+  Worker 2 @ cycle 592: (18, 21)
+  Chebyshev distance: 4
+
+Pair 321: [SAFE]
+  Worker 1 @ cycle 590: (14, 21)
+  Worker 3 @ cycle 571: (14, 17)
+  Chebyshev distance: 4
+
+Pair 322: [SAFE]
+  Worker 1 @ cycle 590: (14, 21)
+  Worker 3 @ cycle 594: (5, 4)
+  Chebyshev distance: 17
+
+Pair 323: [SAFE]
+  Worker 1 @ cycle 613: (37, 29)
+  Worker 2 @ cycle 615: (28, 33)
+  Chebyshev distance: 9
+
+Pair 324: [SAFE]
+  Worker 1 @ cycle 613: (37, 29)
+  Worker 3 @ cycle 594: (5, 4)
+  Chebyshev distance: 32
+
+Pair 325: [SAFE]
+  Worker 1 @ cycle 613: (37, 29)
+  Worker 3 @ cycle 617: (32, 33)
+  Chebyshev distance: 5
+
+Pair 326: [SAFE]
+  Worker 1 @ cycle 638: (32, 29)
+  Worker 2 @ cycle 640: (41, 8)
+  Chebyshev distance: 21
+
+Pair 327: [SAFE]
+  Worker 1 @ cycle 638: (32, 29)
+  Worker 3 @ cycle 642: (14, 33)
+  Chebyshev distance: 18
+
+Pair 328: [SAFE]
+  Worker 1 @ cycle 661: (37, 8)
+  Worker 2 @ cycle 663: (41, 8)
+  Chebyshev distance: 4
+
+Pair 329: [SAFE]
+  Worker 1 @ cycle 661: (37, 8)
+  Worker 3 @ cycle 642: (14, 33)
+  Chebyshev distance: 25
+
+Pair 330: [SAFE]
+  Worker 1 @ cycle 661: (37, 8)
+  Worker 3 @ cycle 665: (5, 13)
+  Chebyshev distance: 32
+
+Pair 331: [SAFE]
+  Worker 1 @ cycle 684: (0, 25)
+  Worker 2 @ cycle 686: (5, 25)
+  Chebyshev distance: 5
+
+Pair 332: [SAFE]
+  Worker 1 @ cycle 684: (0, 25)
+  Worker 3 @ cycle 665: (5, 13)
+  Chebyshev distance: 12
+
+Pair 333: [SAFE]
+  Worker 1 @ cycle 684: (0, 25)
+  Worker 3 @ cycle 688: (0, 29)
+  Chebyshev distance: 4
+
+Pair 334: [SAFE]
+  Worker 1 @ cycle 707: (14, 33)
+  Worker 2 @ cycle 709: (9, 17)
+  Chebyshev distance: 16
+
+Pair 335: [SAFE]
+  Worker 1 @ cycle 707: (14, 33)
+  Worker 3 @ cycle 688: (0, 29)
+  Chebyshev distance: 14
+
+Pair 336: [SAFE]
+  Worker 1 @ cycle 707: (14, 33)
+  Worker 3 @ cycle 711: (32, 46)
+  Chebyshev distance: 18
+
+Pair 337: [SAFE]
+  Worker 1 @ cycle 730: (9, 13)
+  Worker 2 @ cycle 732: (5, 17)
+  Chebyshev distance: 4
+
+Pair 338: [SAFE]
+  Worker 1 @ cycle 730: (9, 13)
+  Worker 3 @ cycle 711: (32, 46)
+  Chebyshev distance: 33
+
+Pair 339: [SAFE]
+  Worker 1 @ cycle 730: (9, 13)
+  Worker 3 @ cycle 734: (32, 38)
+  Chebyshev distance: 25
+
+Pair 340: [SAFE]
+  Worker 1 @ cycle 753: (14, 8)
+  Worker 2 @ cycle 755: (14, 13)
+  Chebyshev distance: 5
+
+Pair 341: [SAFE]
+  Worker 1 @ cycle 753: (14, 8)
+  Worker 3 @ cycle 734: (32, 38)
+  Chebyshev distance: 30
+
+Pair 342: [SAFE]
+  Worker 1 @ cycle 753: (14, 8)
+  Worker 3 @ cycle 757: (37, 17)
+  Chebyshev distance: 23
+
+Pair 343: [SAFE]
+  Worker 1 @ cycle 776: (37, 21)
+  Worker 2 @ cycle 778: (32, 17)
+  Chebyshev distance: 5
+
+Pair 344: [SAFE]
+  Worker 1 @ cycle 776: (37, 21)
+  Worker 3 @ cycle 757: (37, 17)
+  Chebyshev distance: 4
+
+Pair 345: [SAFE]
+  Worker 1 @ cycle 776: (37, 21)
+  Worker 3 @ cycle 780: (14, 29)
+  Chebyshev distance: 23
+
+Pair 346: [SAFE]
+  Worker 1 @ cycle 799: (28, 38)
+  Worker 2 @ cycle 801: (9, 25)
+  Chebyshev distance: 19
+
+Pair 347: [SAFE]
+  Worker 1 @ cycle 799: (28, 38)
+  Worker 3 @ cycle 780: (14, 29)
+  Chebyshev distance: 14
+
+Pair 348: [SAFE]
+  Worker 1 @ cycle 824: (28, 38)
+  Worker 2 @ cycle 826: (9, 42)
+  Chebyshev distance: 19
+
+Pair 349: [SAFE]
+  Worker 1 @ cycle 824: (28, 38)
+  Worker 3 @ cycle 828: (14, 46)
+  Chebyshev distance: 14
+
+Pair 350: [SAFE]
+  Worker 1 @ cycle 847: (28, 42)
+  Worker 2 @ cycle 849: (14, 29)
+  Chebyshev distance: 14
+
+Pair 351: [SAFE]
+  Worker 1 @ cycle 847: (28, 42)
+  Worker 3 @ cycle 828: (14, 46)
+  Chebyshev distance: 14
+
+Pair 352: [SAFE]
+  Worker 1 @ cycle 872: (5, 29)
+  Worker 2 @ cycle 874: (5, 33)
+  Chebyshev distance: 4
+
+Pair 353: [SAFE]
+  Worker 1 @ cycle 872: (5, 29)
+  Worker 3 @ cycle 876: (0, 38)
+  Chebyshev distance: 9
+
+Pair 354: [SAFE]
+  Worker 1 @ cycle 895: (18, 21)
+  Worker 2 @ cycle 897: (14, 25)
+  Chebyshev distance: 4
+
+Pair 355: [SAFE]
+  Worker 1 @ cycle 895: (18, 21)
+  Worker 3 @ cycle 876: (0, 38)
+  Chebyshev distance: 18
+
+Pair 356: [SAFE]
+  Worker 1 @ cycle 895: (18, 21)
+  Worker 3 @ cycle 899: (14, 29)
+  Chebyshev distance: 8
+
+Pair 357: [SAFE]
+  Worker 1 @ cycle 924: (14, 46)
+  Worker 2 @ cycle 926: (18, 42)
+  Chebyshev distance: 4
+
+Pair 358: [SAFE]
+  Worker 1 @ cycle 924: (14, 46)
+  Worker 3 @ cycle 928: (23, 42)
+  Chebyshev distance: 9
+
+Pair 359: [SAFE]
+  Worker 1 @ cycle 947: (32, 42)
+  Worker 2 @ cycle 949: (14, 46)
+  Chebyshev distance: 18
+
+Pair 360: [SAFE]
+  Worker 1 @ cycle 947: (32, 42)
+  Worker 3 @ cycle 928: (23, 42)
+  Chebyshev distance: 9
+
+Pair 361: [SAFE]
+  Worker 1 @ cycle 947: (32, 42)
+  Worker 3 @ cycle 951: (23, 46)
+  Chebyshev distance: 9
+
+Pair 362: [SAFE]
+  Worker 1 @ cycle 970: (32, 38)
+  Worker 2 @ cycle 972: (18, 42)
+  Chebyshev distance: 14
+
+Pair 363: [SAFE]
+  Worker 1 @ cycle 970: (32, 38)
+  Worker 3 @ cycle 951: (23, 46)
+  Chebyshev distance: 9
+
+Pair 364: [SAFE]
+  Worker 1 @ cycle 970: (32, 38)
+  Worker 3 @ cycle 974: (28, 42)
+  Chebyshev distance: 4
+
+Pair 365: [SAFE]
+  Worker 1 @ cycle 995: (18, 42)
+  Worker 2 @ cycle 997: (32, 25)
+  Chebyshev distance: 17
+
+Pair 366: [SAFE]
+  Worker 1 @ cycle 1022: (0, 21)
+  Worker 2 @ cycle 1024: (32, 8)
+  Chebyshev distance: 32
+
+Pair 367: [SAFE]
+  Worker 1 @ cycle 1022: (0, 21)
+  Worker 3 @ cycle 1026: (37, 8)
+  Chebyshev distance: 37
+
+Pair 368: [SAFE]
+  Worker 1 @ cycle 1045: (18, 13)
+  Worker 2 @ cycle 1047: (32, 13)
+  Chebyshev distance: 14
+
+Pair 369: [SAFE]
+  Worker 1 @ cycle 1045: (18, 13)
+  Worker 3 @ cycle 1026: (37, 8)
+  Chebyshev distance: 19
+
+Pair 370: [SAFE]
+  Worker 1 @ cycle 1045: (18, 13)
+  Worker 3 @ cycle 1049: (37, 13)
+  Chebyshev distance: 19
+
+Pair 371: [SAFE]
+  Worker 1 @ cycle 1068: (18, 17)
+  Worker 2 @ cycle 1070: (0, 21)
+  Chebyshev distance: 18
+
+Pair 372: [SAFE]
+  Worker 1 @ cycle 1068: (18, 17)
+  Worker 3 @ cycle 1049: (37, 13)
+  Chebyshev distance: 19
+
+Pair 373: [SAFE]
+  Worker 1 @ cycle 1068: (18, 17)
+  Worker 3 @ cycle 1072: (28, 25)
+  Chebyshev distance: 10
+
+Pair 374: [SAFE]
+  Worker 1 @ cycle 1091: (5, 46)
+  Worker 2 @ cycle 1093: (5, 21)
+  Chebyshev distance: 25
+
+Pair 375: [SAFE]
+  Worker 1 @ cycle 1091: (5, 46)
+  Worker 3 @ cycle 1072: (28, 25)
+  Chebyshev distance: 23
+
+Pair 376: [SAFE]
+  Worker 1 @ cycle 1091: (5, 46)
+  Worker 3 @ cycle 1095: (0, 17)
+  Chebyshev distance: 29
+
+Pair 377: [SAFE]
+  Worker 1 @ cycle 1114: (41, 17)
+  Worker 2 @ cycle 1116: (0, 21)
+  Chebyshev distance: 41
+
+Pair 378: [SAFE]
+  Worker 1 @ cycle 1114: (41, 17)
+  Worker 3 @ cycle 1095: (0, 17)
+  Chebyshev distance: 41
+
+Pair 379: [SAFE]
+  Worker 1 @ cycle 1114: (41, 17)
+  Worker 3 @ cycle 1118: (41, 21)
+  Chebyshev distance: 4
+
+Pair 380: [SAFE]
+  Worker 1 @ cycle 1137: (5, 38)
+  Worker 2 @ cycle 1139: (41, 17)
+  Chebyshev distance: 36
+
+Pair 381: [SAFE]
+  Worker 1 @ cycle 1137: (5, 38)
+  Worker 3 @ cycle 1118: (41, 21)
+  Chebyshev distance: 36
+
+Pair 382: [SAFE]
+  Worker 1 @ cycle 1137: (5, 38)
+  Worker 3 @ cycle 1141: (37, 21)
+  Chebyshev distance: 32
+
+Pair 383: [SAFE]
+  Worker 1 @ cycle 1160: (9, 13)
+  Worker 2 @ cycle 1162: (14, 17)
+  Chebyshev distance: 5
+
+Pair 384: [SAFE]
+  Worker 1 @ cycle 1160: (9, 13)
+  Worker 3 @ cycle 1141: (37, 21)
+  Chebyshev distance: 28
+
+Pair 385: [SAFE]
+  Worker 1 @ cycle 1160: (9, 13)
+  Worker 3 @ cycle 1164: (23, 17)
+  Chebyshev distance: 14
+
+Pair 386: [SAFE]
+  Worker 1 @ cycle 1183: (14, 8)
+  Worker 2 @ cycle 1185: (18, 4)
+  Chebyshev distance: 4
+
+Pair 387: [SAFE]
+  Worker 1 @ cycle 1183: (14, 8)
+  Worker 3 @ cycle 1164: (23, 17)
+  Chebyshev distance: 9
+
+Pair 388: [SAFE]
+  Worker 1 @ cycle 1183: (14, 8)
+  Worker 3 @ cycle 1187: (14, 17)
+  Chebyshev distance: 9
+
+Pair 389: [SAFE]
+  Worker 1 @ cycle 1206: (9, 8)
+  Worker 2 @ cycle 1210: (14, 17)
+  Chebyshev distance: 9
+
+Pair 390: [SAFE]
+  Worker 1 @ cycle 1206: (9, 8)
+  Worker 3 @ cycle 1187: (14, 17)
+  Chebyshev distance: 9
+
+Pair 391: [SAFE]
+  Worker 1 @ cycle 1206: (9, 8)
+  Worker 3 @ cycle 1212: (5, 4)
+  Chebyshev distance: 4
+
+Pair 392: [SAFE]
+  Worker 1 @ cycle 1256: (37, 0)
+  Worker 2 @ cycle 1258: (37, 4)
+  Chebyshev distance: 4
+
+Pair 393: [SAFE]
+  Worker 1 @ cycle 1256: (37, 0)
+  Worker 3 @ cycle 1260: (41, 4)
+  Chebyshev distance: 4
+
+Pair 394: [SAFE]
+  Worker 1 @ cycle 1279: (37, 13)
+  Worker 2 @ cycle 1281: (37, 17)
+  Chebyshev distance: 4
+
+Pair 395: [SAFE]
+  Worker 1 @ cycle 1279: (37, 13)
+  Worker 3 @ cycle 1260: (41, 4)
+  Chebyshev distance: 9
+
+Pair 396: [SAFE]
+  Worker 1 @ cycle 1279: (37, 13)
+  Worker 3 @ cycle 1283: (28, 38)
+  Chebyshev distance: 25
+
+Pair 397: [SAFE]
+  Worker 1 @ cycle 1302: (37, 8)
+  Worker 2 @ cycle 1304: (37, 13)
+  Chebyshev distance: 5
+
+Pair 398: [SAFE]
+  Worker 1 @ cycle 1302: (37, 8)
+  Worker 3 @ cycle 1283: (28, 38)
+  Chebyshev distance: 30
+
+Pair 399: [SAFE]
+  Worker 1 @ cycle 1302: (37, 8)
+  Worker 3 @ cycle 1306: (23, 33)
+  Chebyshev distance: 25
+
+Pair 400: [SAFE]
+  Worker 1 @ cycle 1325: (23, 38)
+  Worker 2 @ cycle 1327: (32, 46)
+  Chebyshev distance: 9
+
+Pair 401: [SAFE]
+  Worker 1 @ cycle 1325: (23, 38)
+  Worker 3 @ cycle 1306: (23, 33)
+  Chebyshev distance: 5
+
+Pair 402: [SAFE]
+  Worker 1 @ cycle 1325: (23, 38)
+  Worker 3 @ cycle 1329: (37, 42)
+  Chebyshev distance: 14
+
+Pair 403: [SAFE]
+  Worker 1 @ cycle 1348: (5, 17)
+  Worker 2 @ cycle 1350: (0, 21)
+  Chebyshev distance: 5
+
+Pair 404: [SAFE]
+  Worker 1 @ cycle 1348: (5, 17)
+  Worker 3 @ cycle 1329: (37, 42)
+  Chebyshev distance: 32
+
+Pair 405: [SAFE]
+  Worker 1 @ cycle 1348: (5, 17)
+  Worker 3 @ cycle 1352: (9, 42)
+  Chebyshev distance: 25
+
+Pair 406: [SAFE]
+  Worker 2 @ cycle 8: (5, 17)
+  Worker 3 @ cycle 10: (9, 17)
+  Chebyshev distance: 4
+
+Pair 407: [SAFE]
+  Worker 2 @ cycle 31: (5, 25)
+  Worker 3 @ cycle 33: (9, 25)
+  Chebyshev distance: 4
+
+Pair 408: [SAFE]
+  Worker 2 @ cycle 54: (14, 25)
+  Worker 3 @ cycle 56: (32, 25)
+  Chebyshev distance: 18
+
+Pair 409: [SAFE]
+  Worker 2 @ cycle 77: (32, 21)
+  Worker 3 @ cycle 79: (5, 46)
+  Chebyshev distance: 27
+
+Pair 410: [SAFE]
+  Worker 2 @ cycle 102: (18, 29)
+  Worker 3 @ cycle 104: (23, 29)
+  Chebyshev distance: 5
+
+Pair 411: [SAFE]
+  Worker 2 @ cycle 125: (5, 46)
+  Worker 3 @ cycle 127: (32, 8)
+  Chebyshev distance: 38
+
+Pair 412: [SAFE]
+  Worker 2 @ cycle 150: (32, 8)
+  Worker 3 @ cycle 152: (32, 38)
+  Chebyshev distance: 30
+
+Pair 413: [SAFE]
+  Worker 2 @ cycle 173: (28, 38)
+  Worker 3 @ cycle 175: (5, 42)
+  Chebyshev distance: 23
+
+Pair 414: [SAFE]
+  Worker 2 @ cycle 198: (5, 42)
+  Worker 3 @ cycle 200: (14, 29)
+  Chebyshev distance: 13
+
+Pair 415: [SAFE]
+  Worker 2 @ cycle 223: (14, 29)
+  Worker 3 @ cycle 225: (14, 25)
+  Chebyshev distance: 4
+
+Pair 416: [SAFE]
+  Worker 2 @ cycle 246: (14, 21)
+  Worker 3 @ cycle 248: (9, 25)
+  Chebyshev distance: 5
+
+Pair 417: [SAFE]
+  Worker 2 @ cycle 269: (28, 17)
+  Worker 3 @ cycle 271: (9, 21)
+  Chebyshev distance: 19
+
+Pair 418: [SAFE]
+  Worker 2 @ cycle 294: (18, 13)
+  Worker 3 @ cycle 296: (18, 21)
+  Chebyshev distance: 8
+
+Pair 419: [SAFE]
+  Worker 2 @ cycle 319: (18, 21)
+  Worker 3 @ cycle 321: (18, 4)
+  Chebyshev distance: 17
+
+Pair 420: [SAFE]
+  Worker 2 @ cycle 342: (14, 8)
+  Worker 3 @ cycle 344: (32, 42)
+  Chebyshev distance: 34
+
+Pair 421: [SAFE]
+  Worker 2 @ cycle 365: (37, 4)
+  Worker 3 @ cycle 367: (23, 25)
+  Chebyshev distance: 21
+
+Pair 422: [SAFE]
+  Worker 2 @ cycle 388: (18, 38)
+  Worker 3 @ cycle 390: (32, 38)
+  Chebyshev distance: 14
+
+Pair 423: [SAFE]
+  Worker 2 @ cycle 411: (14, 42)
+  Worker 3 @ cycle 413: (37, 25)
+  Chebyshev distance: 23
+
+Pair 424: [SAFE]
+  Worker 2 @ cycle 467: (14, 33)
+  Worker 3 @ cycle 469: (28, 42)
+  Chebyshev distance: 14
+
+Pair 425: [SAFE]
+  Worker 2 @ cycle 496: (32, 25)
+  Worker 3 @ cycle 498: (28, 29)
+  Chebyshev distance: 4
+
+Pair 426: [SAFE]
+  Worker 2 @ cycle 519: (9, 17)
+  Worker 3 @ cycle 521: (9, 8)
+  Chebyshev distance: 9
+
+Pair 427: [SAFE]
+  Worker 2 @ cycle 542: (28, 29)
+  Worker 3 @ cycle 544: (32, 29)
+  Chebyshev distance: 4
+
+Pair 428: [SAFE]
+  Worker 2 @ cycle 569: (5, 4)
+  Worker 3 @ cycle 571: (14, 17)
+  Chebyshev distance: 13
+
+Pair 429: [SAFE]
+  Worker 2 @ cycle 592: (18, 21)
+  Worker 3 @ cycle 594: (5, 4)
+  Chebyshev distance: 17
+
+Pair 430: [SAFE]
+  Worker 2 @ cycle 615: (28, 33)
+  Worker 3 @ cycle 617: (32, 33)
+  Chebyshev distance: 4
+
+Pair 431: [SAFE]
+  Worker 2 @ cycle 640: (41, 8)
+  Worker 3 @ cycle 642: (14, 33)
+  Chebyshev distance: 27
+
+Pair 432: [SAFE]
+  Worker 2 @ cycle 663: (41, 8)
+  Worker 3 @ cycle 665: (5, 13)
+  Chebyshev distance: 36
+
+Pair 433: [SAFE]
+  Worker 2 @ cycle 686: (5, 25)
+  Worker 3 @ cycle 688: (0, 29)
+  Chebyshev distance: 5
+
+Pair 434: [SAFE]
+  Worker 2 @ cycle 709: (9, 17)
+  Worker 3 @ cycle 711: (32, 46)
+  Chebyshev distance: 29
+
+Pair 435: [SAFE]
+  Worker 2 @ cycle 732: (5, 17)
+  Worker 3 @ cycle 734: (32, 38)
+  Chebyshev distance: 27
+
+Pair 436: [SAFE]
+  Worker 2 @ cycle 755: (14, 13)
+  Worker 3 @ cycle 757: (37, 17)
+  Chebyshev distance: 23
+
+Pair 437: [SAFE]
+  Worker 2 @ cycle 778: (32, 17)
+  Worker 3 @ cycle 780: (14, 29)
+  Chebyshev distance: 18
+
+Pair 438: [SAFE]
+  Worker 2 @ cycle 826: (9, 42)
+  Worker 3 @ cycle 828: (14, 46)
+  Chebyshev distance: 5
+
+Pair 439: [SAFE]
+  Worker 2 @ cycle 874: (5, 33)
+  Worker 3 @ cycle 876: (0, 38)
+  Chebyshev distance: 5
+
+Pair 440: [SAFE]
+  Worker 2 @ cycle 897: (14, 25)
+  Worker 3 @ cycle 899: (14, 29)
+  Chebyshev distance: 4
+
+Pair 441: [SAFE]
+  Worker 2 @ cycle 926: (18, 42)
+  Worker 3 @ cycle 928: (23, 42)
+  Chebyshev distance: 5
+
+Pair 442: [SAFE]
+  Worker 2 @ cycle 949: (14, 46)
+  Worker 3 @ cycle 951: (23, 46)
+  Chebyshev distance: 9
+
+Pair 443: [SAFE]
+  Worker 2 @ cycle 972: (18, 42)
+  Worker 3 @ cycle 974: (28, 42)
+  Chebyshev distance: 10
+
+Pair 444: [SAFE]
+  Worker 2 @ cycle 1024: (32, 8)
+  Worker 3 @ cycle 1026: (37, 8)
+  Chebyshev distance: 5
+
+Pair 445: [SAFE]
+  Worker 2 @ cycle 1047: (32, 13)
+  Worker 3 @ cycle 1049: (37, 13)
+  Chebyshev distance: 5
+
+Pair 446: [SAFE]
+  Worker 2 @ cycle 1070: (0, 21)
+  Worker 3 @ cycle 1072: (28, 25)
+  Chebyshev distance: 28
+
+Pair 447: [SAFE]
+  Worker 2 @ cycle 1093: (5, 21)
+  Worker 3 @ cycle 1095: (0, 17)
+  Chebyshev distance: 5
+
+Pair 448: [SAFE]
+  Worker 2 @ cycle 1116: (0, 21)
+  Worker 3 @ cycle 1118: (41, 21)
+  Chebyshev distance: 41
+
+Pair 449: [SAFE]
+  Worker 2 @ cycle 1139: (41, 17)
+  Worker 3 @ cycle 1141: (37, 21)
+  Chebyshev distance: 4
+
+Pair 450: [SAFE]
+  Worker 2 @ cycle 1162: (14, 17)
+  Worker 3 @ cycle 1164: (23, 17)
+  Chebyshev distance: 9
+
+Pair 451: [SAFE]
+  Worker 2 @ cycle 1185: (18, 4)
+  Worker 3 @ cycle 1187: (14, 17)
+  Chebyshev distance: 13
+
+Pair 452: [SAFE]
+  Worker 2 @ cycle 1210: (14, 17)
+  Worker 3 @ cycle 1212: (5, 4)
+  Chebyshev distance: 13
+
+Pair 453: [SAFE]
+  Worker 2 @ cycle 1258: (37, 4)
+  Worker 3 @ cycle 1260: (41, 4)
+  Chebyshev distance: 4
+
+Pair 454: [SAFE]
+  Worker 2 @ cycle 1281: (37, 17)
+  Worker 3 @ cycle 1283: (28, 38)
+  Chebyshev distance: 21
+
+Pair 455: [SAFE]
+  Worker 2 @ cycle 1304: (37, 13)
+  Worker 3 @ cycle 1306: (23, 33)
+  Chebyshev distance: 20
+
+Pair 456: [SAFE]
+  Worker 2 @ cycle 1327: (32, 46)
+  Worker 3 @ cycle 1329: (37, 42)
+  Chebyshev distance: 5
+
+Pair 457: [SAFE]
+  Worker 2 @ cycle 1350: (0, 21)
+  Worker 3 @ cycle 1352: (9, 42)
+  Chebyshev distance: 21
+

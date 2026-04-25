@@ -112,6 +112,18 @@ cd D:\College\4-2\SoP2\Code\queuebit
 python verification\extract_d23_k_sweep.py
 ```
 
+### d=23 saturated safety validation data
+
+```powershell
+cd D:\College\4-2\SoP2\Code\queuebit
+python verification\reproduce_d23_safety_evidence.py --publish-deliverables
+```
+
+Generated deliverable artifacts:
+
+- `deliverables/d23/safety_validation/d23_k20_saturated_safety_summary.csv`
+- `deliverables/d23/safety_validation/raw/`
+
 ### Synthesis
 
 For d=11:
@@ -138,9 +150,7 @@ batch_run/generate_publication_figures.py
 
 It requires a Python environment with `matplotlib` installed.
 
-## Recommended Starting Points
-
-For the current submission package, start with:
+## Submission Documents
 
 - `deliverables/README.md`
 - `deliverables/QUEUEBIT_REPORT_DRAFT.md`

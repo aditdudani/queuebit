@@ -1,0 +1,5 @@
+worker_latency,inj_ppt,inj_rate,total_cycles,syndromes_issued,syndromes_stalled,collisions_detected,spatial_collisions,total_locks,total_releases,peak_concurrent_locks,concurrent_pairs,safe_pairs,unsafe_pairs
+20,500,0.5,1381,221,913,112,0,221,221,4,457,457,0
+20,1000,1.0,1380,221,954,112,0,221,221,4,457,457,0
+20,1500,1.5,1380,221,954,112,0,221,221,4,457,457,0
+20,2000,2.0,1380,221,954,112,0,221,221,4,457,457,0

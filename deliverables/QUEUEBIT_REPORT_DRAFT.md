@@ -18,40 +18,69 @@ The contribution of this work is therefore not a new decoder algorithm. It is a 
 
 These questions are answered using a naive baseline, d=11 and d=23 sweeps, and post-route FPGA implementation results.
 
-## 2. Background and Scope
+## 2. Background
 
-QueueBit is designed for surface-code style workloads in which syndrome events arrive over time and must be routed to a worker pool. The key assumption is that each active worker occupies a local spatial neighborhood for some number of cycles. During that time, issuing a nearby syndrome to another worker is unsafe and should be prevented.
+Practical quantum computers require continuous error correction to protect logical states from physical noise. In surface codes [6], parity checks are measured repeatedly on a 2D lattice. A change in consecutive parity measurements produces a syndrome event [2].
 
-This makes QueueBit a control-plane component. It sits between syndrome generation and downstream worker logic. It does not decode by itself. It does not replace Union-Find, matching, or clustering methods. Instead, it provides an online dispatch policy that can be placed in front of such workers.
+If syndrome events are not processed fast enough, the decoder backlog grows and can halt the correction pipeline [3]. Real-time decoding avoids this by processing events continuously.
 
-The implementation and measurements presented here are dispatcher-level results. They show whether QueueBit accepts, delays, and routes syndromes coherently. They do not yet provide a full end-to-end decoder proof.
+Routing events to parallel workers introduces a spatial hazard: nearby syndromes can overlap in active work regions if they are issued at the same time. QueueBit addresses this dispatch-stage hazard.
 
-## 3. Architecture
+## 3. Related Work
 
-QueueBit has three main blocks.
+Recent hardware decoders handle collision avoidance with different architectural choices.
 
-### 3.1 Syndrome FIFO
+- Barber et al. (2025) [1] use reactive clustering where collision checks occur during cluster growth in the matching flow.
+- QUEKUF (2025) [8] uses a centralized controller with internal conflict handling for stateful multi-round processing on toric codes.
+- Kasamura et al. (2025) [5] use per-round batching so that sequential processing within each round avoids overlap.
+- Helios (2024) [7] presents a distributed Union-Find architecture with many local processing units.
 
-The FIFO buffers incoming syndrome coordinates. It decouples the arrival stream from the dispatch logic and provides the next candidate syndrome to the FSM. The interface uses a valid/ready protocol.
+QueueBit targets a different layer. It is a dispatch-plane block for per-syndrome online routing. It enforces spatial separation at issue time and can be placed in front of downstream decoder workers.
 
-### 3.2 Tracking Matrix
+## 4. Scope
 
-The tracking matrix stores the currently locked spatial regions. When a worker receives a syndrome, a local neighborhood around that coordinate is marked as active. When the worker completes, that region is released. Collision checking is performed against this matrix before a new syndrome is issued.
+QueueBit is designed for surface-code workloads in which syndrome events arrive over time and are routed to a centralized worker pool. The assumption is that each active worker occupies a local spatial neighborhood for a fixed number of cycles. During that window, issuing a nearby syndrome is unsafe.
 
-In the present design, the lock model is a static local neighborhood around each active syndrome. This keeps collision checking simple in hardware, but it also means the design should be interpreted as a bounded operating policy rather than a universal proof for all future decoder models.
+QueueBit does not implement decoding logic by itself. Its role is to ensure that downstream workers receive a spatially safe stream of assignments. All measurements in this report are dispatcher-level measurements.
 
-### 3.3 Dispatch FSM
+## 5. Architecture
 
-The FSM coordinates the pipeline. It reads the next syndrome from the FIFO, queries the tracking matrix, and either:
+QueueBit coordinates dispatch through a hardware pipeline:
 
-- issues the syndrome to an available worker and locks the corresponding region, or
-- stalls until the hazard clears
+`Syndrome stream -> Syndrome FIFO -> Dispatch FSM <-> Tracking Matrix -> 4-worker pool`
 
-The worker interface is abstract in the current testbench. Each worker has a configurable latency `K`, which represents the number of cycles that worker remains busy after receiving a syndrome.
+### 5.1 Syndrome FIFO
 
-## 4. Experimental Method
+The FIFO buffers incoming syndrome coordinates and decouples source timing from dispatch timing. The interface uses a valid/ready protocol. For both operating points, `FIFO_DEPTH = 32`.
 
-### 4.1 Testbench Configuration
+### 5.2 Tracking Matrix
+
+The tracking matrix stores active lock regions and performs conflict checks before issue. The lock policy uses a 3x3 Chebyshev neighborhood around each active syndrome.
+
+When a syndrome is issued, the matrix sets the corresponding 3x3 region. When the worker finishes, the matrix clears that same region.
+
+Configured grid sizes are:
+
+- d=11: `GRID_WIDTH = 21`, `GRID_HEIGHT = 23`, `COORD_W = 5`
+- d=23: `GRID_WIDTH = 47`, `GRID_HEIGHT = 47`, `COORD_W = 6`
+
+### 5.3 Dispatch FSM
+
+The FSM uses five states:
+
+- `FSM_IDLE`
+- `FSM_FETCH`
+- `FSM_HAZARD_CHK`
+- `FSM_ISSUE`
+- `FSM_STALL`
+
+The worker pool size is `NUM_WORKERS = 4`. In `FSM_HAZARD_CHK`, the candidate syndrome is checked against the matrix. If conflict is detected, the FSM stalls. If not, the FSM issues to the first available worker and applies a lock.
+
+Worker processing time is modeled by configurable latency `K`.
+
+## 6. Experimental Method
+
+### 6.1 Testbench Configuration
 
 Two dispatcher operating points are studied:
 
@@ -68,7 +97,7 @@ Offered load is swept across:
 
 Each configuration is run three times. The runs are deterministic, so the three repeats serve mainly as a consistency check.
 
-### 4.2 Simulation Flow
+### 6.2 Simulation Flow
 
 The final d=11 and d=23 datasets are taken only from the verified simulation flow. Earlier intermediate runs exposed several issues:
 
@@ -78,7 +107,7 @@ The final d=11 and d=23 datasets are taken only from the verified simulation flo
 
 These issues were fixed before the final datasets used in this report were generated. The final d11 and d23 logs both show complete runs with valid summaries, zero protocol errors in the d11 sweep, and deterministic results across repeated configurations.
 
-### 4.3 Metrics
+### 6.3 Metrics
 
 The report uses the following metrics:
 
@@ -89,9 +118,15 @@ The report uses the following metrics:
 - `stall fraction of runtime`: `stall_cycles / total_cycles * 100`
 - `average busy workers`: average number of active workers over the run
 
+Terminology note:
+
+- Testbench and script outputs use the word `collision` for real-time blocked events.
+- In this report, those blocked events in `FSM_HAZARD_CHK` are reported as `hazard detections`.
+- `unsafe pairs` is a separate post-simulation metric from the naive baseline trace analysis.
+
 One older metric was intentionally not used in this report: `stalled / issued * 100`. That metric mixes cycles and syndromes and can exceed 100% in a way that is difficult to interpret. The present report instead uses stall fraction of runtime, which remains cycle-normalized.
 
-### 4.4 Synthesis Method
+### 6.4 Synthesis Method
 
 Post-route FPGA implementation was performed for:
 
@@ -108,9 +143,9 @@ Clock target:
 
 The synthesis numbers in this report should be interpreted as internal design implementation results under the current constraint set. The present study does not yet include a fully board-constrained I/O timing model.
 
-## 5. Results
+## 7. Results
 
-### 5.1 Naive Baseline
+### 7.1 Naive Baseline
 
 The naive dispatcher disables hazard checking and issues work without spatial protection. This baseline tests whether collision-aware dispatch is actually needed.
 
@@ -123,7 +158,7 @@ The result is clear: the naive baseline produces spatial violations, while the s
 | Standard dispatcher | 144 | 0 | 0.0% |
 | Naive dispatcher | 439 | 138 | 31.4% |
 
-### 5.2 d=11 and d=23 Sweeps
+### 7.2 d=11 and d=23 Sweeps
 
 The d=11 sweep is the baseline characterization case. All 60 runs are valid, complete, and free of FIFO protocol errors. The d=23 sweep is the main scale-up characterization case. All 60 runs are also complete and deterministic.
 
@@ -159,9 +194,17 @@ The d=11 case is the cleaner baseline. It shows expected saturation behavior, an
 
 The d=23 case shows the same low-load versus saturated-load structure, but it also exposes much stronger contention. For example, at `K=5`, runtime drops from `2226` cycles at `inj=0.1` to `519` cycles at `inj=1.0`, while at `K=20` it only drops from `2241` to `1380` cycles because long worker occupancy dominates the runtime.
 
-### 5.3 d=23 Hazard Detections
+### 7.3 d=23 Hazard Detections
 
-The most important scale-up result is the hazard-detection behavior at d=23. In this report, a d=23 "collision detected" event is treated as a blocked hazard or blocked conflict event. It is not, by itself, proof that unsafe overlapping work was actually issued.
+The most important scale-up result is the hazard-detection behavior at d=23. A d=23 "collision detected" event represents a blocked hazard: the candidate issue conflicts with the active lock state, so the FSM stalls instead of issuing unsafe concurrent work.
+
+To make that interpretation explicit, post-simulation trace verification was run on dispatch logs (`LOCK`/`RELEASE` events) for the saturated d=23 cases with `K=20` and `inj in {0.5, 1.0, 1.5, 2.0}`. Across all four cases, the simulation reported `112` hazard detections, while trace verification reported:
+
+- `0` spatial collisions
+- `221` lock events and `221` matching release events
+- `457` concurrent syndrome pairs, all safe (`unsafe_pairs = 0`)
+
+Within this tested saturated operating band, every detected hazard was intercepted before issue.
 
 These counts measure how often QueueBit detects that a candidate syndrome conflicts with the current lock state and therefore must be stalled.
 
@@ -184,9 +227,9 @@ This result should be interpreted as follows:
 2. higher offered load keeps the candidate issue path populated
 3. at d=23, those two effects create many more blocked hazard events
 
-This is therefore a contention result and an operating-envelope result. It shows where the dispatcher spends its effort under load.
+This is a contention result. It shows where the dispatcher spends its effort under load.
 
-### 5.4 FPGA Implementation Results
+### 7.4 FPGA Implementation Results
 
 Post-route implementation results are available for both operating points.
 
@@ -209,17 +252,19 @@ Both operating points meet the applied 100 MHz timing target. This is the fair s
 
 The scale-up story is also clear. LUT growth from d=11 to d=23 is about `4.4x`, which closely matches the growth in tracking-grid cells between the two operating points. The d=23 design is substantially larger than d=11, but it still fits comfortably on XC7Z020 under the current implementation flow.
 
-## 6. Discussion
+## 8. Discussion
 
-### 6.1 Interpretation of d=23 Hazard Detections
+### 8.1 Interpretation of d=23 Hazard Detections
 
 The non-zero d=23 hazard-detection counts are the most important result in the project.
 
-They should not be described as direct evidence of unsafe overlap. Instead, they show that under larger scale, longer worker occupancy, and heavier offered load, the dispatcher encounters many more candidate issues that conflict with the current lock state. QueueBit then blocks those issues.
+In the saturated d=23 verification runs (`K=20`, `inj >= 0.5`), trace-level analysis confirms that these detections are blocked conflicts, not issued overlaps: `112` hazards were detected per run, and `0` spatial violations were observed in the dispatch traces.
 
-This is a performance result and an operating-envelope result. It shows where the dispatcher becomes contention-limited. It does not by itself prove a safety failure.
+More generally, the counts show that under larger scale, longer worker occupancy, and heavier offered load, the dispatcher encounters many more candidate issues that conflict with the current lock state. QueueBit then blocks those issues.
 
-### 6.2 Source-Limited Execution at Low Injection Rates
+This is both a safety result for the tested traces and a performance result. It shows where the dispatcher becomes contention-limited while preserving spatial mutual exclusion in the verified saturated cases.
+
+### 8.2 Source-Limited Execution at Low Injection Rates
 
 One result that could confuse readers is the large runtime drop between `inj=0.1` and `inj=1.0`. For example, at `K=5`, d=23 drops from `2226` cycles to `519` cycles.
 
@@ -227,7 +272,7 @@ The explanation is straightforward. The workload contains the same 221 syndromes
 
 This is why moving from `inj=0.1` to `inj=1.0` reduces total runtime without changing the amount of work completed.
 
-### 6.3 Scalability and Contention Pressure at d=23
+### 8.3 Scalability and Contention Pressure at d=23
 
 d=11 is a necessary baseline, but d=23 is the more informative stress case. The d=23 results expose:
 
@@ -237,7 +282,7 @@ d=11 is a necessary baseline, but d=23 is the more informative stress case. The 
 
 Because of this, d=23 should carry the main discussion burden in the results and discussion sections. The comparison should not be framed as d=23 being better. It should be framed as d=23 being larger and harder.
 
-### 6.4 Scope of the Present Study
+### 8.4 Scope of the Present Study
 
 This report does not yet establish:
 
@@ -247,7 +292,7 @@ This report does not yet establish:
 
 The present evidence is empirical and bounded to the tested operating points. For the present paper, that scope is acceptable as long as it is stated plainly.
 
-## 7. Limitations and Future Work
+## 9. Limitations and Future Work
 
 This report has several clear boundaries.
 
@@ -266,25 +311,97 @@ Natural next steps are:
 - worker-count scaling
 - broader error-rate characterization
 
-## 8. Conclusion
+## 10. Conclusion
 
 This report presented QueueBit, a hardware dispatcher for online syndrome routing in surface-code decoding pipelines. QueueBit is a control-plane block that accepts syndrome coordinates, checks them against the active lock state, and either issues them to a worker or stalls until the conflict clears.
 
 The experimental results support four main conclusions:
 
-1. Hazard checking is necessary. The naive baseline produces spatial violations.
-2. QueueBit shows clear source-limited and saturated regimes at both d=11 and d=23.
-3. Larger worker latency increases runtime and contention pressure.
-4. Scaling from d=11 to d=23 remains implementable on XC7Z020 at the applied 100 MHz target, but d=23 exposes substantial blocked hazard activity under load.
+1. Scaling from d=11 to d=23 remains implementable on XC7Z020 at the applied 100 MHz target, and d=23 shows substantially higher blocked hazard activity under load.
+2. Hazard checking is necessary. The naive baseline produces spatial violations.
+3. QueueBit shows source-limited and saturated regimes at both d=11 and d=23.
+4. Larger worker latency increases runtime and contention pressure.
 
-These results give the project an empirical base, a clean baseline-to-scale-up comparison, and a practical FPGA implementation story at two operating points.
+These results provide a dispatcher-level characterization across two operating points.
+
+## 11. Reproducibility Appendix
+
+The saturated d=23 safety claim in Sections 7.3 and 8.1 is backed by dispatch traces and verification outputs in:
+
+- `deliverables/d23/safety_validation/d23_k20_saturated_safety_summary.csv`
+- `deliverables/d23/safety_validation/raw/`
+
+The summary table is reproduced below.
+
+| K | inj (synd/cycle) | Cycles | Issued | Stalled | Hazards Detected | Spatial Collisions | LOCK events | RELEASE events | Concurrent Pairs | Unsafe Pairs |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 20 | 0.5 | 1381 | 221 | 913 | 112 | 0 | 221 | 221 | 457 | 0 |
+| 20 | 1.0 | 1380 | 221 | 954 | 112 | 0 | 221 | 221 | 457 | 0 |
+| 20 | 1.5 | 1380 | 221 | 954 | 112 | 0 | 221 | 221 | 457 | 0 |
+| 20 | 2.0 | 1380 | 221 | 954 | 112 | 0 | 221 | 221 | 457 | 0 |
+
+All saturated d=23 K=20 runs in this appendix show zero spatial violations in the verified trace outputs.
+
+### 11.1 Reproducing Deliverable Artifacts
+
+Run these commands from the repository root.
+
+Safety validation data:
+
+```powershell
+python verification\reproduce_d23_safety_evidence.py --publish-deliverables
+```
+
+d=11 sweep and extraction:
+
+```tcl
+cd D:/College/4-2/SoP2/Code/queuebit/batch_run
+source batch_simulate.tcl
+```
+
+```powershell
+python batch_run\extract_metrics.py
+```
+
+d=23 sweep and extraction:
+
+```tcl
+cd D:/College/4-2/SoP2/Code/queuebit/batch_run
+source batch_simulate_d23.tcl
+```
+
+```powershell
+python verification\extract_d23_k_sweep.py
+```
+
+Synthesis:
+
+```tcl
+cd D:/College/4-2/SoP2/Code/queuebit/batch_run
+source synthesize.tcl
+source synthesize_d23.tcl
+```
+
+Figure generation:
+
+```powershell
+python batch_run\generate_publication_figures.py
+```
 
 ## References
 
-[1] Ben Barber et al. "A real-time, scalable, fast and resource-efficient decoder for a quantum computer". In: Nature Electronics 8.1 (Jan. 2025), pp. 84–91. issn: 2520-1131. doi: 10.1038/s41928-024-01319-5. url: http://dx.doi.org/10.1038/s41928-024-01319-5.
+[1] Ben Barber et al. "A real-time, scalable, fast and resource-efficient decoder for a quantum computer". In: Nature Electronics 8.1 (Jan. 2025), pp. 84-91. doi: 10.1038/s41928-024-01319-5.
 
-[2] Nicolas Delfosse and Naomi H. Nickerson. "Almost-linear time decoding algorithm for topological codes". In: Quantum 5 (Dec. 2021), p. 595. issn: 2521-327X. doi: 10.22331/q-2021-12-02-595. url: http://dx.doi.org/10.22331/q-2021-12-02-595.
+[2] Eric Dennis et al. "Topological quantum memory". In: Journal of Mathematical Physics 43.9 (2002), pp. 4452-4505.
 
-[3] Takuya Kasamura, Junichiro Kadomoto, and Hidetsugu Irie. "Design of an Online Surface Code Decoder Using Union-Find Algorithm". In: 2025 IEEE 43rd International Conference on Computer Design (ICCD). Los Alamitos, CA, USA: IEEE Computer Society, Nov. 2025, pp. 823–830. doi: 10.1109/ICCD65941.2025.00121. url: https://doi.ieeecomputersociety.org/10.1109/ICCD65941.2025.00121.
+[3] Nicolas Delfosse and Naomi H. Nickerson. "Almost-linear time decoding algorithm for topological codes". In: Quantum 5 (Dec. 2021), p. 595. doi: 10.22331/q-2021-12-02-595.
 
-[4] Federico Valentino et al. "QUEKUF: An FPGA Union Find Decoder for Quantum Error Correction on the Toric Code". In: ACM Trans. Reconfigurable Technol. Syst. 18.3 (Aug. 2025). issn: 1936-7406. doi: 10.1145/3733239. url: https://doi.org/10.1145/3733239.
+[4] Craig Gidney. "Stim: a fast stabilizer circuit simulator". In: Quantum 5 (2021), p. 497.
+
+[5] Takuya Kasamura, Junichiro Kadomoto, and Hidetsugu Irie. "Design of an Online Surface Code Decoder Using Union-Find Algorithm". In: 2025 IEEE 43rd International Conference on Computer Design (ICCD). Nov. 2025, pp. 823-830. doi: 10.1109/ICCD65941.2025.00121.
+
+[6] A. Yu. Kitaev. "Fault-tolerant quantum computation by anyons". In: Annals of Physics 303.1 (2003), pp. 2-30.
+
+[7] Namitha Liyanage, Yue Wu, Siona Tagare, and Lin Zhong. "FPGA-based distributed union-find decoder for surface codes". In: IEEE Transactions on Quantum Engineering 5 (2024), pp. 1-18.
+
+[8] Federico Valentino et al. "QUEKUF: An FPGA Union Find Decoder for Quantum Error Correction on the Toric Code". In: ACM Transactions on Reconfigurable Technology and Systems 18.3 (Aug. 2025). doi: 10.1145/3733239.

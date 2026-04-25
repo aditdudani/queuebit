@@ -1,0 +1,11 @@
+[*] Analyzing dispatch log: D:\College\4-2\SoP2\Code\queuebit\build\safety_d23\K20_INJ1000.dispatch_log_d23.txt
+[*] Mode: COLLISION DETECTION
+
+SUCCESS: 0 Spatial Collisions Detected. Routing integrity verified.
+  Total LOCK events: 221
+  Total RELEASE events: 221
+  Peak concurrent locks: 4
+[*] Mode: SEPARATION ANALYSIS
+[*] Found 457 concurrent syndrome pairs
+[*] Safe pairs: 457, Unsafe pairs: 0
+[*] Separation report written to D:\College\4-2\SoP2\Code\queuebit\build\safety_d23\K20_INJ1000_verify\syndrome_separation_log.txt

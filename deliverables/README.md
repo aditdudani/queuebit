@@ -1,18 +1,19 @@
 # Deliverables
 
-This folder contains the current QueueBit deliverable package. It should be used as the primary source for report writing, figure generation, and submission preparation.
+This folder contains the submission package for QueueBit.
 
-## Package Contents
+## Contents
 
 ### `QUEUEBIT_REPORT_DRAFT.md`
 
-Final markdown draft of the paper/report based on the sweep datasets and synthesis runs.
+Current report draft.
 
 ### `d11/`
 
-d=11 artifacts:
-- `metrics.csv`: d=11 sweep output
-- `synthesis_metrics.txt`: extracted post-route synthesis summary
+d=11 sweep and synthesis artifacts:
+
+- `metrics.csv`
+- `synthesis_metrics.txt`
 - `timing_report.txt`
 - `utilization_report.txt`
 - `power_report.txt`
@@ -20,32 +21,36 @@ d=11 artifacts:
 
 ### `d23/`
 
-d=23 artifacts:
-- `k_sweep_results.csv`: d=23 sweep summary
-- `synthesis_metrics.txt`: extracted post-route synthesis summary
+d=23 sweep and synthesis artifacts:
+
+- `k_sweep_results.csv`
+- `synthesis_metrics.txt`
 - `timing_report.txt`
 - `utilization_report.txt`
 - `power_report.txt`
 - `design_report.txt`
+- `safety_validation/`: saturated d=23 (`K=20`, `inj>=0.5`) safety validation data
+  - `d23_k20_saturated_safety_summary.csv`
+  - `raw/` per-case simulation logs, dispatch logs, and verification outputs
 
 ### `figures/`
 
-Paper figures and summary data:
-- `figure_cycles_distance_comparison.png`
-- `figure_stall_distance_comparison.png`
-- `figure_d23_collisions.png`
-- `paper_results_summary.csv`
+Figure files and summary CSV used by the report.
 
-## How To Read This Package
+## Reproducing Saturated d=23 Safety Validation Data
 
-Use the package in this order:
+From repository root:
 
-1. Read `QUEUEBIT_REPORT_DRAFT.md` for the full narrative.
-2. Use `figures/` for plots referenced by the draft.
-3. Use `d11/` and `d23/` for the underlying simulation and synthesis artifacts.
+```powershell
+python verification\reproduce_d23_safety_evidence.py --publish-deliverables
+```
 
-## Important Interpretation Notes
+This command regenerates the saturated d=23 runs, reruns trace verification, and writes outputs to:
 
-- The d23 `Collisions Detected` counts are treated in the report as hazard detections or blocked conflict events, not as direct proof of unsafe overlap.
-- The report uses stall fraction of runtime, defined as `stall_cycles / total_cycles * 100`, rather than the older mixed-unit `stalled / issued * 100` metric.
-- The synthesis comparison is reported fairly at the applied 100 MHz target for both d=11 and d=23.
+- `build/safety_d23/`
+- `deliverables/d23/safety_validation/`
+
+## Notes
+
+- In d=23 saturated runs (`K=20`, `inj>=0.5`), the testbench counter `Collisions Detected` corresponds to blocked hazards in the dispatch FSM.
+- The validated traces in `d23/safety_validation/` show zero spatial overlap for those runs.
